@@ -5,13 +5,13 @@ The universe is modeled as a directed graph coupled to an external infinite rese
 
 | Previous Term | Rigorous Physical/Mathematical Label | Symbol |
 | :--- | :--- | :--- |
-| **Love (Action)** | **Active Negentropy Export** (Directed Flux) | $J_{i \to j}$ |
-| **Grace (Input)** | **Reservoir Influx** | $J_{res \to i}$ |
-| **Grace (Source)** | **Infinite Potential Bath** (Thermodynamic Reservoir) | $\Phi_{res}$ |
-| **Kenosis** | **Gradient-Driven Coupling** | $\nabla \Phi$ |
-| **Giver (Agent)** | **High-Conductivity Emitter** | $\sigma_{high}$ |
-| **Hoarder (Agent)** | **Local Accumulator** | $\sigma_{low}$ |
-| **Agency** | **Flux Allocation Strategy** | $S(F_i)$ |
+| **Active Negentropy Export** (Directed Flux) | $J_{i \to j}$ |
+| **Reservoir Influx** | $J_{res \to i}$ |
+| **Infinite Potential Bath** (Thermodynamic Reservoir) | $\Phi_{res}$ |
+| **Gradient-Driven Coupling** | $\nabla \Phi$ |
+| **High-Conductivity Emitter** | $\sigma_{high}$ |
+| **Local Accumulator** | $\sigma_{low}$ |
+| **Flux Allocation Strategy** | $S(F_i)$ |
 
 ---
 
@@ -54,7 +54,3 @@ $$J_{res \to i} = \sigma \cdot \max(0, \Phi_{res} - F_i)$$
 3.  **Result:** Emitters act as **Super-Conductors**, maximizing the total power throughput of the system. They draw continuous massive power from the reservoir and distribute it, driving the network far from equilibrium (life-like behavior).
 
 ---
-
-### **4. Summary Description**
-
-**"This is an Agent-Based Model of a Dissipative Structure where nodes utilizing high-export strategies maintain steep potential gradients with an external reservoir, thereby maximizing systemic energy throughput and reducing local entropy."**
