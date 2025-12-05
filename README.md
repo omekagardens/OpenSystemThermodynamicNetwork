@@ -26,7 +26,7 @@ $$\Psi = \alpha_E E + \alpha_I I + \alpha_T T$$
 
 **B. The Conservation Law (with Source terms)**
 For any node $i$, the rate of change of local potential $F_i$ is:
-\frac{dF_i}{dt} = \underbrace{J_{res \to i}}_{\text{Reservoir Influx}} + \underbrace{\sum_{k} \eta J_{k \to i}}_{\text{Network Inflow}} - \underbrace{\gamma \sum_{j} J_{i \to j}}_{\text{Active Export}}
+$$\frac{dF_i}{dt} = \underbrace{J_{res \to i}}_{\text{Reservoir Influx}} + \underbrace{\sum_{k} \eta J_{k \to i}}_{\text{Network Inflow}} - \underbrace{\gamma \sum_{j} J_{i \to j}}_{\text{Active Export}}$$
 
 * **$\gamma > 1$ (Dissipation Coefficient):** Represents the thermodynamic cost of generating ordered flux (internal entropy production).
 * **$\eta < 1$ (Coupling Efficiency):** Represents transmission losses between nodes.
