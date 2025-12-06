@@ -167,36 +167,34 @@ $$
 
 ## **7. Summary of Core Equations**
 
-### **(1) Inter‑Node Flow**
+### **(1) Inter-Node Flow**
 
 $$
 G_{i \to j}^{(k)}
 = \int_{t_k}^{t_{k+1}}
 \left(
 \alpha_E P_{i \to j}(t)
-$$
 + \alpha_I \dot{I}_{i \to j}(t)
 + \alpha_T A_{i \to j}(t)
 \right)\, dt
-
+$$
 
 ### **(2) Reservoir Coupling**
 
 $$
 G_i^{\text{res},(k)}
-= a_i^{(k)}\, \sigma_i^{(k)}\, \max(0,\, \Phi_{\text{res}} - F_i^{(k)})\, \Delta t
+= a_i^{(k)}\, \sigma_i^{(k)}\, \max\!\bigl(0,\, \Phi_{\text{res}} - F_i^{(k)}\bigr)\, \Delta t
 $$
 
-### **(3) Free‑Level Update**
+### **(3) Free-Level Update**
 
 $$
 F_i^{(k+1)}
 = F_i^{(k)}
 - \gamma\, G_i^{\text{out},(k)}
++ \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}
++ G_i^{\text{res},(k)}
 $$
-+ $\sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}$
-+ $G_i^{\text{res},(k)}$
-
 
 ### **(4) Conductivity Update**
 
@@ -207,5 +205,5 @@ $$
 
 $$
 \sigma_i^{(k+1)}
-= \sigma_i^{(k)} + \eta_\sigma\, f(\epsilon_i^{(k)})
+= \sigma_i^{(k)} + \eta_\sigma\, f\!\bigl(\epsilon_i^{(k)}\bigr)
 $$
