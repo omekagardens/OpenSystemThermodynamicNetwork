@@ -132,11 +132,7 @@ $$
 ## **5. Free‑Level Update per Tick**
 
 $$
-F_i^{(k+1)}
-= F_i^{(k)}
-- \gamma\, G_i^{\text{out},(k)}
-+ \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}
-+ G_i^{\text{res},(k)}
+F_i^{(k+1)} = F_i^{(k)} - \gamma\, G_i^{\text{out},(k)} + \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)} + G_i^{\text{res},(k)}
 $$
 
 ---
