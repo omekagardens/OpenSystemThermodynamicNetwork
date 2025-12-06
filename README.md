@@ -174,10 +174,11 @@ G_{i \to j}^{(k)}
 = \int_{t_k}^{t_{k+1}}
 \left(
 \alpha_E P_{i \to j}(t)
+$$
 + \alpha_I \dot{I}_{i \to j}(t)
 + \alpha_T A_{i \to j}(t)
 \right)\, dt
-$$
+
 
 ### **(2) Reservoir Coupling**
 
@@ -192,9 +193,10 @@ $$
 F_i^{(k+1)}
 = F_i^{(k)}
 - \gamma\, G_i^{\text{out},(k)}
-+ \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}
-+ G_i^{\text{res},(k)}
 $$
++ $\sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}$
++ $G_i^{\text{res},(k)}$
+
 
 ### **(4) Conductivity Update**
 
