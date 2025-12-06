@@ -56,136 +56,158 @@ $$J_{res \to i} = \sigma \cdot \max(0, \Phi_{res} - F_i)$$
 
 ---
 
-## Simulator Ready Model
+Simulator Ready Model (DET 2.0)
 
 1. Entities and Topology
-	•	Let $\mathcal{A} = \{1, 2, \dots, N\}$ be the set of nodes.
-	•	Let 0 denote a distinguished reservoir node.
-	•	Interactions occur on a directed graph over nodes \{0\} \cup \mathcal{A}.
+	•	Let $\mathcal{A} = {1, 2, \dots, N}$ be the set of nodes.
+	•	Let $0$ denote a distinguished reservoir node.
+	•	Interactions occur on a directed graph over nodes ${0} \cup \mathcal{A}$.
 
 ⸻
 
 2. State Variables
 
-For each node i \in \mathcal{A}:
-	•	F_i(t) \in \mathbb{R}: scalar state (e.g. “free-level” or potential-like quantity).
-	•	\sigma_i(t) \ge 0: conductivity with respect to the reservoir.
-	•	a_i(t) \in [0,1]: gating factor for reservoir coupling.
+For each node $i \in \mathcal{A}$:
+	•	$F_i(t) \in \mathbb{R}$
+	•	$\sigma_i(t) \ge 0$
+	•	$a_i(t) \in [0,1]$
 
 Global constant:
-	•	\Phi_{\text{res}} \in \mathbb{R}: reservoir potential (assumed large and approximately constant).
+	•	$\Phi_{\text{res}} \in \mathbb{R}$
 
 ⸻
 
 3. Resource Flows Between Nodes
 
-Define a composite flow from node i to node j:
+Composite flow:
 
-J_{i \to j}(t) = \alpha_E P_{i \to j}(t)
-+ \alpha_I \dot{I}_{i \to j}(t)
-+ \alpha_T A_{i \to j}(t)
+$$
+J_{i \to j}(t)
+= \alpha_E P_{i \to j}(t)
+	•	\alpha_I \dot{I}_{i \to j}(t)
+	•	\alpha_T A_{i \to j}(t)
+$$
 
-where:
-	•	P_{i \to j}(t): physical power from i to j (J/s),
-	•	\dot{I}_{i \to j}(t): information rate (bits/s),
-	•	A_{i \to j}(t): dimensionless activity/attention rate,
-	•	\alpha_E, \alpha_I, \alpha_T \ge 0: fixed weighting coefficients.
+Discrete flow:
 
-Over a discrete time interval (tick) [t_k, t_{k+1}], define:
-
+$$
 G_{i \to j}^{(k)}
-= \int_{t_k}^{t_{k+1}} J_{i \to j}(t)\, dt
+= \int_{t_k}^{t_{k+1}} J_{i \to j}(t), dt
+$$
 
-Total outgoing and incoming flows for node i (excluding reservoir):
+Outgoing:
 
-G_i^{\text{out}, (k)}
+$$
+G_i^{\text{out},(k)}
 = \sum_{j \in \mathcal{A}} G_{i \to j}^{(k)}
+$$
 
+Incoming:
+
+$$
 R_i^{(k)}
 = \sum_{j \in \mathcal{A}} G_{j \to i}^{(k)}
+$$
 
 ⸻
 
-4. Potential-Dependent Coupling with Reservoir
+4. Potential-Dependent Coupling With Reservoir
 
-Reservoir–node coupling flux (continuous form):
+Continuous:
 
+$$
 J_{\text{res} \to i}(t)
-= a_i(t)\, \sigma_i(t)\, \max\big(0,\; \Phi_{\text{res}} - F_i(t)\big)
+= a_i(t), \sigma_i(t), \max(0,; \Phi_{\text{res}} - F_i(t))
+$$
 
-Discrete tick approximation with \Delta t = t_{k+1} - t_k:
+Discrete:
 
-G_i^{\text{res}, (k)}
-= J_{\text{res} \to i}^{(k)} \, \Delta t
-= a_i^{(k)}\, \sigma_i^{(k)}\, \max\big(0,\; \Phi_{\text{res}} - F_i^{(k)}\big)\, \Delta t
+$$
+G_i^{\text{res},(k)}
+= a_i^{(k)}, \sigma_i^{(k)}, \max(0,; \Phi_{\text{res}} - F_i^{(k)}), \Delta t
+$$
 
-Total incoming flow for node i including reservoir:
+Total incoming:
 
-R_i^{\text{tot}, (k)}
-= R_i^{(k)} + G_i^{\text{res}, (k)}
+$$
+R_i^{\text{tot},(k)}
+= R_i^{(k)} + G_i^{\text{res},(k)}
+$$
 
 ⸻
 
 5. Free-Level Update per Tick
 
-Let \gamma > 0 be a cost coefficient and \eta_{j \to i} \in [0,1] be transfer-efficiency factors for flows from j to i.
-
-A simple linear update rule for F_i over one tick:
-
+$$
 F_i^{(k+1)}
 = F_i^{(k)}
-- \gamma\, G_i^{\text{out}, (k)}
-+ \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}
-+ G_i^{\text{res}, (k)}
+	•	\gamma, G_i^{\text{out},(k)}
 
-Interpretation:
-	•	First term: persistence of previous level.
-	•	Second term: reduction due to outgoing flow.
-	•	Third term: increase due to incoming flows from other nodes.
-	•	Fourth term: increase due to reservoir coupling driven by potential difference.
+	•	\sum_{j \in \mathcal{A}} \eta_{j \to i}, G_{j \to i}^{(k)}
+	•	G_i^{\text{res},(k)}
+$$
 
 ⸻
 
 6. Adaptation of Conductivity (Optional)
 
-Define a per-tick efficiency measure, e.g.:
+Efficiency:
 
+$$
 \epsilon_i^{(k)}
-= \frac{R_i^{\text{tot}, (k)}}{G_i^{\text{out}, (k)} + \varepsilon}
+= \frac{R_i^{\text{tot},(k)}}{G_i^{\text{out},(k)} + \varepsilon}
+$$
 
-with small \varepsilon > 0 to avoid division by zero.
+Update:
 
-Let f: \mathbb{R} \to \mathbb{R} be a bounded update function (e.g. sigmoid-like). Then:
-
+$$
 \sigma_i^{(k+1)}
-= \sigma_i^{(k)} + \eta_\sigma\, f\big(\epsilon_i^{(k)}\big)
-
-where \eta_\sigma > 0 is a small learning rate.
+= \sigma_i^{(k)} + \eta_\sigma, f(\epsilon_i^{(k)})
+$$
 
 ⸻
 
 7. Summary of Core Equations
-	1.	Inter-node flow per tick
-G_{i \to j}^{(k)} = \int_{t_k}^{t_{k+1}}
-\big(\alpha_E P_{i \to j}(t)
-+ \alpha_I \dot{I}_{i \to j}(t)
-+ \alpha_T A_{i \to j}(t)\big)\, dt
-	2.	Reservoir coupling per tick
-G_i^{\text{res}, (k)}
-= a_i^{(k)}\, \sigma_i^{(k)}\, \max\big(0,\; \Phi_{\text{res}} - F_i^{(k)}\big)\, \Delta t
-	3.	Free-level update
+
+1. Inter-node flow
+
+$$
+G_{i \to j}^{(k)}
+= \int_{t_k}^{t_{k+1}}
+\left(
+\alpha_E P_{i \to j}(t)
+	•	\alpha_I \dot{I}_{i \to j}(t)
+	•	\alpha_T A_{i \to j}(t)
+\right) dt
+$$
+
+2. Reservoir coupling
+
+$$
+G_i^{\text{res},(k)}
+= a_i^{(k)}, \sigma_i^{(k)},
+\max(0,; \Phi_{\text{res}} - F_i^{(k)}), \Delta t
+$$
+
+3. Free-level update
+
+$$
 F_i^{(k+1)}
 = F_i^{(k)}
-- \gamma\, G_i^{\text{out}, (k)}
-+ \sum_{j \in \mathcal{A}} \eta_{j \to i}\, G_{j \to i}^{(k)}
-+ G_i^{\text{res}, (k)}
-	4.	Conductivity adaptation (optional)
+	•	\gamma, G_i^{\text{out},(k)}
+
+	•	\sum_{j \in \mathcal{A}} \eta_{j \to i}, G_{j \to i}^{(k)}
+	•	G_i^{\text{res},(k)}
+$$
+
+4. Conductivity update
+
+$$
 \epsilon_i^{(k)}
-= \frac{R_i^{\text{tot}, (k)}}{G_i^{\text{out}, (k)} + \varepsilon},
-\quad
+= \frac{R_i^{\text{tot},(k)}}{G_i^{\text{out},(k)} + \varepsilon}
+$$
+
+$$
 \sigma_i^{(k+1)}
-= \sigma_i^{(k)} + \eta_\sigma\, f\big(\epsilon_i^{(k)}\big)
-
-This card is self-contained and ready to drop into a simulator without any explicit semantic labels attached.
-
-This card is self-contained and ready to drop into a simulator without any explicit semantic labels attached.
+= \sigma_i^{(k)} + \eta_\sigma, f(\epsilon_i^{(k)})
+$$
