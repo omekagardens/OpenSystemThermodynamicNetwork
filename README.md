@@ -59,7 +59,7 @@ $$J_{res \to i} = \sigma \cdot \max(0, \Phi_{res} - F_i)$$
 ## Simulator Ready Model
 
 1. Entities and Topology
-	•	Let \mathcal{A} = \{1, 2, \dots, N\} be the set of nodes.
+	•	Let $\mathcal{A} = \{1, 2, \dots, N\}$ be the set of nodes.
 	•	Let 0 denote a distinguished reservoir node.
 	•	Interactions occur on a directed graph over nodes \{0\} \cup \mathcal{A}.
 
