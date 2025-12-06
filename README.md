@@ -187,3 +187,5 @@ F_i^{(k+1)}
 = \sigma_i^{(k)} + \eta_\sigma\, f\big(\epsilon_i^{(k)}\big)
 
 This card is self-contained and ready to drop into a simulator without any explicit semantic labels attached.
+
+This card is self-contained and ready to drop into a simulator without any explicit semantic labels attached.
