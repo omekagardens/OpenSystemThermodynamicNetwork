@@ -29,10 +29,7 @@ $$
 ### **B. Conservation Law with Sources**
 
 $$
-\frac{dF_i}{dt}
-= J_{\text{res} \to i}
-+ \sum_k \eta\, J_{k \to i}
-- \gamma \sum_j J_{i \to j}
+\frac{dF_i}{dt} = J_{\text{res} \to i} + \sum_k \eta\, J_{k \to i} - \gamma \sum_j J_{i \to j}
 $$
 
 ---
@@ -83,10 +80,7 @@ Global constant:
 ### **Composite Flow**
 
 $$
-J_{i \to j}(t)
-= \alpha_E P_{i \to j}(t)
-+ \alpha_I \dot{I}_{i \to j}(t)
-+ \alpha_T A_{i \to j}(t)
+J_{i \to j}(t) = \alpha_E P_{i \to j}(t) + \alpha_I \dot{I}_{i \to j}(t) + \alpha_T A_{i \to j}(t)
 $$
 
 ### **Discrete Tick Flow**
