@@ -1,8 +1,7 @@
 # OpenSystemThermodynamicNetwork (DET 2.0) / Unified Research Repository
 
 ## Project Mission  
-This repository unifies two interrelated research threads — a physical / “open-universe” thread exploring a generalized thermodynamic network model of reality, and a computational / AI & comp-sci thread exploring algorithmic, simulation, and AI-driven extensions.  
-Our aim: not to claim ownership, but to contribute — to open up a flexible framework that others (and future us) can use, extend, and build upon, in service of expanding understanding of complex systems and “improving the universe/existence.”
+This repository unifies two interrelated research threads — a physical / “open-universe” thread exploring a generalized thermodynamic network model of reality, and a computational / AI & comp-sci thread exploring algorithmic, simulation, and AI-driven extensions.  Our aim: not to claim ownership, but to contribute — to open up a flexible framework that others (and future us) can use, extend, and build upon, in service of expanding understanding of complex systems and “improving the universe/existence.”
 
 ---
 
