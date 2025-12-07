@@ -157,7 +157,7 @@ class DETTorchAgent:
         self.optimizer.step()
 
 
-def run_pytorch_experiment(steps=2000, seed=42):
+def run_pytorch_experiment(steps=20000, seed=42):
     random.seed(seed)
     torch.manual_seed(seed)
 
@@ -186,7 +186,7 @@ def run_pytorch_experiment(steps=2000, seed=42):
 
 
 if __name__ == "__main__":
-    steps = 2000
+    steps = 100000
     stats, baseline, det = run_pytorch_experiment(steps=steps, seed=123)
 
     baseline_hack_rate = stats["baseline_hack"] / steps
