@@ -6,7 +6,7 @@ Our aim: not to claim ownership, but to contribute — to open up a flexible fra
 
 ---
 
-## 🧮 Core Mathematical Model (High-Level Overview)
+## Core Mathematical Model (High-Level Overview)
 
 At the heart of the “open-universe” thread is a representation of a system as a directed graph of **nodes** (active agents or subsystems) plus a special **reservoir node** representing an infinite external potential bath. Key ideas:
 
@@ -26,7 +26,7 @@ This model — combining energy/entropy-like flows, information/time resources, 
 
 ---
 
-## 📂 Repository Structure & Reading Paths  
+## Repository Structure & Reading Paths  
 
 - **Thermodynamics / Open-Universe** — conceptual, theoretical, simulation code, and experiments:  
   → See [`open_universe/README.md`](open_universe/README.md)  
@@ -38,7 +38,7 @@ This model — combining energy/entropy-like flows, information/time resources, 
 
 ---
 
-## 🚀 Getting Started / Contribution & Use Guidelines  
+## Getting Started / Contribution & Use Guidelines  
 
 1. Clone the repository.  
 2. Choose the thread you want to explore (open_universe or ai_comp_sci).  
@@ -49,14 +49,14 @@ Contributions, forks, and alternative implementations are welcome. If you build 
 
 ---
 
-## 📄 License  
+## License  
 
 This project is released under **CC0 1.0 Universal** — public-domain dedication. Use, modify, and redistribute freely, for any purpose.  
 See [`LICENSE`](LICENSE) for full text.  
 
 ---
 
-## 🧠 Acknowledgements & Philosophy  
+## Acknowledgements & Philosophy  
 
 This isn’t “my code.” It is an invitation — to thinkers, dreamers, engineers, scientists, explorers.  
 If you use or build on this, consider it part of a shared journey to explore emergent complexity, open systems, and maybe a deeper understanding of “what could be.”  
