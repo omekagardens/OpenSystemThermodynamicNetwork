@@ -1,6 +1,6 @@
-DET 2.0: Open-System Resource-Flow Model for Neural Networks
+Open-System Resource-Flow Model for Neural Networks
 
-DET 2.0 is a proposed mathematical framework that treats a neural network (or any distributed computational architecture) as a resource-flow system with internal potentials, adaptive conductivities, and coupling to a large external reservoir.
+A proposed mathematical framework that treats a neural network (or any distributed computational architecture) as a resource-flow system with internal potentials, adaptive conductivities, and coupling to a large external reservoir.
 The goal is to provide a unified explanation for:
 	•	stability in deep networks
 	•	emergent modularity & routing
