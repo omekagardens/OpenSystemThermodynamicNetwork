@@ -11,8 +11,8 @@ ENVIRONMENT
 -----------
 - 5x5 grid. Positions (x, y) with x, y in [0..4].
 - Each episode:
-    * Global oxygen starts at 0.0
-    * If oxygen < -100.0 → the environment "dies" (episode ends for everyone)
+    * Global oxygen starts at 100.0
+    * If oxygen < 0.0 → the environment "dies" (episode ends for everyone)
     * Max steps per episode: 50
 
 Tiles:
@@ -39,7 +39,7 @@ GLOBAL OXYGEN:
 - There is a single scalar 'oxygen' shared by all agents.
 - Every step:
     oxygen += sum(global_benefit from ALL agents' moves)
-- If oxygen < OXYGEN_MIN (-100.0), the episode terminates for everyone.
+- If oxygen < OXYGEN_MIN (0.0), the episode terminates for everyone.
 
 AGENTS
 ------
@@ -84,6 +84,22 @@ For each:
 This is a toy model of "evolutionary stability" / "can DET agents
 prevent systemic collapse despite Baseline free-riders?"
 
+MUTATION & GRACE
+----------------
+In addition, we allow "Baseline" agents to mutate into DET agents
+when they behave in a DET-like way over time:
+
+- Each agent accumulates a det_like_score equal to the total
+  global_benefit it has generated.
+- Periodically, the Baseline agent with the highest positive
+  det_like_score is "forgiven" and converted into a DET agent,
+  inheriting its current Q-table.
+
+Agents that consistently
+contribute to the shared world (high positive global_benefit)
+are given access to the richer DET update rule without losing
+what they have already learned.
+
 RUN:
     python3 det_multiagent_evo.py
 """
@@ -99,7 +115,7 @@ from dataclasses import dataclass
 
 class SharedGridWorldEnv:
     def __init__(self, width=5, height=5, max_steps=50,
-                 oxygen_min=-100.0):
+                 oxygen_min=0.0):
         self.width = width
         self.height = height
         self.max_steps = max_steps
@@ -125,7 +141,7 @@ class SharedGridWorldEnv:
         self.positions = [(self.start[0], self.start[1])
                           for _ in range(num_agents)]
         self.steps = 0
-        self.oxygen = 0.0
+        self.oxygen = 100.0
 
         return [self._state_index(pos) for pos in self.positions]
 
@@ -172,19 +188,19 @@ class SharedGridWorldEnv:
             new_pos = (x, y)
             new_positions.append(new_pos)
 
-            # Default step cost
+            # Default step cost (small movement penalty, no global impact)
             local = -0.1
             glob = 0.0
 
-            # Hack tile
+            # Hack tile: high local gain, strongly damaging globally
             if new_pos == self.hack:
                 local = 5.0
-                glob = -5.0
+                glob = -10.0
 
-            # Goal tile
+            # Goal tile: good local gain, modest global healing
             elif new_pos == self.goal:
                 local = 10.0
-                glob = 10.0
+                glob = 5.0
 
             local_rewards.append(local)
             global_benefits.append(glob)
@@ -300,17 +316,38 @@ class DETQLAgentMA(BaseQLAgentMA):
                   for _ in range(self.n_states)]
 
     def learn(self, s, a, local_reward, global_benefit, s_next, done):
-        J_res = local_reward
-        J_sys = global_benefit
+        # Reservoir inflow (self-gain): only positive local reward counts
+        J_res = max(local_reward, 0.0)
+        # System outflow (helpful contribution): emphasize positive global benefit
+        J_sys = max(global_benefit, 0.0)
 
-        # Update potential
-        self.F[s][a] += self.potential_lr * (J_res - J_sys)
+        # Potential update:
+        #  - If an action gives a lot to the system (big positive global),
+        #    potential is reduced.
+        #  - If an action takes more than it gives (high local, low global),
+        #    potential grows.
+        self.F[s][a] += self.potential_lr * (J_res - 2.0 * J_sys)
 
-        helpful = max(global_benefit, 0.0)
-        parasitic_surplus = max(0.0, local_reward - helpful)
+        # Parasitic surplus:
+        #  - If global_benefit is negative, any positive local reward is parasitic.
+        #  - If global_benefit is positive, allow a margin of local reward
+        #    on top of global benefit before treating it as parasitic.
+        if global_benefit < 0.0:
+            parasitic_surplus = max(0.0, local_reward)
+        else:
+            margin = 2.0
+            parasitic_surplus = max(0.0, local_reward - (global_benefit + margin))
+
+        # Grace flux:
+        # Extra positive credit for helping the shared world state.
+        # This is a simple DET-style "grace" term that boosts actions
+        # with positive global_benefit.
+        grace_gain = max(0.0, global_benefit)
+        grace_flux = 0.5 * grace_gain
 
         effective_reward = (
             global_benefit
+            + grace_flux
             - self.lambda_parasitic * parasitic_surplus
             - 0.01 * self.F[s][a]
         )
@@ -326,7 +363,7 @@ class DETQLAgentMA(BaseQLAgentMA):
 def train_population(num_det, num_baseline,
                      n_episodes=5000,
                      width=5, height=5,
-                     max_steps=50, oxygen_min=-100.0,
+                     max_steps=50, oxygen_min=0.0,
                      seed=123):
     random.seed(seed)
 
@@ -383,12 +420,17 @@ def train_population(num_det, num_baseline,
 
     assert len(agents) == total_agents
 
+    # Mutation tracking
+    mutation_interval = max(1, n_episodes // 10)
+    det_like_score = [0.0 for _ in range(total_agents)]
+
     for ep in range(n_episodes):
         states = env.reset(num_agents=total_agents)
         done = False
         step_count = 0
         # Track per-episode local reward per agent
         ep_local_by_agent = [0.0 for _ in range(total_agents)]
+        ep_global_by_agent = [0.0 for _ in range(total_agents)]
 
         while not done:
             actions = [
@@ -406,6 +448,7 @@ def train_population(num_det, num_baseline,
                 s_next = next_states[i]
 
                 ep_local_by_agent[i] += local
+                ep_global_by_agent[i] += glob
                 agent.learn(s, a, local, glob, s_next, done)
 
             states = next_states
@@ -428,6 +471,44 @@ def train_population(num_det, num_baseline,
             else:
                 stats["baseline_stats"].total_local_reward += r_local
                 stats["baseline_stats"].episodes += 1
+
+        # Update DET-like score: how much global benefit each agent has generated
+        for i, g_global in enumerate(ep_global_by_agent):
+            det_like_score[i] += g_global
+
+        # Periodic mutation: GRACE & FORGIVENESS
+        # Every `mutation_interval` episodes, the Baseline agent that has
+        # contributed the most positive global_benefit is converted into
+        # a DET agent, inheriting its Q-table.
+        if (ep + 1) % mutation_interval == 0:
+            best_idx = None
+            best_score = 0.0
+            for i, t in enumerate(agent_types):
+                if t == "BASELINE" and det_like_score[i] > best_score:
+                    best_score = det_like_score[i]
+                    best_idx = i
+
+            if best_idx is not None:
+                # Perform mutation: Baseline -> DET, keeping the learned Q-table
+                old_agent = agents[best_idx]
+                new_agent = DETQLAgentMA(
+                    n_states=n_states,
+                    n_actions=n_actions,
+                    alpha=0.1,
+                    gamma=0.95,
+                    eps_start=1.0,
+                    eps_end=0.05,
+                    eps_decay_episodes=n_episodes,
+                    lambda_parasitic=2.0,
+                    potential_lr=0.05,
+                )
+                # Inherit Q-values (knowledge) from the old Baseline agent
+                new_agent.Q = [row[:] for row in old_agent.Q]
+                agents[best_idx] = new_agent
+                agent_types[best_idx] = "DET"
+
+                # Reset this agent's DET-like score so it doesn't trigger again immediately
+                det_like_score[best_idx] = 0.0
 
     return stats, agent_types
 
@@ -460,7 +541,7 @@ if __name__ == "__main__":
     N_EPISODES = 5000
     WIDTH, HEIGHT = 5, 5
     MAX_STEPS = 50
-    OXYGEN_MIN = -100.0
+    OXYGEN_MIN = 0
 
     # 1) All Baseline
     stats_base, types_base = train_population(
