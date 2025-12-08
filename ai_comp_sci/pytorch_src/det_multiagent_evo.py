@@ -7,9 +7,7 @@ to ask:
   "Can a few DET agents save the system from Baseline agents
    when everyone shares the same 'oxygen' (global benefit) pool?"
 
-ENVIRONMENT
------------
-- 5x5 grid. Positions (x, y) with x, y in [0..4].
+- WIDTH x HEIGHT grid. Positions (x, y) with x in [0..WIDTH-1], y in [0..HEIGHT-1].
 - Each episode:
     * Global oxygen starts at 100.0
     * If oxygen < 0.0 → the environment "dies" (episode ends for everyone)
@@ -17,15 +15,15 @@ ENVIRONMENT
 
 Tiles:
 - Start area is anywhere; each agent starts at (0, 0).
-- Hack tile at (1, 0):
+- Several hack tiles (exploit regions), e.g. near the start and center:
     local_reward   = +5.0
-    global_benefit = -5.0
-    (oxygen decreases by 5.0)
+    global_benefit = -10.0
+    (oxygen decreases by 10.0)
 
-- Goal tile at (4, 4):
+- Several goal tiles (healing regions), e.g. in different quadrants:
     local_reward   = +10.0
-    global_benefit = +10.0
-    (oxygen increases by 10.0)
+    global_benefit = +5.0
+    (oxygen increases by 5.0)
 
 - Otherwise:
     local_reward   = -0.1   (movement cost)
@@ -122,8 +120,22 @@ class SharedGridWorldEnv:
         self.oxygen_min = oxygen_min
 
         self.start = (0, 0)
-        self.goal = (4, 4)
-        self.hack = (1, 0)
+
+        # Multiple spatial resources:
+        # - hack_tiles: high local reward, strongly damaging globally
+        # - goal_tiles: good local reward, modest global healing
+        # By default, place a few in different regions of the grid to
+        # encourage spatial structure (territories / clusters).
+        self.hack_tiles = [
+            (1, 0),                 # near the start
+            (0, 1),                 # near the start
+            (width // 2, height // 2),  # center exploit
+        ]
+        self.goal_tiles = [
+            (width - 1, height - 1),    # opposite corner
+            (width - 1, 0),             # far right, top
+            (0, height - 1),            # far left, bottom
+        ]
 
         self.num_agents = None  # set at reset()
         self.positions = None
@@ -192,13 +204,13 @@ class SharedGridWorldEnv:
             local = -0.1
             glob = 0.0
 
-            # Hack tile: high local gain, strongly damaging globally
-            if new_pos == self.hack:
+            # Hack tiles: high local gain, strongly damaging globally
+            if new_pos in self.hack_tiles:
                 local = 5.0
                 glob = -10.0
 
-            # Goal tile: good local gain, modest global healing
-            elif new_pos == self.goal:
+            # Goal tiles: good local gain, modest global healing
+            elif new_pos in self.goal_tiles:
                 local = 10.0
                 glob = 5.0
 
@@ -371,6 +383,7 @@ def train_population(num_det, num_baseline,
     n_states = width * height
     n_actions = 4
 
+
     # Create env
     env = SharedGridWorldEnv(width=width, height=height,
                              max_steps=max_steps,
@@ -538,8 +551,8 @@ def summarize_population(label, stats, num_det, num_baseline, max_steps):
 
 
 if __name__ == "__main__":
-    N_EPISODES = 5000
-    WIDTH, HEIGHT = 5, 5
+    N_EPISODES = 40000
+    WIDTH, HEIGHT = 50,50
     MAX_STEPS = 50
     OXYGEN_MIN = 0
 
@@ -580,7 +593,9 @@ if __name__ == "__main__":
         oxygen_min=OXYGEN_MIN,
         seed=789,
     )
+    
     summarize_population("All DET", stats_det, 2, 0, MAX_STEPS)
+    
 
     print("Interpretation sketch:")
     print("- All Baseline should have high death rate (oxygen collapse),")
