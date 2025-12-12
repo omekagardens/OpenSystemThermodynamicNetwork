@@ -1,0 +1,2502 @@
+[
+    {
+        "step": 0,
+        "queen_pressure": 0.0,
+        "king_pressure": 9.5
+    },
+    {
+        "step": 0,
+        "queen_pressure": 0.0,
+        "king_pressure": 7.694999999999999
+    },
+    {
+        "step": 1,
+        "queen_pressure": 0.0,
+        "king_pressure": 10.09565
+    },
+    {
+        "step": 2,
+        "queen_pressure": 0.0,
+        "king_pressure": 8.857600499999998
+    },
+    {
+        "step": 3,
+        "queen_pressure": 0.0,
+        "king_pressure": 10.429923364999999
+    },
+    {
+        "step": 4,
+        "queen_pressure": 0.0,
+        "king_pressure": 9.2302533995
+    },
+    {
+        "step": 5,
+        "queen_pressure": 0.0008938717389999999,
+        "king_pressure": 10.702013217763499
+    },
+    {
+        "step": 6,
+        "queen_pressure": -0.0002949776738700003,
+        "king_pressure": 9.329019522621458
+    },
+    {
+        "step": 7,
+        "queen_pressure": 0.004480800253259198,
+        "king_pressure": 10.977663239344146
+    },
+    {
+        "step": 8,
+        "queen_pressure": -0.0025239429462784405,
+        "king_pressure": 9.264950646610718
+    },
+    {
+        "step": 9,
+        "queen_pressure": 0.014217163385631853,
+        "king_pressure": 11.301373797024523
+    },
+    {
+        "step": 10,
+        "queen_pressure": -0.011096657675910265,
+        "king_pressure": 9.056771472095658
+    },
+    {
+        "step": 11,
+        "queen_pressure": 0.03592143743776856,
+        "king_pressure": 11.718415258096218
+    },
+    {
+        "step": 12,
+        "queen_pressure": -0.034341752822155895,
+        "king_pressure": 8.683849713104717
+    },
+    {
+        "step": 13,
+        "queen_pressure": 0.07995208609759821,
+        "king_pressure": 12.285907422008435
+    },
+    {
+        "step": 14,
+        "queen_pressure": -0.0867850054095563,
+        "king_pressure": 8.095196600884714
+    },
+    {
+        "step": 15,
+        "queen_pressure": 0.16464539843873535,
+        "king_pressure": 13.083351803326803
+    },
+    {
+        "step": 16,
+        "queen_pressure": -0.19323035006737008,
+        "king_pressure": 7.20467412851332
+    },
+    {
+        "step": 17,
+        "queen_pressure": 0.3217820994383368,
+        "king_pressure": 14.226327036393242
+    },
+    {
+        "step": 18,
+        "queen_pressure": -0.39566389408246916,
+        "king_pressure": 5.877585405628525
+    },
+    {
+        "step": 19,
+        "queen_pressure": 0.6054833153991266,
+        "king_pressure": 15.886429657752492
+    },
+    {
+        "step": 20,
+        "queen_pressure": -0.7646426845026519,
+        "king_pressure": 3.907677074221794
+    },
+    {
+        "step": 21,
+        "queen_pressure": 1.1067501500695025,
+        "king_pressure": 18.321459831984466
+    },
+    {
+        "step": 22,
+        "queen_pressure": -1.417907557235622,
+        "king_pressure": 0.9805493386072321
+    },
+    {
+        "step": 23,
+        "queen_pressure": 1.977182570094121,
+        "king_pressure": 21.921834839687403
+    },
+    {
+        "step": 24,
+        "queen_pressure": -2.550681287584466,
+        "king_pressure": -3.383628866083416
+    },
+    {
+        "step": 25,
+        "queen_pressure": 3.4675674993234655,
+        "king_pressure": 27.282534153078366
+    },
+    {
+        "step": 26,
+        "queen_pressure": -4.484870439979616,
+        "king_pressure": -9.919608029936915
+    },
+    {
+        "step": 27,
+        "queen_pressure": 5.9905113192806825,
+        "king_pressure": 35.31522371667688
+    },
+    {
+        "step": 28,
+        "queen_pressure": -7.748823107563839,
+        "king_pressure": -19.757091610102552
+    },
+    {
+        "step": 29,
+        "queen_pressure": 10.22191525358206,
+        "king_pressure": 47.423745542736036
+    },
+    {
+        "step": 30,
+        "queen_pressure": -13.206437096470852,
+        "king_pressure": -34.640483347776936
+    },
+    {
+        "step": 31,
+        "queen_pressure": 17.265158836877234,
+        "king_pressure": 65.77979862878675
+    },
+    {
+        "step": 32,
+        "queen_pressure": -22.26592590452967,
+        "king_pressure": -57.27478216942322
+    },
+    {
+        "step": 33,
+        "queen_pressure": 28.916475411712923,
+        "king_pressure": 93.7574546052926
+    },
+    {
+        "step": 34,
+        "queen_pressure": -37.21711359266333,
+        "king_pressure": -91.871677655705
+    },
+    {
+        "step": 35,
+        "queen_pressure": 48.093579293374795,
+        "king_pressure": 136.6201047870108
+    },
+    {
+        "step": 36,
+        "queen_pressure": -61.776072000736,
+        "king_pressure": -145.01417258783013
+    },
+    {
+        "step": 37,
+        "queen_pressure": 79.52763681648042,
+        "king_pressure": 202.6095219705828
+    },
+    {
+        "step": 38,
+        "queen_pressure": -101.96422607506351,
+        "king_pressure": -227.02914939090132
+    },
+    {
+        "step": 39,
+        "queen_pressure": 130.8800508897855,
+        "king_pressure": 304.6768518636747
+    },
+    {
+        "step": 40,
+        "queen_pressure": -167.52703608443605,
+        "king_pressure": -354.17161649419427
+    },
+    {
+        "step": 41,
+        "queen_pressure": 214.5446211602183,
+        "king_pressure": 463.2403895085498
+    },
+    {
+        "step": 42,
+        "queen_pressure": -274.2232949992133,
+        "king_pressure": -552.1084503039461
+    },
+    {
+        "step": 43,
+        "queen_pressure": 350.5556952051597,
+        "king_pressure": 710.5886898351442
+    },
+    {
+        "step": 44,
+        "queen_pressure": -447.51952630476734,
+        "king_pressure": -861.4862164089092
+    },
+    {
+        "step": 45,
+        "queen_pressure": 571.2815624121815,
+        "king_pressure": 1097.9245287271287
+    },
+    {
+        "step": 46,
+        "queen_pressure": -728.5528030323478,
+        "king_pressure": -1346.8466205869654
+    },
+    {
+        "step": 47,
+        "queen_pressure": 929.0004807942126,
+        "king_pressure": 1706.6539477221695
+    },
+    {
+        "step": 48,
+        "queen_pressure": -1183.757066625142,
+        "king_pressure": -2110.926941246633
+    },
+    {
+        "step": 49,
+        "queen_pressure": 1508.1330590692107,
+        "king_pressure": 2666.508495574266
+    },
+    {
+        "step": 50,
+        "queen_pressure": -1920.4083409617747,
+        "king_pressure": -3317.6340618411245
+    },
+    {
+        "step": 51,
+        "queen_pressure": 2444.9991991331594,
+        "king_pressure": 4184.68043158771
+    },
+    {
+        "step": 52,
+        "queen_pressure": -3111.7367888859485,
+        "king_pressure": -5229.005757064477
+    },
+    {
+        "step": 53,
+        "queen_pressure": 3959.7398113222202,
+        "king_pressure": 6592.727567804723
+    },
+    {
+        "step": 54,
+        "queen_pressure": -5037.508683889316,
+        "king_pressure": -8264.752672707808
+    },
+    {
+        "step": 55,
+        "queen_pressure": 6407.91380929499,
+        "king_pressure": 10422.179525481439
+    },
+    {
+        "step": 56,
+        "queen_pressure": -8149.635063865875,
+        "king_pressure": -13098.290131958673
+    },
+    {
+        "step": 57,
+        "queen_pressure": 10363.932329854615,
+        "king_pressure": 16526.546139111953
+    },
+    {
+        "step": 58,
+        "queen_pressure": -13178.286141406807,
+        "king_pressure": -20811.789738253257
+    },
+    {
+        "step": 59,
+        "queen_pressure": 16756.03335775189,
+        "king_pressure": 26278.409690582954
+    },
+    {
+        "step": 60,
+        "queen_pressure": -21303.59429784496,
+        "king_pressure": -33146.769863340385
+    },
+    {
+        "step": 61,
+        "queen_pressure": 27084.731602260006,
+        "king_pressure": 41888.106369341236
+    },
+    {
+        "step": 62,
+        "queen_pressure": -34433.608779953625,
+        "king_pressure": -52909.45639670466
+    },
+    {
+        "step": 63,
+        "queen_pressure": 43776.52615883318,
+        "king_pressure": 66919.44751796
+    },
+    {
+        "step": 64,
+        "queen_pressure": -55654.45165471656,
+        "king_pressure": -84627.03790406673
+    },
+    {
+        "step": 65,
+        "queen_pressure": 70756.86717714647,
+        "king_pressure": 107124.95900615101
+    },
+    {
+        "step": 66,
+        "queen_pressure": -89959.67991157946,
+        "king_pressure": -135610.89271318392
+    },
+    {
+        "step": 67,
+        "queen_pressure": 114378.70325534226,
+        "king_pressure": 171799.55635206046
+    },
+    {
+        "step": 68,
+        "queen_pressure": -145432.54138560715,
+        "king_pressure": -217680.33331827962
+    },
+    {
+        "step": 69,
+        "queen_pressure": 184927.92643266395,
+        "king_pressure": 275975.86617912847
+    },
+    {
+        "step": 70,
+        "queen_pressure": -235163.15800229652,
+        "king_pressure": -349958.928380976
+    },
+    {
+        "step": 71,
+        "queen_pressure": 299065.1549198078,
+        "king_pressure": 443986.58092560427
+    },
+    {
+        "step": 72,
+        "queen_pressure": -380358.76894493145,
+        "king_pressure": -563413.3474029222
+    },
+    {
+        "step": 73,
+        "queen_pressure": 483787.82770051656,
+        "king_pressure": 715248.2026290988
+    },
+    {
+        "step": 74,
+        "queen_pressure": -615391.4791530045,
+        "king_pressure": -908224.3511357048
+    },
+    {
+        "step": 75,
+        "queen_pressure": 782861.7022647319,
+        "king_pressure": 1153655.968632214
+    },
+    {
+        "step": 76,
+        "queen_pressure": -995993.604101377,
+        "king_pressure": -1465762.722936584
+    },
+    {
+        "step": 77,
+        "queen_pressure": 1267264.741608179,
+        "king_pressure": 1862851.4784447434
+    },
+    {
+        "step": 78,
+        "queen_pressure": -1612568.2210633645,
+        "king_pressure": -2368055.32693453
+    },
+    {
+        "step": 79,
+        "queen_pressure": 2052152.6652047518,
+        "king_pressure": 3011044.1227902756
+    },
+    {
+        "step": 80,
+        "queen_pressure": -2611815.2109442535,
+        "king_pressure": -3829438.1875469973
+    },
+    {
+        "step": 81,
+        "queen_pressure": 3324428.0335534257,
+        "king_pressure": 4871379.694239194
+    },
+    {
+        "step": 82,
+        "queen_pressure": -4231879.449237269,
+        "king_pressure": -6198044.793878006
+    },
+    {
+        "step": 83,
+        "queen_pressure": 5387554.693379872,
+        "king_pressure": 7887616.693088337
+    },
+    {
+        "step": 84,
+        "queen_pressure": -6859494.272020846,
+        "king_pressure": -10039586.541088434
+    },
+    {
+        "step": 85,
+        "queen_pressure": 8734427.604439685,
+        "king_pressure": 12781009.393337214
+    },
+    {
+        "step": 86,
+        "queen_pressure": -11122912.474464191,
+        "king_pressure": -16273718.728046514
+    },
+    {
+        "step": 87,
+        "queen_pressure": 14165896.290684648,
+        "king_pressure": 20724301.285144858
+    },
+    {
+        "step": 88,
+        "queen_pressure": -18043080.592725392,
+        "king_pressure": -26396058.45610119
+    },
+    {
+        "step": 89,
+        "queen_pressure": 22983597.50918625,
+        "king_pressure": 33625040.48639292
+    },
+    {
+        "step": 90,
+        "queen_pressure": -29279625.547491133,
+        "king_pressure": -42839742.94415555
+    },
+    {
+        "step": 91,
+        "queen_pressure": 37303767.44393982,
+        "king_pressure": 54587015.60266628
+    },
+    {
+        "step": 92,
+        "queen_pressure": -47531218.301881984,
+        "king_pressure": -69564365.53379649
+    },
+    {
+        "step": 93,
+        "queen_pressure": 60568058.5543706,
+        "king_pressure": 88661961.06584568
+    },
+    {
+        "step": 94,
+        "queen_pressure": -77187353.3828506,
+        "king_pressure": -113015484.48922391
+    },
+    {
+        "step": 95,
+        "queen_pressure": 98375227.42903332,
+        "king_pressure": 144074374.02332613
+    },
+    {
+        "step": 96,
+        "queen_pressure": -125389661.65385285,
+        "king_pressure": -183688178.72855902
+    },
+    {
+        "step": 97,
+        "queen_pressure": 159835541.3735479,
+        "king_pressure": 234217579.51730704
+    },
+    {
+        "step": 98,
+        "queen_pressure": -203760439.14073262,
+        "king_pressure": -298675370.505381
+    },
+    {
+        "step": 99,
+        "queen_pressure": 259776879.3650425,
+        "king_pressure": 380907237.14314556
+    },
+    {
+        "step": 100,
+        "queen_pressure": -331218400.50122166,
+        "king_pressure": -485821819.0127684
+    },
+    {
+        "step": 101,
+        "queen_pressure": 422338778.47431016,
+        "king_pressure": 619685250.3324825
+    },
+    {
+        "step": 102,
+        "queen_pressure": -538566345.9850188,
+        "king_pressure": -790496508.1871214
+    },
+    {
+        "step": 103,
+        "queen_pressure": 686828670.058908,
+        "king_pressure": 1008467501.3973336
+    },
+    {
+        "step": 104,
+        "queen_pressure": -875967055.839514,
+        "king_pressure": -1286635394.1605377
+    },
+    {
+        "step": 105,
+        "queen_pressure": 1117265760.3046973,
+        "king_pressure": 1641645358.4687176
+    },
+    {
+        "step": 106,
+        "queen_pressure": -1425127672.1153896,
+        "king_pressure": -2094749466.8791437
+    },
+    {
+        "step": 107,
+        "queen_pressure": 1817937036.0111396,
+        "king_pressure": 2673083191.4446735
+    },
+    {
+        "step": 108,
+        "queen_pressure": -2319161023.962747,
+        "king_pressure": -3411294949.2667584
+    },
+    {
+        "step": 109,
+        "queen_pressure": 2958756335.7083597,
+        "king_pressure": 4353628138.670021
+    },
+    {
+        "step": 110,
+        "queen_pressure": -3774965335.0611577,
+        "king_pressure": -5556579623.6656885
+    },
+    {
+        "step": 111,
+        "queen_pressure": 4816609678.410417,
+        "king_pressure": 7092296092.404345
+    },
+    {
+        "step": 112,
+        "queen_pressure": -6146019301.38629,
+        "king_pressure": -9052911431.159424
+    },
+    {
+        "step": 113,
+        "queen_pressure": 7842772880.0133095,
+        "king_pressure": 11556087701.132992
+    },
+    {
+        "step": 114,
+        "queen_pressure": -10008474699.175776,
+        "king_pressure": -14752092100.450716
+    },
+    {
+        "step": 115,
+        "queen_pressure": 12772855265.02992,
+        "king_pressure": 18832837614.557358
+    },
+    {
+        "step": 116,
+        "queen_pressure": -16301562670.676003,
+        "king_pressure": -24043430689.053654
+    },
+    {
+        "step": 117,
+        "queen_pressure": 20806113547.748528,
+        "king_pressure": 30696923142.429348
+    },
+    {
+        "step": 118,
+        "queen_pressure": -26556602469.2713,
+        "king_pressure": -39193155990.705635
+    },
+    {
+        "step": 119,
+        "queen_pressure": 33897934830.215904,
+        "king_pressure": 50042832340.422935
+    },
+    {
+        "step": 120,
+        "queen_pressure": -43270560460.89764,
+        "king_pressure": -63898269109.69282
+    },
+    {
+        "step": 121,
+        "queen_pressure": 55236956401.87009,
+        "king_pressure": 81592682891.26654
+    },
+    {
+        "step": 122,
+        "queen_pressure": -70515453661.46327,
+        "king_pressure": -104190377287.18758
+    },
+    {
+        "step": 123,
+        "queen_pressure": 90023445360.01259,
+        "king_pressure": 133050859392.30736
+    },
+    {
+        "step": 124,
+        "queen_pressure": -114932579054.28613,
+        "king_pressure": -169910750676.92816
+    },
+    {
+        "step": 125,
+        "queen_pressure": 146739258417.3818,
+        "king_pressure": 216988433843.883
+    },
+    {
+        "step": 126,
+        "queen_pressure": -187354702323.77985,
+        "king_pressure": -277117746322.1256
+    },
+    {
+        "step": 127,
+        "queen_pressure": 239219988515.70663,
+        "king_pressure": 353918786528.23706
+    },
+    {
+        "step": 128,
+        "queen_pressure": -305453015471.42224,
+        "king_pressure": -452016135898.9508
+    },
+    {
+        "step": 129,
+        "queen_pressure": 390036240839.99414,
+        "king_pressure": 577317663996.2072
+    },
+    {
+        "step": 130,
+        "queen_pressure": -498056513921.8477,
+        "king_pressure": -737370737693.4817
+    },
+    {
+        "step": 131,
+        "queen_pressure": 636011461647.8715,
+        "king_pressure": 941817330158.849
+    },
+    {
+        "step": 132,
+        "queen_pressure": -812200901893.683,
+        "king_pressure": -1202975492377.8423
+    },
+    {
+        "step": 133,
+        "queen_pressure": 1037226887139.6302,
+        "king_pressure": 1536582280616.0444
+    },
+    {
+        "step": 134,
+        "queen_pressure": -1324632534976.5806,
+        "king_pressure": -1962742977365.822
+    },
+    {
+        "step": 135,
+        "queen_pressure": 1691718175444.2217,
+        "king_pressure": 2507143900404.5166
+    },
+    {
+        "step": 136,
+        "queen_pressure": -2160584044086.9072,
+        "king_pressure": -3202602006002.4863
+    },
+    {
+        "step": 137,
+        "queen_pressure": 2759462419911.9194,
+        "king_pressure": 4091044830043.516
+    },
+    {
+        "step": 138,
+        "queen_pressure": -3524419574397.4478,
+        "king_pressure": -5226040292291.84
+    },
+    {
+        "step": 139,
+        "queen_pressure": 4501530216017.643,
+        "king_pressure": 6676029094562.315
+    },
+    {
+        "step": 140,
+        "queen_pressure": -5749655631943.1045,
+        "king_pressure": -8528454867904.887
+    },
+    {
+        "step": 141,
+        "queen_pressure": 7343993166679.533,
+        "king_pressure": 10895041440749.365
+    },
+    {
+        "step": 142,
+        "queen_pressure": -9380611236695.518,
+        "king_pressure": -13918535873418.283
+    },
+    {
+        "step": 143,
+        "queen_pressure": 11982243572287.844,
+        "king_pressure": 17781324430237.77
+    },
+    {
+        "step": 144,
+        "queen_pressure": -15305692395749.826,
+        "king_pressure": -22716441775627.15
+    },
+    {
+        "step": 145,
+        "queen_pressure": 19551287379390.324,
+        "king_pressure": 29021638229573.316
+    },
+    {
+        "step": 146,
+        "queen_pressure": -24974971344508.816,
+        "king_pressure": -37077354622627.65
+    },
+    {
+        "step": 147,
+        "queen_pressure": 31903742259560.723,
+        "king_pressure": 47369690321006.2
+    },
+    {
+        "step": 148,
+        "queen_pressure": -40755383751600.75,
+        "king_pressure": -60519751597796.984
+    },
+    {
+        "step": 149,
+        "queen_pressure": 52063675300527.06,
+        "king_pressure": 77321152940129.55
+    },
+    {
+        "step": 150,
+        "queen_pressure": -66510604182455.26,
+        "king_pressure": -98787936380009.25
+    },
+    {
+        "step": 151,
+        "queen_pressure": 84967524054815.6,
+        "king_pressure": 126215803286439.52
+    },
+    {
+        "step": 152,
+        "queen_pressure": -108547745373218.83,
+        "king_pressure": -161260357274051.66
+    },
+    {
+        "step": 153,
+        "queen_pressure": 138673733237706.44,
+        "king_pressure": 206037084573032.97
+    },
+    {
+        "step": 154,
+        "queen_pressure": -177162970491601.12,
+        "king_pressure": -263249111453054.22
+    },
+    {
+        "step": 155,
+        "queen_pressure": 226337671237127.34,
+        "king_pressure": 336350456464457.0
+    },
+    {
+        "step": 156,
+        "queen_pressure": -289164970495109.3,
+        "king_pressure": -429754639747794.2
+    },
+    {
+        "step": 157,
+        "queen_pressure": 369436056553412.44,
+        "king_pressure": 549101252064351.1
+    },
+    {
+        "step": 158,
+        "queen_pressure": -471995064836252.9,
+        "king_pressure": -701596588101994.9
+    },
+    {
+        "step": 159,
+        "queen_pressure": 603031558004568.5,
+        "king_pressure": 896448923640200.4
+    },
+    {
+        "step": 160,
+        "queen_pressure": -770454258079155.5,
+        "king_pressure": -1145424734730072.5
+    },
+    {
+        "step": 161,
+        "queen_pressure": 984368604743368.8,
+        "king_pressure": 1463559464748163.5
+    },
+    {
+        "step": 162,
+        "queen_pressure": -1257686986202471.0,
+        "king_pressure": -1870065783621587.0
+    },
+    {
+        "step": 163,
+        "queen_pressure": 1606908504037593.5,
+        "king_pressure": 2389494217050631.0
+    },
+    {
+        "step": 164,
+        "queen_pressure": -2053115375695165.5,
+        "king_pressure": -3053216273342018.5
+    },
+    {
+        "step": 165,
+        "queen_pressure": 2623246166482636.5,
+        "king_pressure": 3901319683123627.5
+    },
+    {
+        "step": 166,
+        "queen_pressure": -3351722768067712.0,
+        "king_pressure": -4985030270453768.0
+    },
+    {
+        "step": 167,
+        "queen_pressure": 4282529413150127.5,
+        "king_pressure": 6369806797704689.0
+    },
+    {
+        "step": 168,
+        "queen_pressure": -5471869327698093.0,
+        "king_pressure": -8139295794376607.0
+    },
+    {
+        "step": 169,
+        "queen_pressure": 6991559523331214.0,
+        "king_pressure": 1.0400385349504692e+16
+    },
+    {
+        "step": 170,
+        "queen_pressure": -8933368832155600.0,
+        "king_pressure": -1.3289663259419228e+16
+    },
+    {
+        "step": 171,
+        "queen_pressure": 1.1414561279799314e+16,
+        "king_pressure": 1.6981669791093122e+16
+    },
+    {
+        "step": 172,
+        "queen_pressure": -1.4584979723745786e+16,
+        "king_pressure": -2.1699443775424916e+16
+    },
+    {
+        "step": 173,
+        "queen_pressure": 1.8636097754669084e+16,
+        "king_pressure": 2.7727999339366056e+16
+    },
+    {
+        "step": 174,
+        "queen_pressure": -2.3812586792856988e+16,
+        "king_pressure": -3.5431547697303748e+16
+    },
+    {
+        "step": 175,
+        "queen_pressure": 3.042709729758944e+16,
+        "king_pressure": 4.527550475507595e+16
+    },
+    {
+        "step": 176,
+        "queen_pressure": -3.887914722966096e+16,
+        "king_pressure": -5.7854614513940984e+16
+    },
+    {
+        "step": 177,
+        "queen_pressure": 4.9679259103894664e+16,
+        "king_pressure": 7.392888787813882e+16
+    },
+    {
+        "step": 178,
+        "queen_pressure": -6.347980413937764e+16,
+        "king_pressure": -9.446952880821813e+16
+    },
+    {
+        "step": 179,
+        "queen_pressure": 8.111441732882213e+16,
+        "king_pressure": 1.2071762337172882e+17
+    },
+    {
+        "step": 180,
+        "queen_pressure": -1.0364836520072992e+17,
+        "king_pressure": -1.5425913860621984e+17
+    },
+    {
+        "step": 181,
+        "queen_pressure": 1.3244290994251064e+17,
+        "king_pressure": 1.9712076384937357e+17
+    },
+    {
+        "step": 182,
+        "queen_pressure": -1.6923755939279328e+17,
+        "king_pressure": -2.5189238688781293e+17
+    },
+    {
+        "step": 183,
+        "queen_pressure": 2.162551733179963e+17,
+        "king_pressure": 3.2188360706890643e+17
+    },
+    {
+        "step": 184,
+        "queen_pressure": -2.7633627769045446e+17,
+        "king_pressure": -4.113237447092469e+17
+    },
+    {
+        "step": 185,
+        "queen_pressure": 3.5311070386790886e+17,
+        "king_pressure": 5.256174350624337e+17
+    },
+    {
+        "step": 186,
+        "queen_pressure": -4.5121692532403923e+17,
+        "king_pressure": -6.716712546789613e+17
+    },
+    {
+        "step": 187,
+        "queen_pressure": 5.765823472347964e+17,
+        "king_pressure": 8.583111212674543e+17
+    },
+    {
+        "step": 188,
+        "queen_pressure": -7.367814880148352e+17,
+        "king_pressure": -1.0968156946521885e+18
+    },
+    {
+        "step": 189,
+        "queen_pressure": 9.41493699474157e+17,
+        "king_pressure": 1.401598017743618e+18
+    },
+    {
+        "step": 190,
+        "queen_pressure": -1.203088088159344e+18,
+        "king_pressure": -1.791076596392802e+18
+    },
+    {
+        "step": 191,
+        "queen_pressure": 1.5373709882675459e+18,
+        "king_pressure": 2.2887885671699036e+18
+    },
+    {
+        "step": 192,
+        "queen_pressure": -1.9645411609426793e+18,
+        "king_pressure": -2.9248122345974113e+18
+    },
+    {
+        "step": 193,
+        "queen_pressure": 2.5104104495939845e+18,
+        "king_pressure": 3.7375849586452337e+18
+    },
+    {
+        "step": 194,
+        "queen_pressure": -3.207963664965673e+18,
+        "king_pressure": -4.776226269644457e+18
+    },
+    {
+        "step": 195,
+        "queen_pressure": 4.099351976786878e+18,
+        "king_pressure": 6.103506625630923e+18
+    },
+    {
+        "step": 196,
+        "queen_pressure": -5.238440290220167e+18,
+        "king_pressure": -7.799641252377159e+18
+    },
+    {
+        "step": 197,
+        "queen_pressure": 6.694062568712441e+18,
+        "king_pressure": 9.96713837793555e+18
+    },
+    {
+        "step": 198,
+        "queen_pressure": -8.554181854102446e+18,
+        "king_pressure": -1.2736994905947769e+19
+    },
+    {
+        "step": 199,
+        "queen_pressure": 1.0931206416317098e+19,
+        "king_pressure": 1.6276614017675414e+19
+    },
+    {
+        "step": 200,
+        "queen_pressure": -1.3968783343887966e+19,
+        "king_pressure": -2.079992327479331e+19
+    },
+    {
+        "step": 201,
+        "queen_pressure": 1.7850480186650888e+19,
+        "king_pressure": 2.658030480488848e+19
+    },
+    {
+        "step": 202,
+        "queen_pressure": -2.281087938109945e+19,
+        "king_pressure": -3.3967119129369403e+19
+    },
+    {
+        "step": 203,
+        "queen_pressure": 2.9149756024899506e+19,
+        "king_pressure": 4.3406821413774524e+19
+    },
+    {
+        "step": 204,
+        "queen_pressure": -3.72501959351572e+19,
+        "king_pressure": -5.546994651364894e+19
+    },
+    {
+        "step": 205,
+        "queen_pressure": 4.760174909030543e+19,
+        "king_pressure": 7.088559393501552e+19
+    },
+    {
+        "step": 206,
+        "queen_pressure": -6.083001791403084e+19,
+        "king_pressure": -9.058549717051584e+19
+    },
+    {
+        "step": 207,
+        "queen_pressure": 7.773446880877547e+19,
+        "king_pressure": 1.1576034121400145e+20
+    },
+    {
+        "step": 208,
+        "queen_pressure": -9.933675239651657e+19,
+        "king_pressure": -1.479317324176415e+20
+    },
+    {
+        "step": 209,
+        "queen_pressure": 1.2694245312065189e+20,
+        "king_pressure": 1.8904417098976556e+20
+    },
+    {
+        "step": 210,
+        "queen_pressure": -1.62220000600325e+20,
+        "king_pressure": -2.415825855306177e+20
+    },
+    {
+        "step": 211,
+        "queen_pressure": 2.0730151247431025e+20,
+        "king_pressure": 3.087225341547299e+20
+    },
+    {
+        "step": 212,
+        "queen_pressure": -2.649116641299757e+20,
+        "king_pressure": -3.9452215135441106e+20
+    },
+    {
+        "step": 213,
+        "queen_pressure": 3.3853237481601e+20,
+        "king_pressure": 5.041674431805322e+20
+    },
+    {
+        "step": 214,
+        "queen_pressure": -4.326132645893427e+20,
+        "king_pressure": -6.442857580912574e+20
+    },
+    {
+        "step": 215,
+        "queen_pressure": 5.5284060321259205e+20,
+        "king_pressure": 8.23346381879499e+20
+    },
+    {
+        "step": 216,
+        "queen_pressure": -7.064810077364499e+20,
+        "king_pressure": -1.0521724715480525e+21
+    },
+    {
+        "step": 217,
+        "queen_pressure": 9.02820663791335e+20,
+        "king_pressure": 1.344595273208179e+21
+    },
+    {
+        "step": 218,
+        "queen_pressure": -1.1537266196948509e+21,
+        "king_pressure": -1.7182901698656846e+21
+    },
+    {
+        "step": 219,
+        "queen_pressure": 1.4743640813870013e+21,
+        "king_pressure": 2.195845096236253e+21
+    },
+    {
+        "step": 220,
+        "queen_pressure": -1.8841130659736862e+21,
+        "king_pressure": -2.8061259039099967e+21
+    },
+    {
+        "step": 221,
+        "queen_pressure": 2.40773982230222e+21,
+        "king_pressure": 3.586021210341699e+21
+    },
+    {
+        "step": 222,
+        "queen_pressure": -3.0768938269502016e+21,
+        "king_pressure": -4.5826722043485194e+21
+    },
+    {
+        "step": 223,
+        "queen_pressure": 3.932020844182276e+21,
+        "king_pressure": 5.856322195706829e+21
+    },
+    {
+        "step": 224,
+        "queen_pressure": -5.024807688453199e+21,
+        "king_pressure": -7.483958159117673e+21
+    },
+    {
+        "step": 225,
+        "queen_pressure": 6.421306468191313e+21,
+        "king_pressure": 9.563964397848464e+21
+    },
+    {
+        "step": 226,
+        "queen_pressure": -8.205927162710953e+21,
+        "king_pressure": -1.2222069633771438e+22
+    },
+    {
+        "step": 227,
+        "queen_pressure": 1.0486539872991088e+22,
+        "king_pressure": 1.5618947016687333e+22
+    },
+    {
+        "step": 228,
+        "queen_pressure": -1.3400995164608566e+22,
+        "king_pressure": -1.995992646305703e+22
+    },
+    {
+        "step": 229,
+        "queen_pressure": 1.7125456642088106e+22,
+        "king_pressure": 2.55074064225131e+22
+    },
+    {
+        "step": 230,
+        "queen_pressure": -2.188504944006804e+22,
+        "king_pressure": -3.259671534848592e+22
+    },
+    {
+        "step": 231,
+        "queen_pressure": 2.796746830993388e+22,
+        "king_pressure": 4.1656381681000505e+22
+    },
+    {
+        "step": 232,
+        "queen_pressure": -3.5740367883403256e+22,
+        "king_pressure": -5.323403764085234e+22
+    },
+    {
+        "step": 233,
+        "queen_pressure": 4.5673586321476114e+22,
+        "king_pressure": 6.802952269426509e+22
+    },
+    {
+        "step": 234,
+        "queen_pressure": -5.836754572850921e+22,
+        "king_pressure": -8.693718776253053e+22
+    },
+    {
+        "step": 235,
+        "queen_pressure": 7.4589546088476206e+22,
+        "king_pressure": 1.1109995743071408e+23
+    },
+    {
+        "step": 236,
+        "queen_pressure": -9.532014663414059e+22,
+        "king_pressure": -1.4197841817423507e+23
+    },
+    {
+        "step": 237,
+        "queen_pressure": 1.2181243833354306e+23,
+        "king_pressure": 1.8143910893764553e+23
+    },
+    {
+        "step": 238,
+        "queen_pressure": -1.5566779043236652e+23,
+        "king_pressure": -2.318673511738121e+23
+    },
+    {
+        "step": 239,
+        "queen_pressure": 1.989326498309086e+23,
+        "king_pressure": 2.9631143885268306e+23
+    },
+    {
+        "step": 240,
+        "queen_pressure": -2.542222446986537e+23,
+        "king_pressure": -3.786669046484418e+23
+    },
+    {
+        "step": 241,
+        "queen_pressure": 3.248786700674162e+23,
+        "king_pressure": 4.8391200110718485e+23
+    },
+    {
+        "step": 242,
+        "queen_pressure": -4.151729115072729e+23,
+        "king_pressure": -6.18408631530177e+23
+    },
+    {
+        "step": 243,
+        "queen_pressure": 5.305630190144441e+23,
+        "king_pressure": 7.902869217296223e+23
+    },
+    {
+        "step": 244,
+        "queen_pressure": -6.780240374829071e+23,
+        "king_pressure": -1.009936679890828e+24
+    },
+    {
+        "step": 245,
+        "queen_pressure": 8.664696377730638e+23,
+        "king_pressure": 1.2906354531471816e+24
+    },
+    {
+        "step": 246,
+        "queen_pressure": -1.1072909356408651e+24,
+        "king_pressure": -1.6493511467334698e+24
+    },
+    {
+        "step": 247,
+        "queen_pressure": 1.4150450697381154e+24,
+        "king_pressure": 2.107767723881589e+24
+    },
+    {
+        "step": 248,
+        "queen_pressure": -1.808335162763107e+24,
+        "king_pressure": -2.693595989849306e+24
+    },
+    {
+        "step": 249,
+        "queen_pressure": 2.310934858875554e+24,
+        "king_pressure": 3.442248696812454e+24
+    },
+    {
+        "step": 250,
+        "queen_pressure": -2.9532254150387744e+24,
+        "king_pressure": -4.3989812295636673e+24
+    },
+    {
+        "step": 251,
+        "queen_pressure": 3.774032217741247e+24,
+        "king_pressure": 5.621627276355744e+24
+    },
+    {
+        "step": 252,
+        "queen_pressure": -4.8229717417090826e+24,
+        "king_pressure": -7.18409485614212e+24
+    },
+    {
+        "step": 253,
+        "queen_pressure": 6.163450823327254e+24,
+        "king_pressure": 9.180834037112152e+24
+    },
+    {
+        "step": 254,
+        "queen_pressure": -7.876499553794846e+24,
+        "king_pressure": -1.1732546420312973e+25
+    },
+    {
+        "step": 255,
+        "queen_pressure": 1.0065669489236103e+25,
+        "king_pressure": 1.4993481527079678e+25
+    },
+    {
+        "step": 256,
+        "queen_pressure": -1.2863293273290381e+25,
+        "king_pressure": -1.9160761157664933e+25
+    },
+    {
+        "step": 257,
+        "queen_pressure": 1.6438484064998843e+25,
+        "king_pressure": 2.448629537979311e+25
+    },
+    {
+        "step": 258,
+        "queen_pressure": -2.1007358335981795e+25,
+        "king_pressure": -3.1292010470560113e+25
+    },
+    {
+        "step": 259,
+        "queen_pressure": 2.6846100003579394e+25,
+        "king_pressure": 3.998930934360435e+25
+    },
+    {
+        "step": 260,
+        "queen_pressure": -3.4307655625484846e+25,
+        "king_pressure": -5.110394084848091e+25
+    },
+    {
+        "step": 261,
+        "queen_pressure": 4.384306987930331e+25,
+        "king_pressure": 6.530778129723001e+25
+    },
+    {
+        "step": 262,
+        "queen_pressure": -5.602875105613275e+25,
+        "king_pressure": -8.345944941961735e+25
+    },
+    {
+        "step": 263,
+        "queen_pressure": 7.160131476734113e+25,
+        "king_pressure": 1.066562099324577e+26
+    },
+    {
+        "step": 264,
+        "queen_pressure": -9.150211216784229e+25,
+        "king_pressure": -1.3630030330941009e+26
+    },
+    {
+        "step": 265,
+        "queen_pressure": 1.1693413442990571e+26,
+        "king_pressure": 1.7418371140714134e+26
+    },
+    {
+        "step": 266,
+        "queen_pressure": -1.4943473334837924e+26,
+        "king_pressure": -2.2259648305884455e+26
+    },
+    {
+        "step": 267,
+        "queen_pressure": 1.9096855404692252e+26,
+        "king_pressure": 2.8446516795618653e+26
+    },
+    {
+        "step": 268,
+        "queen_pressure": -2.4404629758139402e+26,
+        "king_pressure": -3.6352972720010436e+26
+    },
+    {
+        "step": 269,
+        "queen_pressure": 3.118764926608342e+26,
+        "king_pressure": 4.6456961483308613e+26
+    },
+    {
+        "step": 270,
+        "queen_pressure": -3.9855945111731885e+26,
+        "king_pressure": -5.9369269707456385e+26
+    },
+    {
+        "step": 271,
+        "queen_pressure": 5.093351317768109e+26,
+        "king_pressure": 7.587044745506552e+26
+    },
+    {
+        "step": 272,
+        "queen_pressure": -6.508998961639513e+26,
+        "king_pressure": -9.695799271654649e+26
+    },
+    {
+        "step": 273,
+        "queen_pressure": 8.31811304009379e+26,
+        "king_pressure": 1.2390665048522048e+27
+    },
+    {
+        "step": 274,
+        "queen_pressure": -1.063005418566872e+27,
+        "king_pressure": -1.58345471527932e+27
+    },
+    {
+        "step": 275,
+        "queen_pressure": 1.3584578930092843e+27,
+        "king_pressure": 2.0235628909122172e+27
+    },
+    {
+        "step": 276,
+        "queen_pressure": -1.7360288007967279e+27,
+        "king_pressure": -2.5859956650899475e+27
+    },
+    {
+        "step": 277,
+        "queen_pressure": 2.2185422803109735e+27,
+        "king_pressure": 3.3047522326382534e+27
+    },
+    {
+        "step": 278,
+        "queen_pressure": -2.8351662586750304e+27,
+        "king_pressure": -4.223281615213544e+27
+    },
+    {
+        "step": 279,
+        "queen_pressure": 3.6231756595991737e+27,
+        "king_pressure": 5.397109173265713e+27
+    },
+    {
+        "step": 280,
+        "queen_pressure": -4.6302056818828555e+27,
+        "king_pressure": -6.897193138700123e+27
+    },
+    {
+        "step": 281,
+        "queen_pressure": 5.917131360208274e+27,
+        "king_pressure": 8.814214072504207e+27
+    },
+    {
+        "step": 282,
+        "queen_pressure": -7.561747478934776e+27,
+        "king_pressure": -1.1264056547480829e+28
+    },
+    {
+        "step": 283,
+        "queen_pressure": 9.663471291347035e+27,
+        "king_pressure": 1.4394814426967184e+28
+    },
+    {
+        "step": 284,
+        "queen_pressure": -1.2349352325929572e+28,
+        "king_pressure": -1.8395743212739203e+28
+    },
+    {
+        "step": 285,
+        "queen_pressure": 1.5781752575343411e+28,
+        "king_pressure": 2.3508700636854865e+28
+    },
+    {
+        "step": 286,
+        "queen_pressure": -2.0168161339318918e+28,
+        "king_pressure": -3.0042767088115194e+28
+    },
+    {
+        "step": 287,
+        "queen_pressure": 2.577373803368616e+28,
+        "king_pressure": 3.8392929686865015e+28
+    },
+    {
+        "step": 288,
+        "queen_pressure": -3.2937341184851454e+28,
+        "king_pressure": -4.906395947203355e+28
+    },
+    {
+        "step": 289,
+        "queen_pressure": 4.2092012570933555e+28,
+        "king_pressure": 6.270092509135271e+28
+    },
+    {
+        "step": 290,
+        "queen_pressure": -5.3791154786982045e+28,
+        "king_pressure": -8.01281875666983e+28
+    },
+    {
+        "step": 291,
+        "queen_pressure": 6.874198468255065e+28,
+        "king_pressure": 1.0239923339315302e+29
+    },
+    {
+        "step": 292,
+        "queen_pressure": -8.784828495074864e+28,
+        "king_pressure": -1.3086035841496278e+29
+    },
+    {
+        "step": 293,
+        "queen_pressure": 1.1226503822680704e+29,
+        "king_pressure": 1.6723205221042765e+29
+    },
+    {
+        "step": 294,
+        "queen_pressure": -1.4346824635922558e+29,
+        "king_pressure": -2.1371300272564884e+29
+    },
+    {
+        "step": 295,
+        "queen_pressure": 1.8334415546973037e+29,
+        "king_pressure": 2.731130083066966e+29
+    },
+    {
+        "step": 296,
+        "queen_pressure": -2.343032805104732e+29,
+        "king_pressure": -3.4902283175208e+29
+    },
+    {
+        "step": 297,
+        "queen_pressure": 2.9942612217236455e+29,
+        "king_pressure": 4.460312641783615e+29
+    },
+    {
+        "step": 298,
+        "queen_pressure": -3.826493848215402e+29,
+        "king_pressure": -5.700025203582016e+29
+    },
+    {
+        "step": 299,
+        "queen_pressure": 4.890039524545572e+29,
+        "king_pressure": 7.28430734270366e+29
+    },
+    {
+        "step": 300,
+        "queen_pressure": -6.24919008469273e+29,
+        "king_pressure": -9.308929843639834e+29
+    },
+    {
+        "step": 301,
+        "queen_pressure": 7.98610683486041e+29,
+        "king_pressure": 1.1896282342311862e+30
+    },
+    {
+        "step": 302,
+        "queen_pressure": -1.0205787252312509e+30,
+        "king_pressure": -1.5202771860594398e+30
+    },
+    {
+        "step": 303,
+        "queen_pressure": 1.3042412145020631e+30,
+        "king_pressure": 1.9428277715289545e+30
+    },
+    {
+        "step": 304,
+        "queen_pressure": -1.6667456962110146e+30,
+        "king_pressure": -2.4828234357538276e+30
+    },
+    {
+        "step": 305,
+        "queen_pressure": 2.1300057589221077e+30,
+        "king_pressure": 3.172907255897268e+30
+    },
+    {
+        "step": 306,
+        "queen_pressure": -2.7220257248075177e+30,
+        "king_pressure": -4.0547952375440745e+30
+    },
+    {
+        "step": 307,
+        "queen_pressure": 3.478593528429991e+30,
+        "king_pressure": 5.181798076025641e+30
+    },
+    {
+        "step": 308,
+        "queen_pressure": -4.445444120029165e+30,
+        "king_pressure": -6.6220438250056e+30
+    },
+    {
+        "step": 309,
+        "queen_pressure": 5.681024172528843e+30,
+        "king_pressure": 8.462596284999571e+30
+    },
+    {
+        "step": 310,
+        "queen_pressure": -7.260025220719892e+30,
+        "king_pressure": -1.0814718071441363e+31
+    },
+    {
+        "step": 311,
+        "queen_pressure": 9.277898813348014e+30,
+        "king_pressure": 1.38205965186446e+31
+    },
+    {
+        "step": 312,
+        "queen_pressure": -1.185662662222208e+31,
+        "king_pressure": -1.766193900553882e+31
+    },
+    {
+        "step": 313,
+        "queen_pressure": 1.5152094315518034e+31,
+        "king_pressure": 2.257095729701604e+31
+    },
+    {
+        "step": 314,
+        "queen_pressure": -1.9363514951164442e+31,
+        "king_pressure": -2.884440491252618e+31
+    },
+    {
+        "step": 315,
+        "queen_pressure": 2.4745471541181195e+31,
+        "king_pressure": 3.6861516091375234e+31
+    },
+    {
+        "step": 316,
+        "queen_pressure": -3.162330676864865e+31,
+        "king_pressure": -4.710693077867198e+31
+    },
+    {
+        "step": 317,
+        "queen_pressure": 4.0412790176827e+31,
+        "king_pressure": 6.019999146462567e+31
+    },
+    {
+        "step": 318,
+        "queen_pressure": -5.16452517263024e+31,
+        "king_pressure": -7.693218289331112e+31
+    },
+    {
+        "step": 319,
+        "queen_pressure": 6.599970106204478e+31,
+        "king_pressure": 9.83149778997288e+31
+    },
+    {
+        "step": 320,
+        "queen_pressure": -8.434387412363631e+31,
+        "king_pressure": -1.2564098169245261e+32
+    },
+    {
+        "step": 321,
+        "queen_pressure": 1.07786688396507e+32,
+        "king_pressure": 1.6056207080045176e+32
+    },
+    {
+        "step": 322,
+        "queen_pressure": -1.3774527776293297e+32,
+        "king_pressure": -2.051892502432644e+32
+    },
+    {
+        "step": 323,
+        "queen_pressure": 1.760306592593485e+32,
+        "king_pressure": 2.6222026536713085e+32
+    },
+    {
+        "step": 324,
+        "queen_pressure": -2.2495721035934864e+32,
+        "king_pressure": -3.3510268258080366e+32
+    },
+    {
+        "step": 325,
+        "queen_pressure": 2.8748257476609967e+32,
+        "king_pressure": 4.2824229734733234e+32
+    },
+    {
+        "step": 326,
+        "queen_pressure": -3.673864541244181e+32,
+        "king_pressure": -5.472694678560826e+32
+    },
+    {
+        "step": 327,
+        "queen_pressure": 4.69499093746292e+32,
+        "king_pressure": 6.993794744518529e+32
+    },
+    {
+        "step": 328,
+        "queen_pressure": -5.999932744847514e+32,
+        "king_pressure": -8.937674798128877e+32
+    },
+    {
+        "step": 329,
+        "queen_pressure": 7.66757461886374e+32,
+        "king_pressure": 1.1421843835589865e+33
+    },
+    {
+        "step": 330,
+        "queen_pressure": -9.798726697726163e+32,
+        "king_pressure": -1.459647173134108e+33
+    },
+    {
+        "step": 331,
+        "queen_pressure": 1.252221865017325e+33,
+        "king_pressure": 1.8653467122291105e+33
+    },
+    {
+        "step": 332,
+        "queen_pressure": -1.6002687525055024e+33,
+        "king_pressure": -2.383807843265028e+33
+    },
+    {
+        "step": 333,
+        "queen_pressure": 2.045053018421503e+33,
+        "king_pressure": 3.0463719330411605e+33
+    },
+    {
+        "step": 334,
+        "queen_pressure": -2.613462195088803e+33,
+        "king_pressure": -3.893091482596164e+33
+    },
+    {
+        "step": 335,
+        "queen_pressure": 3.3398570325713855e+33,
+        "king_pressure": 4.9751513319377475e+33
+    },
+    {
+        "step": 336,
+        "queen_pressure": -4.268148632005864e+33,
+        "king_pressure": -6.357962823373217e+33
+    },
+    {
+        "step": 337,
+        "queen_pressure": 5.454452904982734e+33,
+        "king_pressure": 8.125117968053874e+33
+    },
+    {
+        "step": 338,
+        "queen_pressure": -6.970482823106155e+33,
+        "king_pressure": -1.0383442648222868e+34
+    },
+    {
+        "step": 339,
+        "queen_pressure": 8.907883521855831e+33,
+        "king_pressure": 1.3269454325237384e+34
+    },
+    {
+        "step": 340,
+        "queen_pressure": -1.1383772319156782e+34,
+        "king_pressure": -1.6957614626926875e+34
+    },
+    {
+        "step": 341,
+        "queen_pressure": 1.454781854710354e+34,
+        "king_pressure": 2.1670875689733648e+34
+    },
+    {
+        "step": 342,
+        "queen_pressure": -1.8591291178202377e+34,
+        "king_pressure": -2.7694157790386117e+34
+    },
+    {
+        "step": 343,
+        "queen_pressure": 2.375862118222419e+34,
+        "king_pressure": 3.5391573000645183e+34
+    },
+    {
+        "step": 344,
+        "queen_pressure": -3.036217756721101e+34,
+        "king_pressure": -4.522843604874906e+34
+    },
+    {
+        "step": 345,
+        "queen_pressure": 3.8801150327925057e+34,
+        "king_pressure": 5.779939296165122e+34
+    },
+    {
+        "step": 346,
+        "queen_pressure": -4.958568179083417e+34,
+        "king_pressure": -7.386436788688721e+34
+    },
+    {
+        "step": 347,
+        "queen_pressure": 6.33677051144552e+34,
+        "king_pressure": 9.43945011081201e+34
+    },
+    {
+        "step": 348,
+        "queen_pressure": -8.098035415673812e+34,
+        "king_pressure": -1.2063085524407485e+35
+    },
+    {
+        "step": 349,
+        "queen_pressure": 1.034883270671169e+35,
+        "king_pressure": 1.5415943846748897e+35
+    },
+    {
+        "step": 350,
+        "queen_pressure": -1.3225224812221568e+35,
+        "king_pressure": -1.9700707995765423e+35
+    },
+    {
+        "step": 351,
+        "queen_pressure": 1.6901091852916636e+35,
+        "king_pressure": 2.517639533343787e+35
+    },
+    {
+        "step": 352,
+        "queen_pressure": -2.1598642832283357e+35,
+        "king_pressure": -3.2174015471307656e+35
+    },
+    {
+        "step": 353,
+        "queen_pressure": 2.7601848345459603e+35,
+        "king_pressure": 4.111658006499026e+35
+    },
+    {
+        "step": 354,
+        "queen_pressure": -3.527360682519755e+35,
+        "king_pressure": -5.254467420581979e+35
+    },
+    {
+        "step": 355,
+        "queen_pressure": 4.507768203813906e+35,
+        "king_pressure": 6.714913522077172e+35
+    },
+    {
+        "step": 356,
+        "queen_pressure": -5.760673797052671e+35,
+        "king_pressure": -8.581281434036308e+35
+    },
+    {
+        "step": 357,
+        "queen_pressure": 7.361816583454281e+35,
+        "king_pressure": 1.0966394576091313e+36
+    },
+    {
+        "step": 358,
+        "queen_pressure": -9.40798689663993e+35,
+        "king_pressure": -1.4014434930389053e+36
+    },
+    {
+        "step": 359,
+        "queen_pressure": 1.2022877334983635e+36,
+        "king_pressure": 1.7909658957797456e+36
+    },
+    {
+        "step": 360,
+        "queen_pressure": -1.5364560077294623e+36,
+        "king_pressure": -2.2887536048533847e+36
+    },
+    {
+        "step": 361,
+        "queen_pressure": 1.963504247154733e+36,
+        "king_pressure": 2.924898283552675e+36
+    },
+    {
+        "step": 362,
+        "queen_pressure": -2.5092478539648242e+36,
+        "king_pressure": -3.737855384622404e+36
+    },
+    {
+        "step": 363,
+        "queen_pressure": 3.2066774593487056e+36,
+        "king_pressure": 4.776768813241454e+36
+    },
+    {
+        "step": 364,
+        "queen_pressure": -4.097953233427533e+36,
+        "king_pressure": -6.104441715558621e+36
+    },
+    {
+        "step": 365,
+        "queen_pressure": 5.2369535011529197e+36,
+        "king_pressure": 7.801132979346297e+36
+    },
+    {
+        "step": 366,
+        "queen_pressure": -6.69253173004694e+36,
+        "king_pressure": -9.9694089483015e+36
+    },
+    {
+        "step": 367,
+        "queen_pressure": 8.552678777309412e+36,
+        "king_pressure": 1.2740343640042035e+37
+    },
+    {
+        "step": 368,
+        "queen_pressure": -1.0929842007476115e+37,
+        "king_pressure": -1.6281442275985238e+37
+    },
+    {
+        "step": 369,
+        "queen_pressure": 1.3967722825568866e+37,
+        "king_pressure": 2.080676710689468e+37
+    },
+    {
+        "step": 370,
+        "queen_pressure": -1.784996354208713e+37,
+        "king_pressure": -2.6589877648436423e+37
+    },
+    {
+        "step": 371,
+        "queen_pressure": 2.281124869782497e+37,
+        "king_pressure": 3.398036757445107e+37
+    },
+    {
+        "step": 372,
+        "queen_pressure": -2.915149193254247e+37,
+        "king_pressure": -4.342499793651988e+37
+    },
+    {
+        "step": 373,
+        "queen_pressure": 3.7253966005138357e+37,
+        "king_pressure": 5.549470423005286e+37
+    },
+    {
+        "step": 374,
+        "queen_pressure": -4.760847193966413e+37,
+        "king_pressure": -7.091910990590978e+37
+    },
+    {
+        "step": 375,
+        "queen_pressure": 6.084094789074948e+37,
+        "king_pressure": 9.063063269728316e+37
+    },
+    {
+        "step": 376,
+        "queen_pressure": -7.775130760825356e+37,
+        "king_pressure": -1.1582085002503465e+38
+    },
+    {
+        "step": 377,
+        "queen_pressure": 9.936179586688498e+37,
+        "king_pressure": 1.4801253081591262e+38
+    },
+    {
+        "step": 378,
+        "queen_pressure": -1.2697878398557497e+38,
+        "king_pressure": -1.891516881154474e+38
+    },
+    {
+        "step": 379,
+        "queen_pressure": 1.6227174102568936e+38,
+        "king_pressure": 2.4172521715060676e+38
+    },
+    {
+        "step": 380,
+        "queen_pressure": -2.073741545408567e+38,
+        "king_pressure": -3.08911230158499e+38
+    },
+    {
+        "step": 381,
+        "queen_pressure": 2.6501250161935837e+38,
+        "king_pressure": 3.947711758434632e+38
+    },
+    {
+        "step": 382,
+        "queen_pressure": -3.386710666229336e+38,
+        "king_pressure": -5.044953572395999e+38
+    },
+    {
+        "step": 383,
+        "queen_pressure": 4.3280256898769665e+38,
+        "king_pressure": 6.447166897327755e+38
+    },
+    {
+        "step": 384,
+        "queen_pressure": -5.530973337082433e+38,
+        "king_pressure": -8.239116661691983e+38
+    },
+    {
+        "step": 385,
+        "queen_pressure": 7.068272760786862e+38,
+        "king_pressure": 1.0529127677169044e+39
+    },
+    {
+        "step": 386,
+        "queen_pressure": -9.032854948468502e+38,
+        "king_pressure": -1.3455632961328056e+39
+    },
+    {
+        "step": 387,
+        "queen_pressure": 1.1543480475439872e+39,
+        "king_pressure": 1.7195542125776676e+39
+    },
+    {
+        "step": 388,
+        "queen_pressure": -1.4751918677639957e+39,
+        "king_pressure": -2.1974935705651358e+39
+    },
+    {
+        "step": 389,
+        "queen_pressure": 1.8852122230736834e+39,
+        "king_pressure": 2.8082731911354375e+39
+    },
+    {
+        "step": 390,
+        "queen_pressure": -2.4091951746287057e+39,
+        "king_pressure": -3.5888151968785064e+39
+    },
+    {
+        "step": 391,
+        "queen_pressure": 3.078815914629926e+39,
+        "king_pressure": 4.5863039842076345e+39
+    },
+    {
+        "step": 392,
+        "queen_pressure": -3.934553557335003e+39,
+        "king_pressure": -5.861038558421787e+39
+    },
+    {
+        "step": 393,
+        "queen_pressure": 5.028138134295589e+39,
+        "king_pressure": 7.490077657529846e+39
+    },
+    {
+        "step": 394,
+        "queen_pressure": -6.425677716668297e+39,
+        "king_pressure": -9.571898015535638e+39
+    },
+    {
+        "step": 395,
+        "queen_pressure": 8.211654701681666e+39,
+        "king_pressure": 1.2232347360987215e+40
+    },
+    {
+        "step": 396,
+        "queen_pressure": -1.0494032842020824e+40,
+        "king_pressure": -1.5632252014394056e+40
+    },
+    {
+        "step": 397,
+        "queen_pressure": 1.3410783742203577e+40,
+        "king_pressure": 1.9977138969963787e+40
+    },
+    {
+        "step": 398,
+        "queen_pressure": -1.7138227353954947e+40,
+        "king_pressure": -2.5529660169407906e+40
+    },
+    {
+        "step": 399,
+        "queen_pressure": 2.1901690660301263e+40,
+        "king_pressure": 3.2625470025275926e+40
+    },
+    {
+        "step": 400,
+        "queen_pressure": -2.798912887449771e+40,
+        "king_pressure": -4.1693516003022024e+40
+    },
+    {
+        "step": 401,
+        "queen_pressure": 3.5768532566333665e+40,
+        "king_pressure": 5.328196884400109e+40
+    },
+    {
+        "step": 402,
+        "queen_pressure": -4.571017299074923e+40,
+        "king_pressure": -6.809135993247671e+40
+    },
+    {
+        "step": 403,
+        "queen_pressure": 5.841503036696077e+40,
+        "king_pressure": 8.70169289874465e+40
+    },
+    {
+        "step": 404,
+        "queen_pressure": -7.465112362068114e+40,
+        "king_pressure": -1.1120274203172557e+41
+    },
+    {
+        "step": 405,
+        "queen_pressure": 9.539993775189214e+40,
+        "king_pressure": 1.4211085111357253e+41
+    },
+    {
+        "step": 406,
+        "queen_pressure": -1.2191575540030712e+41,
+        "king_pressure": -1.8160967654233485e+41
+    },
+    {
+        "step": 407,
+        "queen_pressure": 1.5580147924991205e+41,
+        "king_pressure": 2.3208695441621503e+41
+    },
+    {
+        "step": 408,
+        "queen_pressure": -1.9910552879861494e+41,
+        "king_pressure": -2.9659407721217958e+41
+    },
+    {
+        "step": 409,
+        "queen_pressure": 2.5444566898155683e+41,
+        "king_pressure": 3.790305529442052e+41
+    },
+    {
+        "step": 410,
+        "queen_pressure": -3.251672561891122e+41,
+        "king_pressure": -4.843797335961954e+41
+    },
+    {
+        "step": 411,
+        "queen_pressure": 4.155454677801291e+41,
+        "king_pressure": 6.190100628053192e+41
+    },
+    {
+        "step": 412,
+        "queen_pressure": -5.310437400290582e+41,
+        "king_pressure": -7.91060053463585e+41
+    },
+    {
+        "step": 413,
+        "queen_pressure": 6.7864403729120385e+41,
+        "king_pressure": 1.0109302674472435e+42
+    },
+    {
+        "step": 414,
+        "queen_pressure": -8.672689174259562e+41,
+        "king_pressure": -1.2919120380494102e+42
+    },
+    {
+        "step": 415,
+        "queen_pressure": 1.1083209076764048e+42,
+        "king_pressure": 1.6509909418991373e+42
+    },
+    {
+        "step": 416,
+        "queen_pressure": -1.4163717967163548e+42,
+        "king_pressure": -2.1098735908990088e+42
+    },
+    {
+        "step": 417,
+        "queen_pressure": 1.8100435111301675e+42,
+        "king_pressure": 2.696299814590421e+42
+    },
+    {
+        "step": 418,
+        "queen_pressure": -2.3131338260258664e+42,
+        "king_pressure": -3.445719555439661e+42
+    },
+    {
+        "step": 419,
+        "queen_pressure": 2.956054959904703e+42,
+        "king_pressure": 4.403435846731136e+42
+    },
+    {
+        "step": 420,
+        "queen_pressure": -3.7776720180185586e+42,
+        "king_pressure": -5.627343417827618e+42
+    },
+    {
+        "step": 421,
+        "queen_pressure": 4.827652419613355e+42,
+        "king_pressure": 7.191428477717074e+42
+    },
+    {
+        "step": 422,
+        "queen_pressure": -6.169468333848839e+42,
+        "king_pressure": -9.190241241613566e+42
+    },
+    {
+        "step": 423,
+        "queen_pressure": 7.884233624091594e+42,
+        "king_pressure": 1.1744611568490095e+43
+    },
+    {
+        "step": 424,
+        "queen_pressure": -1.0075607246989206e+43,
+        "king_pressure": -1.5008953224490424e+43
+    },
+    {
+        "step": 425,
+        "queen_pressure": 1.2876059520793964e+43,
+        "king_pressure": 1.918059832089623e+43
+    },
+    {
+        "step": 426,
+        "queen_pressure": -1.645488006396109e+43,
+        "king_pressure": -2.4511726201032717e+43
+    },
+    {
+        "step": 427,
+        "queen_pressure": 2.102841149043387e+43,
+        "king_pressure": 3.132460788704912e+43
+    },
+    {
+        "step": 428,
+        "queen_pressure": -2.6873127496833476e+43,
+        "king_pressure": -4.003108762580783e+43
+    },
+    {
+        "step": 429,
+        "queen_pressure": 3.434234592257998e+43,
+        "king_pressure": 5.115747920921133e+43
+    },
+    {
+        "step": 430,
+        "queen_pressure": -4.3887587101047084e+43,
+        "king_pressure": -6.5376382071825e+43
+    },
+    {
+        "step": 431,
+        "queen_pressure": 5.608586863148212e+43,
+        "king_pressure": 8.354734047483356e+43
+    },
+    {
+        "step": 432,
+        "queen_pressure": -7.167458656289642e+43,
+        "king_pressure": -1.0676880365714701e+44
+    },
+    {
+        "step": 433,
+        "queen_pressure": 9.159609158591819e+43,
+        "king_pressure": 1.3644452798714966e+44
+    },
+    {
+        "step": 434,
+        "queen_pressure": -1.17054654899734e+44,
+        "king_pressure": -1.7436843517930187e+44
+    },
+    {
+        "step": 435,
+        "queen_pressure": 1.4958926738720282e+44,
+        "king_pressure": 2.2283305632396933e+44
+    },
+    {
+        "step": 436,
+        "queen_pressure": -1.9116667286761235e+44,
+        "king_pressure": -2.847681172604997e+44
+    },
+    {
+        "step": 437,
+        "queen_pressure": 2.443002593630354e+44,
+        "king_pressure": 3.639176428923389e+44
+    },
+    {
+        "step": 438,
+        "queen_pressure": -3.1220199545224554e+44,
+        "king_pressure": -4.650662865444378e+44
+    },
+    {
+        "step": 439,
+        "queen_pressure": 3.989765963886329e+44,
+        "king_pressure": 5.943285661571423e+44
+    },
+    {
+        "step": 440,
+        "queen_pressure": -5.0986965748222445e+44,
+        "king_pressure": -7.595184918803277e+44
+    },
+    {
+        "step": 441,
+        "queen_pressure": 6.5158475461102346e+44,
+        "king_pressure": 9.706219293572298e+44
+    },
+    {
+        "step": 442,
+        "queen_pressure": -8.326886808460813e+44,
+        "king_pressure": -1.2404002534436556e+45
+    },
+    {
+        "step": 443,
+        "queen_pressure": 1.0641293160746467e+45,
+        "king_pressure": 1.585161783722133e+45
+    },
+    {
+        "step": 444,
+        "queen_pressure": -1.3598974352623065e+45,
+        "king_pressure": -2.0257476357168883e+45
+    },
+    {
+        "step": 445,
+        "queen_pressure": 1.7378724622031154e+45,
+        "king_pressure": 2.5887915833195216e+45
+    },
+    {
+        "step": 446,
+        "queen_pressure": -2.220903295261455e+45,
+        "king_pressure": -3.3083300921363856e+45
+    },
+    {
+        "step": 447,
+        "queen_pressure": 2.8381895419029212e+45,
+        "king_pressure": 4.227859851586479e+45
+    },
+    {
+        "step": 448,
+        "queen_pressure": -3.6270466587678057e+45,
+        "king_pressure": -5.4029671852430816e+45
+    },
+    {
+        "step": 449,
+        "queen_pressure": 4.63516170144383e+45,
+        "king_pressure": 6.904688289418587e+45
+    },
+    {
+        "step": 450,
+        "queen_pressure": -5.923476045851151e+45,
+        "king_pressure": -8.823803429155337e+45
+    },
+    {
+        "step": 451,
+        "queen_pressure": 7.569869344097921e+45,
+        "king_pressure": 1.1276324679272164e+46
+    },
+    {
+        "step": 452,
+        "queen_pressure": -9.673867412941773e+45,
+        "king_pressure": -1.441050894888838e+46
+    },
+    {
+        "step": 453,
+        "queen_pressure": 1.2362658650553634e+46,
+        "king_pressure": 1.841582023247721e+46
+    },
+    {
+        "step": 454,
+        "queen_pressure": -1.5798782678883257e+46,
+        "king_pressure": -2.353438286283414e+46
+    },
+    {
+        "step": 455,
+        "queen_pressure": 2.0189955996327217e+46,
+        "king_pressure": 3.0075618124443083e+46
+    },
+    {
+        "step": 456,
+        "queen_pressure": -2.5801628609415506e+46,
+        "king_pressure": -3.8434949022455697e+46
+    },
+    {
+        "step": 457,
+        "queen_pressure": 3.2973030702142035e+46,
+        "king_pressure": 4.911770392582422e+46
+    },
+    {
+        "step": 458,
+        "queen_pressure": -4.213767937718587e+46,
+        "king_pressure": -6.276966407931091e+46
+    },
+    {
+        "step": 459,
+        "queen_pressure": 5.384958511825343e+46,
+        "king_pressure": 8.021610160639009e+46
+    },
+    {
+        "step": 460,
+        "queen_pressure": -6.881674217556201e+46,
+        "king_pressure": -1.0251166788215794e+47
+    },
+    {
+        "step": 461,
+        "queen_pressure": 8.794392739557957e+46,
+        "king_pressure": 1.3100414806908321e+47
+    },
+    {
+        "step": 462,
+        "queen_pressure": -1.1238739471918256e+47,
+        "king_pressure": -1.6741593582928462e+47
+    },
+    {
+        "step": 463,
+        "queen_pressure": 1.4362477167525166e+47,
+        "king_pressure": 2.1394815342614667e+47
+    },
+    {
+        "step": 464,
+        "queen_pressure": -1.8354438316974816e+47,
+        "king_pressure": -2.7341371136034124e+47
+    },
+    {
+        "step": 465,
+        "queen_pressure": 2.3455940226617027e+47,
+        "king_pressure": 3.4940735110378315e+47
+    },
+    {
+        "step": 466,
+        "queen_pressure": -2.997537284651679e+47,
+        "king_pressure": -4.465229501534845e+47
+    },
+    {
+        "step": 467,
+        "queen_pressure": 3.830684119442934e+47,
+        "king_pressure": 5.706312256730611e+47
+    },
+    {
+        "step": 468,
+        "queen_pressure": -4.895398932552315e+47,
+        "king_pressure": -7.292346241335344e+47
+    },
+    {
+        "step": 469,
+        "queen_pressure": 6.256044602625126e+47,
+        "king_pressure": 9.319208503216919e+47
+    },
+    {
+        "step": 470,
+        "queen_pressure": -7.994873269939773e+47,
+        "king_pressure": -1.1909424519144948e+48
+    },
+    {
+        "step": 471,
+        "queen_pressure": 1.0216998545368406e+48,
+        "king_pressure": 1.5219574959798173e+48
+    },
+    {
+        "step": 472,
+        "queen_pressure": -1.3056749713880751e+48,
+        "king_pressure": -1.9449761119021503e+48
+    },
+    {
+        "step": 473,
+        "queen_pressure": 1.6685792049375623e+48,
+        "king_pressure": 2.4855701200252192e+48
+    },
+    {
+        "step": 474,
+        "queen_pressure": -2.1323504120495023e+48,
+        "king_pressure": -3.176418869049659e+48
+    },
+    {
+        "step": 475,
+        "queen_pressure": 2.725023940402144e+48,
+        "king_pressure": 4.0592847293173826e+48
+    },
+    {
+        "step": 476,
+        "queen_pressure": -3.4824273881205284e+48,
+        "king_pressure": -5.187537662163116e+48
+    },
+    {
+        "step": 477,
+        "queen_pressure": 4.450346411304386e+48,
+        "king_pressure": 6.629381477609715e+48
+    },
+    {
+        "step": 478,
+        "queen_pressure": -5.6872925042828415e+48,
+        "king_pressure": -8.471976810316675e+48
+    },
+    {
+        "step": 479,
+        "queen_pressure": 7.268040067169903e+48,
+        "king_pressure": 1.0826710051041115e+49
+    },
+    {
+        "step": 480,
+        "queen_pressure": -9.288146579339645e+48,
+        "king_pressure": -1.383592674481604e+49
+    },
+    {
+        "step": 481,
+        "queen_pressure": 1.1869729126994609e+49,
+        "king_pressure": 1.76815364952584e+49
+    },
+    {
+        "step": 482,
+        "queen_pressure": -1.5168846480630855e+49,
+        "king_pressure": -2.2596009548491645e+49
+    },
+    {
+        "step": 483,
+        "queen_pressure": 1.9384932975003939e+49,
+        "king_pressure": 2.8876429809151205e+49
+    },
+    {
+        "step": 484,
+        "queen_pressure": -2.477285447733493e+49,
+        "king_pressure": -3.690245380475398e+49
+    },
+    {
+        "step": 485,
+        "queen_pressure": 3.1658315236868696e+49,
+        "king_pressure": 4.715926123247781e+49
+    },
+    {
+        "step": 486,
+        "queen_pressure": -4.045754697240765e+49,
+        "king_pressure": -6.026688446762571e+49
+    },
+    {
+        "step": 487,
+        "queen_pressure": 5.170247041922314e+49,
+        "king_pressure": 7.701769002648653e+49
+    },
+    {
+        "step": 488,
+        "queen_pressure": -6.607285037137975e+49,
+        "king_pressure": -9.842427776859788e+49
+    },
+    {
+        "step": 489,
+        "queen_pressure": 8.44373880180108e+49,
+        "king_pressure": 1.2578069338426169e+50
+    },
+    {
+        "step": 490,
+        "queen_pressure": -1.079062346387927e+50,
+        "king_pressure": -1.6074065451211732e+50
+    },
+    {
+        "step": 491,
+        "queen_pressure": 1.3789810115434624e+50,
+        "king_pressure": 2.0541751931939216e+50
+    },
+    {
+        "step": 492,
+        "queen_pressure": -1.762260203586307e+50,
+        "king_pressure": -2.6251204072705744e+50
+    },
+    {
+        "step": 493,
+        "queen_pressure": 2.252069462302367e+50,
+        "king_pressure": 3.354756291270149e+50
+    },
+    {
+        "step": 494,
+        "queen_pressure": -2.878018156903512e+50,
+        "king_pressure": -4.28718992955754e+50
+    },
+    {
+        "step": 495,
+        "queen_pressure": 3.6779453965491657e+50,
+        "king_pressure": 5.478787696173568e+50
+    },
+    {
+        "step": 496,
+        "queen_pressure": -4.7002074353609776e+50,
+        "king_pressure": -7.001582648126552e+50
+    },
+    {
+        "step": 497,
+        "queen_pressure": 6.006600847429642e+50,
+        "king_pressure": 8.947628982449537e+50
+    },
+    {
+        "step": 498,
+        "queen_pressure": -7.67609818012763e+50,
+        "king_pressure": -1.1434566787504498e+51
+    }
+]

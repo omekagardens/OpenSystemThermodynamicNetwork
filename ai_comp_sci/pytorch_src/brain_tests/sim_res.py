@@ -1,0 +1,9043 @@
+import matplotlib.pyplot as plt
+import json
+
+# Loading the data you provided
+data = [
+    {
+        "step": 0,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 0,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 1,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 2,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 3,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 4,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 5,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 6,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 7,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 8,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 9,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 10,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 11,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 12,
+        "vision_center": 0.0,
+        "sound_center": 0.0,
+        "concept_score": 0.0
+    },
+    {
+        "step": 13,
+        "vision_center": 3.3038931065186097e-17,
+        "sound_center": 5.464037698644072e-17,
+        "concept_score": 3.3038931065186097e-17
+    },
+    {
+        "step": 14,
+        "vision_center": 6.523212500396858e-16,
+        "sound_center": 1.0430190950468821e-15,
+        "concept_score": 6.523212500396858e-16
+    },
+    {
+        "step": 15,
+        "vision_center": 6.405636773113572e-15,
+        "sound_center": 1.0041119765480317e-14,
+        "concept_score": 6.405636773113572e-15
+    },
+    {
+        "step": 16,
+        "vision_center": 4.383997068224282e-14,
+        "sound_center": 6.773367761830737e-14,
+        "concept_score": 4.383997068224282e-14
+    },
+    {
+        "step": 17,
+        "vision_center": 2.334431664224332e-13,
+        "sound_center": 3.5595045491537657e-13,
+        "concept_score": 2.334431664224332e-13
+    },
+    {
+        "step": 18,
+        "vision_center": 1.0258607873108742e-12,
+        "sound_center": 1.5447984569400445e-12,
+        "concept_score": 1.0258607873108742e-12
+    },
+    {
+        "step": 19,
+        "vision_center": 3.86927664778721e-12,
+        "sound_center": 5.761881611725735e-12,
+        "concept_score": 3.86927664778721e-12
+    },
+    {
+        "step": 20,
+        "vision_center": 1.287756613291252e-11,
+        "sound_center": 1.89946886647551e-11,
+        "concept_score": 1.287756613291252e-11
+    },
+    {
+        "step": 21,
+        "vision_center": 3.8608580638357946e-11,
+        "sound_center": 5.649781114767947e-11,
+        "concept_score": 3.8608580638357946e-11
+    },
+    {
+        "step": 22,
+        "vision_center": 1.0597602575658778e-10,
+        "sound_center": 1.5405233707881214e-10,
+        "concept_score": 1.0597602575658778e-10
+    },
+    {
+        "step": 23,
+        "vision_center": 2.6975451497442474e-10,
+        "sound_center": 3.899179727505629e-10,
+        "concept_score": 2.6975451497442474e-10
+    },
+    {
+        "step": 24,
+        "vision_center": 6.432600731156805e-10,
+        "sound_center": 9.252740311998854e-10,
+        "concept_score": 6.432600731156805e-10
+    },
+    {
+        "step": 25,
+        "vision_center": 1.4487877924572101e-09,
+        "sound_center": 2.075137593095068e-09,
+        "concept_score": 1.4487877924572101e-09
+    },
+    {
+        "step": 26,
+        "vision_center": 3.1025474674114374e-09,
+        "sound_center": 4.42760210244427e-09,
+        "concept_score": 3.1025474674114374e-09
+    },
+    {
+        "step": 27,
+        "vision_center": 6.352430413279369e-09,
+        "sound_center": 9.037263279667904e-09,
+        "concept_score": 6.352430413279369e-09
+    },
+    {
+        "step": 28,
+        "vision_center": 1.2494151780625716e-08,
+        "sound_center": 1.772920140109557e-08,
+        "concept_score": 1.2494151780625716e-08
+    },
+    {
+        "step": 29,
+        "vision_center": 2.3700364671445086e-08,
+        "sound_center": 3.3562932296320447e-08,
+        "concept_score": 2.3700364671445086e-08
+    },
+    {
+        "step": 30,
+        "vision_center": 4.350836789304281e-08,
+        "sound_center": 6.15214858692115e-08,
+        "concept_score": 4.350836789304281e-08
+    },
+    {
+        "step": 31,
+        "vision_center": 7.752518490154646e-08,
+        "sound_center": 1.0950951375438738e-07,
+        "concept_score": 7.752518490154646e-08
+    },
+    {
+        "step": 32,
+        "vision_center": 1.344242700469312e-07,
+        "sound_center": 1.8976610344211442e-07,
+        "concept_score": 1.344242700469312e-07
+    },
+    {
+        "step": 33,
+        "vision_center": 2.273240731114585e-07,
+        "sound_center": 3.208211242748277e-07,
+        "concept_score": 2.273240731114585e-07
+    },
+    {
+        "step": 34,
+        "vision_center": 3.7565413824923445e-07,
+        "sound_center": 5.301445570230429e-07,
+        "concept_score": 3.7565413824923445e-07
+    },
+    {
+        "step": 35,
+        "vision_center": 6.076303191607342e-07,
+        "sound_center": 8.576550631298475e-07,
+        "concept_score": 6.076303191607342e-07
+    },
+    {
+        "step": 36,
+        "vision_center": 9.634782385473923e-07,
+        "sound_center": 1.3602710345259629e-06,
+        "concept_score": 9.634782385473923e-07
+    },
+    {
+        "step": 37,
+        "vision_center": 1.4995634091199152e-06,
+        "sound_center": 2.1177080124277897e-06,
+        "concept_score": 1.4995634091199152e-06
+    },
+    {
+        "step": 38,
+        "vision_center": 2.293605839073484e-06,
+        "sound_center": 3.239750600750189e-06,
+        "concept_score": 2.293605839073484e-06
+    },
+    {
+        "step": 39,
+        "vision_center": 3.4511684528780432e-06,
+        "sound_center": 4.875225040489362e-06,
+        "concept_score": 3.4511684528780432e-06
+    },
+    {
+        "step": 40,
+        "vision_center": 5.1136073582607306e-06,
+        "sound_center": 7.22289394783789e-06,
+        "concept_score": 5.1136073582607306e-06
+    },
+    {
+        "step": 41,
+        "vision_center": 7.467639970933443e-06,
+        "sound_center": 1.0544464980375358e-05,
+        "concept_score": 7.467639970933443e-06
+    },
+    {
+        "step": 42,
+        "vision_center": 1.0756657592119506e-05,
+        "sound_center": 1.5179845465055254e-05,
+        "concept_score": 1.0756657592119506e-05
+    },
+    {
+        "step": 43,
+        "vision_center": 1.5293870406991217e-05,
+        "sound_center": 2.1564721228439376e-05,
+        "concept_score": 1.5293870406991217e-05
+    },
+    {
+        "step": 44,
+        "vision_center": 2.1477327955777818e-05,
+        "sound_center": 3.0250505674440374e-05,
+        "concept_score": 2.1477327955777818e-05
+    },
+    {
+        "step": 45,
+        "vision_center": 2.9806818642283135e-05,
+        "sound_center": 4.1926679811529435e-05,
+        "concept_score": 2.9806818642283135e-05
+    },
+    {
+        "step": 46,
+        "vision_center": 4.090260940976908e-05,
+        "sound_center": 5.744548288616239e-05,
+        "concept_score": 4.090260940976908e-05
+    },
+    {
+        "step": 47,
+        "vision_center": 5.552588224734801e-05,
+        "sound_center": 7.784874158100303e-05,
+        "concept_score": 5.552588224734801e-05
+    },
+    {
+        "step": 48,
+        "vision_center": 7.460059019026818e-05,
+        "sound_center": 0.00010439615779080521,
+        "concept_score": 7.460059019026818e-05
+    },
+    {
+        "step": 49,
+        "vision_center": 9.92362034092487e-05,
+        "sound_center": 0.00013859417804590646,
+        "concept_score": 9.92362034092487e-05
+    },
+    {
+        "step": 50,
+        "vision_center": 0.00013075055121761846,
+        "sound_center": 0.0001822244095110896,
+        "concept_score": 0.00013075055121761846
+    },
+    {
+        "step": 51,
+        "vision_center": 0.00017069178905775278,
+        "sound_center": 0.00023737024465735884,
+        "concept_score": 0.00017069178905775278
+    },
+    {
+        "step": 52,
+        "vision_center": 0.0002208583269005245,
+        "sound_center": 0.0003064402182063945,
+        "concept_score": 0.0002208583269005245
+    },
+    {
+        "step": 53,
+        "vision_center": 0.0002833154148424137,
+        "sound_center": 0.00039218648197650817,
+        "concept_score": 0.0002833154148424137
+    },
+    {
+        "step": 54,
+        "vision_center": 0.00036040704336771104,
+        "sound_center": 0.0004977165220952018,
+        "concept_score": 0.00036040704336771104
+    },
+    {
+        "step": 55,
+        "vision_center": 0.00045476195893723016,
+        "sound_center": 0.0006264965173944397,
+        "concept_score": 0.00045476195893723016
+    },
+    {
+        "step": 56,
+        "vision_center": 0.0005692928042469365,
+        "sound_center": 0.0007823448476239219,
+        "concept_score": 0.0005692928042469365
+    },
+    {
+        "step": 57,
+        "vision_center": 0.0007071875461148734,
+        "sound_center": 0.0009694142323587331,
+        "concept_score": 0.0007071875461148734
+    },
+    {
+        "step": 58,
+        "vision_center": 0.0008718924974443638,
+        "sound_center": 0.001192161332905922,
+        "concept_score": 0.0008718924974443638
+    },
+    {
+        "step": 59,
+        "vision_center": 0.0010670862374998818,
+        "sound_center": 0.0014553028981454223,
+        "concept_score": 0.0010670862374998818
+    },
+    {
+        "step": 60,
+        "vision_center": 0.0012966430150707874,
+        "sound_center": 0.0017637579046374011,
+        "concept_score": 0.0012966430150707874
+    },
+    {
+        "step": 61,
+        "vision_center": 0.0015645850752476632,
+        "sound_center": 0.0021225753983597105,
+        "concept_score": 0.0015645850752476632
+    },
+    {
+        "step": 62,
+        "vision_center": 0.0018750246032380165,
+        "sound_center": 0.0025368476741737607,
+        "concept_score": 0.0018750246032380165
+    },
+    {
+        "step": 63,
+        "vision_center": 0.00223209576680695,
+        "sound_center": 0.0030116093310669574,
+        "concept_score": 0.00223209576680695
+    },
+    {
+        "step": 64,
+        "vision_center": 0.002639879045109731,
+        "sound_center": 0.0035517253827487914,
+        "concept_score": 0.002639879045109731
+    },
+    {
+        "step": 65,
+        "vision_center": 0.0031023200311478373,
+        "sound_center": 0.004161771274049576,
+        "concept_score": 0.0031023200311478373
+    },
+    {
+        "step": 66,
+        "vision_center": 0.003623144845637784,
+        "sound_center": 0.004845908473546092,
+        "concept_score": 0.003623144845637784
+    },
+    {
+        "step": 67,
+        "vision_center": 0.004205774940633479,
+        "sound_center": 0.005607760459854256,
+        "concept_score": 0.004205774940633479
+    },
+    {
+        "step": 68,
+        "vision_center": 0.0048532450223035435,
+        "sound_center": 0.006450296616296838,
+        "concept_score": 0.0048532450223035435
+    },
+    {
+        "step": 69,
+        "vision_center": 0.005568128838213799,
+        "sound_center": 0.007375732407796526,
+        "concept_score": 0.005568128838213799
+    },
+    {
+        "step": 70,
+        "vision_center": 0.006352476867715085,
+        "sound_center": 0.008385452711649713,
+        "concept_score": 0.006352476867715085
+    },
+    {
+        "step": 71,
+        "vision_center": 0.007207769673589146,
+        "sound_center": 0.009479963848001826,
+        "concept_score": 0.007207769673589146
+    },
+    {
+        "step": 72,
+        "vision_center": 0.008134890114982597,
+        "sound_center": 0.01065887721883615,
+        "concept_score": 0.008134890114982597
+    },
+    {
+        "step": 73,
+        "vision_center": 0.009134114197662876,
+        "sound_center": 0.011920927602699046,
+        "concept_score": 0.009134114197662876
+    },
+    {
+        "step": 74,
+        "vision_center": 0.010205123778405831,
+        "sound_center": 0.013264025467938624,
+        "concept_score": 0.010205123778405831
+    },
+    {
+        "step": 75,
+        "vision_center": 0.011347046898340738,
+        "sound_center": 0.014685341460931318,
+        "concept_score": 0.011347046898340738
+    },
+    {
+        "step": 76,
+        "vision_center": 0.012558525590724574,
+        "sound_center": 0.016181427074465706,
+        "concept_score": 0.012558525590724574
+    },
+    {
+        "step": 77,
+        "vision_center": 0.01383780807149022,
+        "sound_center": 0.01774837049520165,
+        "concept_score": 0.01383780807149022
+    },
+    {
+        "step": 78,
+        "vision_center": 0.015182862891131863,
+        "sound_center": 0.01938198440196304,
+        "concept_score": 0.015182862891131863
+    },
+    {
+        "step": 79,
+        "vision_center": 0.01659151348951481,
+        "sound_center": 0.02107802111581543,
+        "concept_score": 0.01659151348951481
+    },
+    {
+        "step": 80,
+        "vision_center": 0.018061588402473648,
+        "sound_center": 0.022832403900636462,
+        "concept_score": 0.018061588402473648
+    },
+    {
+        "step": 81,
+        "vision_center": 0.01959108317502588,
+        "sound_center": 0.02464145926265876,
+        "concept_score": 0.01959108317502588
+    },
+    {
+        "step": 82,
+        "vision_center": 0.02117831298112159,
+        "sound_center": 0.02650212701962745,
+        "concept_score": 0.02117831298112159
+    },
+    {
+        "step": 83,
+        "vision_center": 0.02282204613138462,
+        "sound_center": 0.028412127774136205,
+        "concept_score": 0.02282204613138462
+    },
+    {
+        "step": 84,
+        "vision_center": 0.02452161676985021,
+        "sound_center": 0.030370083672507982,
+        "concept_score": 0.02452161676985021
+    },
+    {
+        "step": 85,
+        "vision_center": 0.026277012624810518,
+        "sound_center": 0.032375592268050715,
+        "concept_score": 0.026277012624810518
+    },
+    {
+        "step": 86,
+        "vision_center": 0.028088921201662172,
+        "sound_center": 0.03442923273517897,
+        "concept_score": 0.028088921201662172
+    },
+    {
+        "step": 87,
+        "vision_center": 0.02995875655712623,
+        "sound_center": 0.03653250528168424,
+        "concept_score": 0.02995875655712623
+    },
+    {
+        "step": 88,
+        "vision_center": 0.03188866382484237,
+        "sound_center": 0.03868776386128683,
+        "concept_score": 0.03188866382484237
+    },
+    {
+        "step": 89,
+        "vision_center": 0.033881493817990695,
+        "sound_center": 0.04089813487766975,
+        "concept_score": 0.033881493817990695
+    },
+    {
+        "step": 90,
+        "vision_center": 0.035940730293128983,
+        "sound_center": 0.04316741640471613,
+        "concept_score": 0.035940730293128983
+    },
+    {
+        "step": 91,
+        "vision_center": 0.03807032496475969,
+        "sound_center": 0.04549998751050459,
+        "concept_score": 0.03807032496475969
+    },
+    {
+        "step": 92,
+        "vision_center": 0.040274573761295764,
+        "sound_center": 0.047900707023008776,
+        "concept_score": 0.040274573761295764
+    },
+    {
+        "step": 93,
+        "vision_center": 0.042558014389908236,
+        "sound_center": 0.05037468920112104,
+        "concept_score": 0.042558014389908236
+    },
+    {
+        "step": 94,
+        "vision_center": 0.044925332857989705,
+        "sound_center": 0.05292715847482722,
+        "concept_score": 0.044925332857989705
+    },
+    {
+        "step": 95,
+        "vision_center": 0.047381206815966685,
+        "sound_center": 0.05556331485577195,
+        "concept_score": 0.047381206815966685
+    },
+    {
+        "step": 96,
+        "vision_center": 0.049930086772123426,
+        "sound_center": 0.05828821865846376,
+        "concept_score": 0.049930086772123426
+    },
+    {
+        "step": 97,
+        "vision_center": 0.052575756355984174,
+        "sound_center": 0.06110655212417517,
+        "concept_score": 0.052575756355984174
+    },
+    {
+        "step": 98,
+        "vision_center": 0.05532130467918555,
+        "sound_center": 0.0640222508284458,
+        "concept_score": 0.05532130467918555
+    },
+    {
+        "step": 99,
+        "vision_center": 0.05816908945889474,
+        "sound_center": 0.06703856721386448,
+        "concept_score": 0.05816908945889474
+    },
+    {
+        "step": 100,
+        "vision_center": 0.06112069526145723,
+        "sound_center": 0.07015776959163264,
+        "concept_score": 0.06112069526145723
+    },
+    {
+        "step": 101,
+        "vision_center": 0.06417683181251205,
+        "sound_center": 0.07338069464835534,
+        "concept_score": 0.06417683181251205
+    },
+    {
+        "step": 102,
+        "vision_center": 0.06733728119151096,
+        "sound_center": 0.07670671368534082,
+        "concept_score": 0.06733728119151096
+    },
+    {
+        "step": 103,
+        "vision_center": 0.07060083629619274,
+        "sound_center": 0.08013392496143822,
+        "concept_score": 0.07060083629619274
+    },
+    {
+        "step": 104,
+        "vision_center": 0.0739648302086348,
+        "sound_center": 0.08365876971065583,
+        "concept_score": 0.0739648302086348
+    },
+    {
+        "step": 105,
+        "vision_center": 0.07742541968521803,
+        "sound_center": 0.08727535791569685,
+        "concept_score": 0.07742541968521803
+    },
+    {
+        "step": 106,
+        "vision_center": 0.08097742590564837,
+        "sound_center": 0.09097596644654422,
+        "concept_score": 0.08097742590564837
+    },
+    {
+        "step": 107,
+        "vision_center": 0.08461457351412963,
+        "sound_center": 0.09475126774467121,
+        "concept_score": 0.08461457351412963
+    },
+    {
+        "step": 108,
+        "vision_center": 0.08832935117044766,
+        "sound_center": 0.0985893601116552,
+        "concept_score": 0.08832935117044766
+    },
+    {
+        "step": 109,
+        "vision_center": 0.09211276815707505,
+        "sound_center": 0.10247624381387223,
+        "concept_score": 0.09211276815707505
+    },
+    {
+        "step": 110,
+        "vision_center": 0.09595402796447769,
+        "sound_center": 0.1063962325743615,
+        "concept_score": 0.09595402796447769
+    },
+    {
+        "step": 111,
+        "vision_center": 0.09983956599763892,
+        "sound_center": 0.11033110488750054,
+        "concept_score": 0.09983956599763892
+    },
+    {
+        "step": 112,
+        "vision_center": 0.10375370528271795,
+        "sound_center": 0.11425998432636983,
+        "concept_score": 0.10375370528271795
+    },
+    {
+        "step": 113,
+        "vision_center": 0.10767690153928207,
+        "sound_center": 0.11816140262763973,
+        "concept_score": 0.10767690153928207
+    },
+    {
+        "step": 114,
+        "vision_center": 0.11158897610792286,
+        "sound_center": 0.12201342200824092,
+        "concept_score": 0.11158897610792286
+    },
+    {
+        "step": 115,
+        "vision_center": 0.11546971283385425,
+        "sound_center": 0.1257938018639584,
+        "concept_score": 0.11546971283385425
+    },
+    {
+        "step": 116,
+        "vision_center": 0.11929872710479149,
+        "sound_center": 0.12947970966704198,
+        "concept_score": 0.11929872710479149
+    },
+    {
+        "step": 117,
+        "vision_center": 0.12305471085581886,
+        "sound_center": 0.13304186310456473,
+        "concept_score": 0.12305471085581886
+    },
+    {
+        "step": 118,
+        "vision_center": 0.12671619019360755,
+        "sound_center": 0.13645530537595058,
+        "concept_score": 0.12671619019360755
+    },
+    {
+        "step": 119,
+        "vision_center": 0.1302629107417394,
+        "sound_center": 0.1396972165221604,
+        "concept_score": 0.1302629107417394
+    },
+    {
+        "step": 120,
+        "vision_center": 0.13366927362493197,
+        "sound_center": 0.14274270128251923,
+        "concept_score": 0.13366927362493197
+    },
+    {
+        "step": 121,
+        "vision_center": 0.1369115519876502,
+        "sound_center": 0.1455691272760068,
+        "concept_score": 0.1369115519876502
+    },
+    {
+        "step": 122,
+        "vision_center": 0.1399684885285678,
+        "sound_center": 0.14815479593236192,
+        "concept_score": 0.1399684885285678
+    },
+    {
+        "step": 123,
+        "vision_center": 0.1428213792851912,
+        "sound_center": 0.15048161175819416,
+        "concept_score": 0.1428213792851912
+    },
+    {
+        "step": 124,
+        "vision_center": 0.14545203490545325,
+        "sound_center": 0.1525407873800297,
+        "concept_score": 0.14545203490545325
+    },
+    {
+        "step": 125,
+        "vision_center": 0.14784489714785537,
+        "sound_center": 0.15432812300547483,
+        "concept_score": 0.14784489714785537
+    },
+    {
+        "step": 126,
+        "vision_center": 0.14998519363826,
+        "sound_center": 0.15584250709151315,
+        "concept_score": 0.14998519363826
+    },
+    {
+        "step": 127,
+        "vision_center": 0.15186376632613724,
+        "sound_center": 0.15709048390519964,
+        "concept_score": 0.15186376632613724
+    },
+    {
+        "step": 128,
+        "vision_center": 0.15347160543769067,
+        "sound_center": 0.15807703416602278,
+        "concept_score": 0.15347160543769067
+    },
+    {
+        "step": 129,
+        "vision_center": 0.15480681926425913,
+        "sound_center": 0.15880734016705403,
+        "concept_score": 0.15480681926425913
+    },
+    {
+        "step": 130,
+        "vision_center": 0.15587084451917402,
+        "sound_center": 0.15928616922680264,
+        "concept_score": 0.15587084451917402
+    },
+    {
+        "step": 131,
+        "vision_center": 0.15667384948475932,
+        "sound_center": 0.15952071974100418,
+        "concept_score": 0.15667384948475932
+    },
+    {
+        "step": 132,
+        "vision_center": 0.15722559824315044,
+        "sound_center": 0.15951337318228,
+        "concept_score": 0.15722559824315044
+    },
+    {
+        "step": 133,
+        "vision_center": 0.1575371961399776,
+        "sound_center": 0.1592717663027931,
+        "concept_score": 0.1575371961399776
+    },
+    {
+        "step": 134,
+        "vision_center": 0.15762176131781674,
+        "sound_center": 0.15882665722256065,
+        "concept_score": 0.15762176131781674
+    },
+    {
+        "step": 135,
+        "vision_center": 0.15749567899705344,
+        "sound_center": 0.15820200710769386,
+        "concept_score": 0.15749567899705344
+    },
+    {
+        "step": 136,
+        "vision_center": 0.15717524376074696,
+        "sound_center": 0.157420700373184,
+        "concept_score": 0.15717524376074696
+    },
+    {
+        "step": 137,
+        "vision_center": 0.1566771339423393,
+        "sound_center": 0.15650463594952402,
+        "concept_score": 0.15650463594952402
+    },
+    {
+        "step": 138,
+        "vision_center": 0.1560135036692326,
+        "sound_center": 0.156016114950851,
+        "concept_score": 0.1560135036692326
+    },
+    {
+        "step": 139,
+        "vision_center": 0.15521712747378558,
+        "sound_center": 0.15622023054999248,
+        "concept_score": 0.15521712747378558
+    },
+    {
+        "step": 140,
+        "vision_center": 0.1543179752580889,
+        "sound_center": 0.1566967128921199,
+        "concept_score": 0.1543179752580889
+    },
+    {
+        "step": 141,
+        "vision_center": 0.15334340581628947,
+        "sound_center": 0.15727832828677502,
+        "concept_score": 0.15334340581628947
+    },
+    {
+        "step": 142,
+        "vision_center": 0.15231669840872186,
+        "sound_center": 0.15790057958419862,
+        "concept_score": 0.15231669840872186
+    },
+    {
+        "step": 143,
+        "vision_center": 0.151260821161191,
+        "sound_center": 0.15831158151714722,
+        "concept_score": 0.151260821161191
+    },
+    {
+        "step": 144,
+        "vision_center": 0.15020764251029112,
+        "sound_center": 0.15865422988578953,
+        "concept_score": 0.15020764251029112
+    },
+    {
+        "step": 145,
+        "vision_center": 0.14989371615734318,
+        "sound_center": 0.1589859338853255,
+        "concept_score": 0.14989371615734318
+    },
+    {
+        "step": 146,
+        "vision_center": 0.15022598582747154,
+        "sound_center": 0.15934252518023578,
+        "concept_score": 0.15022598582747154
+    },
+    {
+        "step": 147,
+        "vision_center": 0.15091901472544855,
+        "sound_center": 0.15975407865890082,
+        "concept_score": 0.15091901472544855
+    },
+    {
+        "step": 148,
+        "vision_center": 0.1518476108454321,
+        "sound_center": 0.16023628771136925,
+        "concept_score": 0.1518476108454321
+    },
+    {
+        "step": 149,
+        "vision_center": 0.1529701719631096,
+        "sound_center": 0.1608093730811737,
+        "concept_score": 0.1529701719631096
+    },
+    {
+        "step": 150,
+        "vision_center": 0.1542368310239058,
+        "sound_center": 0.16148427883493627,
+        "concept_score": 0.1542368310239058
+    },
+    {
+        "step": 151,
+        "vision_center": 0.15561826929857503,
+        "sound_center": 0.16221673463915176,
+        "concept_score": 0.15561826929857503
+    },
+    {
+        "step": 152,
+        "vision_center": 0.1571065157037779,
+        "sound_center": 0.16284789244896838,
+        "concept_score": 0.1571065157037779
+    },
+    {
+        "step": 153,
+        "vision_center": 0.15867784714139743,
+        "sound_center": 0.16354331646582776,
+        "concept_score": 0.15867784714139743
+    },
+    {
+        "step": 154,
+        "vision_center": 0.16033286160854088,
+        "sound_center": 0.16429931739807782,
+        "concept_score": 0.16033286160854088
+    },
+    {
+        "step": 155,
+        "vision_center": 0.16206345285193008,
+        "sound_center": 0.16512976237701016,
+        "concept_score": 0.16206345285193008
+    },
+    {
+        "step": 156,
+        "vision_center": 0.16386904549796347,
+        "sound_center": 0.16603569918047517,
+        "concept_score": 0.16386904549796347
+    },
+    {
+        "step": 157,
+        "vision_center": 0.1657463562933995,
+        "sound_center": 0.16701535143327653,
+        "concept_score": 0.1657463562933995
+    },
+    {
+        "step": 158,
+        "vision_center": 0.16762196889525177,
+        "sound_center": 0.1680820512916156,
+        "concept_score": 0.16762196889525177
+    },
+    {
+        "step": 159,
+        "vision_center": 0.16926566328804482,
+        "sound_center": 0.16922902723203298,
+        "concept_score": 0.16922902723203298
+    },
+    {
+        "step": 160,
+        "vision_center": 0.1707236352605159,
+        "sound_center": 0.17044451791687848,
+        "concept_score": 0.17044451791687848
+    },
+    {
+        "step": 161,
+        "vision_center": 0.17218048405010294,
+        "sound_center": 0.17172409691682958,
+        "concept_score": 0.17172409691682958
+    },
+    {
+        "step": 162,
+        "vision_center": 0.17367171629061184,
+        "sound_center": 0.1730561727059145,
+        "concept_score": 0.1730561727059145
+    },
+    {
+        "step": 163,
+        "vision_center": 0.17520533535712265,
+        "sound_center": 0.1744380517194439,
+        "concept_score": 0.1744380517194439
+    },
+    {
+        "step": 164,
+        "vision_center": 0.1767932216453139,
+        "sound_center": 0.17589415333189118,
+        "concept_score": 0.17589415333189118
+    },
+    {
+        "step": 165,
+        "vision_center": 0.17841840200796275,
+        "sound_center": 0.1774046077945786,
+        "concept_score": 0.1774046077945786
+    },
+    {
+        "step": 166,
+        "vision_center": 0.18007486093203395,
+        "sound_center": 0.1788184948653988,
+        "concept_score": 0.1788184948653988
+    },
+    {
+        "step": 167,
+        "vision_center": 0.18156716556895078,
+        "sound_center": 0.18014782727327058,
+        "concept_score": 0.18014782727327058
+    },
+    {
+        "step": 168,
+        "vision_center": 0.1829886349112335,
+        "sound_center": 0.18147737784568088,
+        "concept_score": 0.18147737784568088
+    },
+    {
+        "step": 169,
+        "vision_center": 0.18439316913344433,
+        "sound_center": 0.18280739618276107,
+        "concept_score": 0.18280739618276107
+    },
+    {
+        "step": 170,
+        "vision_center": 0.1857894795528287,
+        "sound_center": 0.18413004842773426,
+        "concept_score": 0.18413004842773426
+    },
+    {
+        "step": 171,
+        "vision_center": 0.18717574201717352,
+        "sound_center": 0.18541268840166847,
+        "concept_score": 0.18541268840166847
+    },
+    {
+        "step": 172,
+        "vision_center": 0.1885478423918602,
+        "sound_center": 0.18670073381002295,
+        "concept_score": 0.18670073381002295
+    },
+    {
+        "step": 173,
+        "vision_center": 0.1898999558208795,
+        "sound_center": 0.18798219705266475,
+        "concept_score": 0.18798219705266475
+    },
+    {
+        "step": 174,
+        "vision_center": 0.1912249418816006,
+        "sound_center": 0.18927466894435238,
+        "concept_score": 0.18927466894435238
+    },
+    {
+        "step": 175,
+        "vision_center": 0.1925151025185322,
+        "sound_center": 0.19055717588391913,
+        "concept_score": 0.19055717588391913
+    },
+    {
+        "step": 176,
+        "vision_center": 0.19375869316832922,
+        "sound_center": 0.19180951531932805,
+        "concept_score": 0.19180951531932805
+    },
+    {
+        "step": 177,
+        "vision_center": 0.19495082311421105,
+        "sound_center": 0.19303596620286206,
+        "concept_score": 0.19303596620286206
+    },
+    {
+        "step": 178,
+        "vision_center": 0.19609416106414107,
+        "sound_center": 0.1942140263344626,
+        "concept_score": 0.1942140263344626
+    },
+    {
+        "step": 179,
+        "vision_center": 0.19718624881886132,
+        "sound_center": 0.19533212272262915,
+        "concept_score": 0.19533212272262915
+    },
+    {
+        "step": 180,
+        "vision_center": 0.19820836284833013,
+        "sound_center": 0.19638068833435499,
+        "concept_score": 0.19638068833435499
+    },
+    {
+        "step": 181,
+        "vision_center": 0.19915287935544043,
+        "sound_center": 0.19735293993568992,
+        "concept_score": 0.19735293993568992
+    },
+    {
+        "step": 182,
+        "vision_center": 0.2000113344475034,
+        "sound_center": 0.19824200612163997,
+        "concept_score": 0.19824200612163997
+    },
+    {
+        "step": 183,
+        "vision_center": 0.20077840779091238,
+        "sound_center": 0.19903940095558414,
+        "concept_score": 0.19903940095558414
+    },
+    {
+        "step": 184,
+        "vision_center": 0.20145821711356843,
+        "sound_center": 0.19973895613134804,
+        "concept_score": 0.19973895613134804
+    },
+    {
+        "step": 185,
+        "vision_center": 0.20205918284574895,
+        "sound_center": 0.20033829628811148,
+        "concept_score": 0.20033829628811148
+    },
+    {
+        "step": 186,
+        "vision_center": 0.20255805085188208,
+        "sound_center": 0.20083414519356094,
+        "concept_score": 0.20083414519356094
+    },
+    {
+        "step": 187,
+        "vision_center": 0.20294631081617143,
+        "sound_center": 0.20122340186797427,
+        "concept_score": 0.20122340186797427
+    },
+    {
+        "step": 188,
+        "vision_center": 0.20322798748009446,
+        "sound_center": 0.20150470992378736,
+        "concept_score": 0.20150470992378736
+    },
+    {
+        "step": 189,
+        "vision_center": 0.20339807902335125,
+        "sound_center": 0.2016811494905448,
+        "concept_score": 0.2016811494905448
+    },
+    {
+        "step": 190,
+        "vision_center": 0.20346046651925123,
+        "sound_center": 0.2017539517120134,
+        "concept_score": 0.2017539517120134
+    },
+    {
+        "step": 191,
+        "vision_center": 0.20342922635420244,
+        "sound_center": 0.20172261586601511,
+        "concept_score": 0.20172261586601511
+    },
+    {
+        "step": 192,
+        "vision_center": 0.20330904134480682,
+        "sound_center": 0.2015844312631331,
+        "concept_score": 0.2015844312631331
+    },
+    {
+        "step": 193,
+        "vision_center": 0.20309458569756625,
+        "sound_center": 0.201348332471777,
+        "concept_score": 0.201348332471777
+    },
+    {
+        "step": 194,
+        "vision_center": 0.20278435038983175,
+        "sound_center": 0.20101935499731677,
+        "concept_score": 0.20101935499731677
+    },
+    {
+        "step": 195,
+        "vision_center": 0.20239133571981827,
+        "sound_center": 0.20060935468823385,
+        "concept_score": 0.20060935468823385
+    },
+    {
+        "step": 196,
+        "vision_center": 0.20192344905407925,
+        "sound_center": 0.20012930926226274,
+        "concept_score": 0.20012930926226274
+    },
+    {
+        "step": 197,
+        "vision_center": 0.2013895628021136,
+        "sound_center": 0.19958749519885022,
+        "concept_score": 0.19958749519885022
+    },
+    {
+        "step": 198,
+        "vision_center": 0.20079990328827638,
+        "sound_center": 0.1989910249521362,
+        "concept_score": 0.1989910249521362
+    },
+    {
+        "step": 199,
+        "vision_center": 0.20016674942013948,
+        "sound_center": 0.19837508654104782,
+        "concept_score": 0.19837508654104782
+    },
+    {
+        "step": 200,
+        "vision_center": 0.19950293845964767,
+        "sound_center": 0.19774021232749625,
+        "concept_score": 0.19774021232749625
+    },
+    {
+        "step": 201,
+        "vision_center": 0.1988682041987731,
+        "sound_center": 0.19715855138331956,
+        "concept_score": 0.19715855138331956
+    },
+    {
+        "step": 202,
+        "vision_center": 0.19824705479644966,
+        "sound_center": 0.19658550448258474,
+        "concept_score": 0.19658550448258474
+    },
+    {
+        "step": 203,
+        "vision_center": 0.19765387979222324,
+        "sound_center": 0.19604307330573453,
+        "concept_score": 0.19604307330573453
+    },
+    {
+        "step": 204,
+        "vision_center": 0.19709751371276782,
+        "sound_center": 0.1955428587909859,
+        "concept_score": 0.1955428587909859
+    },
+    {
+        "step": 205,
+        "vision_center": 0.19659615864209148,
+        "sound_center": 0.19509298847951234,
+        "concept_score": 0.19509298847951234
+    },
+    {
+        "step": 206,
+        "vision_center": 0.1961594925509458,
+        "sound_center": 0.1947038838201761,
+        "concept_score": 0.1947038838201761
+    },
+    {
+        "step": 207,
+        "vision_center": 0.195798745667628,
+        "sound_center": 0.1943877087204318,
+        "concept_score": 0.1943877087204318
+    },
+    {
+        "step": 208,
+        "vision_center": 0.19552513729916957,
+        "sound_center": 0.19415592216215152,
+        "concept_score": 0.19415592216215152
+    },
+    {
+        "step": 209,
+        "vision_center": 0.19535000669477717,
+        "sound_center": 0.1940202305654767,
+        "concept_score": 0.1940202305654767
+    },
+    {
+        "step": 210,
+        "vision_center": 0.19528321273377494,
+        "sound_center": 0.19399042885090376,
+        "concept_score": 0.19399042885090376
+    },
+    {
+        "step": 211,
+        "vision_center": 0.19533303435560168,
+        "sound_center": 0.19407493697503234,
+        "concept_score": 0.19407493697503234
+    },
+    {
+        "step": 212,
+        "vision_center": 0.19550397578166712,
+        "sound_center": 0.19427878749527622,
+        "concept_score": 0.19427878749527622
+    },
+    {
+        "step": 213,
+        "vision_center": 0.19579597531003656,
+        "sound_center": 0.19460172937209064,
+        "concept_score": 0.19460172937209064
+    },
+    {
+        "step": 214,
+        "vision_center": 0.19620787101269954,
+        "sound_center": 0.19504265713091679,
+        "concept_score": 0.19504265713091679
+    },
+    {
+        "step": 215,
+        "vision_center": 0.19673451646448648,
+        "sound_center": 0.19559640661850258,
+        "concept_score": 0.19559640661850258
+    },
+    {
+        "step": 216,
+        "vision_center": 0.19737147702910618,
+        "sound_center": 0.19625853330386886,
+        "concept_score": 0.19625853330386886
+    },
+    {
+        "step": 217,
+        "vision_center": 0.1981118690852632,
+        "sound_center": 0.19702215420865155,
+        "concept_score": 0.19702215420865155
+    },
+    {
+        "step": 218,
+        "vision_center": 0.19894983679378675,
+        "sound_center": 0.19788191959843193,
+        "concept_score": 0.19788191959843193
+    },
+    {
+        "step": 219,
+        "vision_center": 0.19987889150850682,
+        "sound_center": 0.19883119301783192,
+        "concept_score": 0.19883119301783192
+    },
+    {
+        "step": 220,
+        "vision_center": 0.20089235742043385,
+        "sound_center": 0.1998606299883017,
+        "concept_score": 0.1998606299883017
+    },
+    {
+        "step": 221,
+        "vision_center": 0.20198436211019005,
+        "sound_center": 0.20096352551155738,
+        "concept_score": 0.20096352551155738
+    },
+    {
+        "step": 222,
+        "vision_center": 0.20314888687574723,
+        "sound_center": 0.20213747868912793,
+        "concept_score": 0.20213747868912793
+    },
+    {
+        "step": 223,
+        "vision_center": 0.20437756203092808,
+        "sound_center": 0.20337690208908205,
+        "concept_score": 0.20337690208908205
+    },
+    {
+        "step": 224,
+        "vision_center": 0.20566735987422655,
+        "sound_center": 0.20467715824775845,
+        "concept_score": 0.20467715824775845
+    },
+    {
+        "step": 225,
+        "vision_center": 0.20701253909665446,
+        "sound_center": 0.206032933515855,
+        "concept_score": 0.206032933515855
+    },
+    {
+        "step": 226,
+        "vision_center": 0.20840892729093372,
+        "sound_center": 0.20743930119135948,
+        "concept_score": 0.20743930119135948
+    },
+    {
+        "step": 227,
+        "vision_center": 0.20985097739750105,
+        "sound_center": 0.20889170622550352,
+        "concept_score": 0.20889170622550352
+    },
+    {
+        "step": 228,
+        "vision_center": 0.2113343478147289,
+        "sound_center": 0.21038491416875457,
+        "concept_score": 0.21038491416875457
+    },
+    {
+        "step": 229,
+        "vision_center": 0.21285355126504726,
+        "sound_center": 0.21191336578354839,
+        "concept_score": 0.21191336578354839
+    },
+    {
+        "step": 230,
+        "vision_center": 0.21440299713009003,
+        "sound_center": 0.21347130012981388,
+        "concept_score": 0.21347130012981388
+    },
+    {
+        "step": 231,
+        "vision_center": 0.21597623846625869,
+        "sound_center": 0.215052630049124,
+        "concept_score": 0.215052630049124
+    },
+    {
+        "step": 232,
+        "vision_center": 0.21756471467970775,
+        "sound_center": 0.21665113323756444,
+        "concept_score": 0.21665113323756444
+    },
+    {
+        "step": 233,
+        "vision_center": 0.21916307624032189,
+        "sound_center": 0.2182600374138872,
+        "concept_score": 0.2182600374138872
+    },
+    {
+        "step": 234,
+        "vision_center": 0.2207636075387695,
+        "sound_center": 0.21987257440592767,
+        "concept_score": 0.21987257440592767
+    },
+    {
+        "step": 235,
+        "vision_center": 0.22236064334240147,
+        "sound_center": 0.22148130445410236,
+        "concept_score": 0.22148130445410236
+    },
+    {
+        "step": 236,
+        "vision_center": 0.22394629309094308,
+        "sound_center": 0.22307880379050857,
+        "concept_score": 0.22307880379050857
+    },
+    {
+        "step": 237,
+        "vision_center": 0.22551169813605945,
+        "sound_center": 0.22465685438790764,
+        "concept_score": 0.22465685438790764
+    },
+    {
+        "step": 238,
+        "vision_center": 0.2270481872167522,
+        "sound_center": 0.22620741606517672,
+        "concept_score": 0.22620741606517672
+    },
+    {
+        "step": 239,
+        "vision_center": 0.228546811650869,
+        "sound_center": 0.2277200271078796,
+        "concept_score": 0.2277200271078796
+    },
+    {
+        "step": 240,
+        "vision_center": 0.2299994178841345,
+        "sound_center": 0.2291873622279767,
+        "concept_score": 0.2291873622279767
+    },
+    {
+        "step": 241,
+        "vision_center": 0.23139821827701745,
+        "sound_center": 0.23060063864302782,
+        "concept_score": 0.23060063864302782
+    },
+    {
+        "step": 242,
+        "vision_center": 0.23273450841902274,
+        "sound_center": 0.23195200514342812,
+        "concept_score": 0.23195200514342812
+    },
+    {
+        "step": 243,
+        "vision_center": 0.23399993765549254,
+        "sound_center": 0.23323333775244434,
+        "concept_score": 0.23323333775244434
+    },
+    {
+        "step": 244,
+        "vision_center": 0.23518645216861883,
+        "sound_center": 0.2344372728370192,
+        "concept_score": 0.2344372728370192
+    },
+    {
+        "step": 245,
+        "vision_center": 0.23628659600422217,
+        "sound_center": 0.23555658463820361,
+        "concept_score": 0.23555658463820361
+    },
+    {
+        "step": 246,
+        "vision_center": 0.23729384284485744,
+        "sound_center": 0.2365849736866027,
+        "concept_score": 0.2365849736866027
+    },
+    {
+        "step": 247,
+        "vision_center": 0.2382022685161815,
+        "sound_center": 0.2375164198000513,
+        "concept_score": 0.2375164198000513
+    },
+    {
+        "step": 248,
+        "vision_center": 0.23900703814824334,
+        "sound_center": 0.23834248375615283,
+        "concept_score": 0.23834248375615283
+    },
+    {
+        "step": 249,
+        "vision_center": 0.23970433779122313,
+        "sound_center": 0.2390628326945389,
+        "concept_score": 0.2390628326945389
+    },
+    {
+        "step": 250,
+        "vision_center": 0.24029139890201592,
+        "sound_center": 0.23967427382423842,
+        "concept_score": 0.23967427382423842
+    },
+    {
+        "step": 251,
+        "vision_center": 0.24076678573056062,
+        "sound_center": 0.2401760587010216,
+        "concept_score": 0.2401760587010216
+    },
+    {
+        "step": 252,
+        "vision_center": 0.24113014930038207,
+        "sound_center": 0.24056773508471097,
+        "concept_score": 0.24056773508471097
+    },
+    {
+        "step": 253,
+        "vision_center": 0.241382512421095,
+        "sound_center": 0.2408504754373439,
+        "concept_score": 0.2408504754373439
+    },
+    {
+        "step": 254,
+        "vision_center": 0.2415258524997447,
+        "sound_center": 0.24102612717785515,
+        "concept_score": 0.24102612717785515
+    },
+    {
+        "step": 255,
+        "vision_center": 0.2415638697451201,
+        "sound_center": 0.24109794500818854,
+        "concept_score": 0.24109794500818854
+    },
+    {
+        "step": 256,
+        "vision_center": 0.24150130756142554,
+        "sound_center": 0.24107052172711851,
+        "concept_score": 0.24107052172711851
+    },
+    {
+        "step": 257,
+        "vision_center": 0.24134485384152013,
+        "sound_center": 0.2409493458174524,
+        "concept_score": 0.2409493458174524
+    },
+    {
+        "step": 258,
+        "vision_center": 0.2411019104297786,
+        "sound_center": 0.24073955085590085,
+        "concept_score": 0.24073955085590085
+    },
+    {
+        "step": 259,
+        "vision_center": 0.24078161431170425,
+        "sound_center": 0.24045301572438732,
+        "concept_score": 0.24045301572438732
+    },
+    {
+        "step": 260,
+        "vision_center": 0.2403937992737825,
+        "sound_center": 0.24009911880285179,
+        "concept_score": 0.24009911880285179
+    },
+    {
+        "step": 261,
+        "vision_center": 0.23994961391638595,
+        "sound_center": 0.23968925538580182,
+        "concept_score": 0.23968925538580182
+    },
+    {
+        "step": 262,
+        "vision_center": 0.2394609244340902,
+        "sound_center": 0.23923500736395503,
+        "concept_score": 0.23923500736395503
+    },
+    {
+        "step": 263,
+        "vision_center": 0.23894074146054367,
+        "sound_center": 0.23874912602147433,
+        "concept_score": 0.23874912602147433
+    },
+    {
+        "step": 264,
+        "vision_center": 0.23840260288311182,
+        "sound_center": 0.23824477512327544,
+        "concept_score": 0.23824477512327544
+    },
+    {
+        "step": 265,
+        "vision_center": 0.23786070662790032,
+        "sound_center": 0.2377358051689575,
+        "concept_score": 0.2377358051689575
+    },
+    {
+        "step": 266,
+        "vision_center": 0.23732967513379452,
+        "sound_center": 0.23723645332882495,
+        "concept_score": 0.23723645332882495
+    },
+    {
+        "step": 267,
+        "vision_center": 0.23682430077015781,
+        "sound_center": 0.23676142867772118,
+        "concept_score": 0.23676142867772118
+    },
+    {
+        "step": 268,
+        "vision_center": 0.2363595300616589,
+        "sound_center": 0.23632522893930505,
+        "concept_score": 0.23632522893930505
+    },
+    {
+        "step": 269,
+        "vision_center": 0.23595012420074774,
+        "sound_center": 0.23594210372591146,
+        "concept_score": 0.23594210372591146
+    },
+    {
+        "step": 270,
+        "vision_center": 0.23561050768925393,
+        "sound_center": 0.2356257833480075,
+        "concept_score": 0.23561050768925393
+    },
+    {
+        "step": 271,
+        "vision_center": 0.23535460577096187,
+        "sound_center": 0.23538869123731063,
+        "concept_score": 0.23535460577096187
+    },
+    {
+        "step": 272,
+        "vision_center": 0.2351958127477448,
+        "sound_center": 0.23524397793481583,
+        "concept_score": 0.2351958127477448
+    },
+    {
+        "step": 273,
+        "vision_center": 0.23514590849788714,
+        "sound_center": 0.23520368385734725,
+        "concept_score": 0.23514590849788714
+    },
+    {
+        "step": 274,
+        "vision_center": 0.2352147545931944,
+        "sound_center": 0.23527827821638084,
+        "concept_score": 0.2352147545931944
+    },
+    {
+        "step": 275,
+        "vision_center": 0.2354087652691079,
+        "sound_center": 0.23547458329102122,
+        "concept_score": 0.2354087652691079
+    },
+    {
+        "step": 276,
+        "vision_center": 0.23573032178578848,
+        "sound_center": 0.23579526878752183,
+        "concept_score": 0.23573032178578848
+    },
+    {
+        "step": 277,
+        "vision_center": 0.23617858724505536,
+        "sound_center": 0.23623975258684715,
+        "concept_score": 0.23617858724505536
+    },
+    {
+        "step": 278,
+        "vision_center": 0.23674222628442426,
+        "sound_center": 0.2368048559917242,
+        "concept_score": 0.23674222628442426
+    },
+    {
+        "step": 279,
+        "vision_center": 0.23741787237688752,
+        "sound_center": 0.2374854107524014,
+        "concept_score": 0.23741787237688752
+    },
+    {
+        "step": 280,
+        "vision_center": 0.23820127325363627,
+        "sound_center": 0.23827529340706138,
+        "concept_score": 0.23820127325363627
+    },
+    {
+        "step": 281,
+        "vision_center": 0.23908585842218294,
+        "sound_center": 0.239167443248632,
+        "concept_score": 0.23908585842218294
+    },
+    {
+        "step": 282,
+        "vision_center": 0.24006419774635232,
+        "sound_center": 0.2401541938689362,
+        "concept_score": 0.24006419774635232
+    },
+    {
+        "step": 283,
+        "vision_center": 0.24112892619651277,
+        "sound_center": 0.24122812988835632,
+        "concept_score": 0.24112892619651277
+    },
+    {
+        "step": 284,
+        "vision_center": 0.24227255884489737,
+        "sound_center": 0.24238196875466175,
+        "concept_score": 0.24227255884489737
+    },
+    {
+        "step": 285,
+        "vision_center": 0.24348795780923205,
+        "sound_center": 0.24360888743451733,
+        "concept_score": 0.24348795780923205
+    },
+    {
+        "step": 286,
+        "vision_center": 0.244768198309871,
+        "sound_center": 0.24490227858173588,
+        "concept_score": 0.244768198309871
+    },
+    {
+        "step": 287,
+        "vision_center": 0.24610687135710865,
+        "sound_center": 0.24625616080434806,
+        "concept_score": 0.24610687135710865
+    },
+    {
+        "step": 288,
+        "vision_center": 0.2474974996937152,
+        "sound_center": 0.24766430316360205,
+        "concept_score": 0.2474974996937152
+    },
+    {
+        "step": 289,
+        "vision_center": 0.24893418969538905,
+        "sound_center": 0.2491209952083484,
+        "concept_score": 0.24893418969538905
+    },
+    {
+        "step": 290,
+        "vision_center": 0.25041134204382626,
+        "sound_center": 0.2506207920999435,
+        "concept_score": 0.25041134204382626
+    },
+    {
+        "step": 291,
+        "vision_center": 0.25192352579719274,
+        "sound_center": 0.252158078605348,
+        "concept_score": 0.25192352579719274
+    },
+    {
+        "step": 292,
+        "vision_center": 0.2534649598743803,
+        "sound_center": 0.25372700886107175,
+        "concept_score": 0.2534649598743803
+    },
+    {
+        "step": 293,
+        "vision_center": 0.255029404953015,
+        "sound_center": 0.2553215261447756,
+        "concept_score": 0.255029404953015
+    },
+    {
+        "step": 294,
+        "vision_center": 0.2566106518003682,
+        "sound_center": 0.2569353041135037,
+        "concept_score": 0.2566106518003682
+    },
+    {
+        "step": 295,
+        "vision_center": 0.25820194734506813,
+        "sound_center": 0.258561588395198,
+        "concept_score": 0.25820194734506813
+    },
+    {
+        "step": 296,
+        "vision_center": 0.2597962847560827,
+        "sound_center": 0.2601931419628214,
+        "concept_score": 0.2597962847560827
+    },
+    {
+        "step": 297,
+        "vision_center": 0.26138630880411157,
+        "sound_center": 0.2618225448828482,
+        "concept_score": 0.26138630880411157
+    },
+    {
+        "step": 298,
+        "vision_center": 0.26296417278699147,
+        "sound_center": 0.26344180231872016,
+        "concept_score": 0.26296417278699147
+    },
+    {
+        "step": 299,
+        "vision_center": 0.2645218390607792,
+        "sound_center": 0.26504254269996624,
+        "concept_score": 0.2645218390607792
+    },
+    {
+        "step": 300,
+        "vision_center": 0.2660504316820813,
+        "sound_center": 0.26661550304362125,
+        "concept_score": 0.2660504316820813
+    },
+    {
+        "step": 301,
+        "vision_center": 0.26754131420967525,
+        "sound_center": 0.2681520252062902,
+        "concept_score": 0.26754131420967525
+    },
+    {
+        "step": 302,
+        "vision_center": 0.2689852138968181,
+        "sound_center": 0.2696427637923161,
+        "concept_score": 0.2689852138968181
+    },
+    {
+        "step": 303,
+        "vision_center": 0.27037321172907236,
+        "sound_center": 0.2710787354502341,
+        "concept_score": 0.27037321172907236
+    },
+    {
+        "step": 304,
+        "vision_center": 0.2716961092390363,
+        "sound_center": 0.2724505860095687,
+        "concept_score": 0.2716961092390363
+    },
+    {
+        "step": 305,
+        "vision_center": 0.2729452341860887,
+        "sound_center": 0.27374950900818246,
+        "concept_score": 0.2729452341860887
+    },
+    {
+        "step": 306,
+        "vision_center": 0.2741121284342576,
+        "sound_center": 0.2749664849311375,
+        "concept_score": 0.2741121284342576
+    },
+    {
+        "step": 307,
+        "vision_center": 0.27518864563802903,
+        "sound_center": 0.2760923345059456,
+        "concept_score": 0.27518864563802903
+    },
+    {
+        "step": 308,
+        "vision_center": 0.27616743828255325,
+        "sound_center": 0.2771191862016303,
+        "concept_score": 0.27616743828255325
+    },
+    {
+        "step": 309,
+        "vision_center": 0.27704174458851244,
+        "sound_center": 0.2780398112790517,
+        "concept_score": 0.27704174458851244
+    },
+    {
+        "step": 310,
+        "vision_center": 0.2778059910414082,
+        "sound_center": 0.27884823728603997,
+        "concept_score": 0.2778059910414082
+    },
+    {
+        "step": 311,
+        "vision_center": 0.27845552897501336,
+        "sound_center": 0.2795393339301636,
+        "concept_score": 0.27845552897501336
+    },
+    {
+        "step": 312,
+        "vision_center": 0.27898658104965485,
+        "sound_center": 0.2801090750114498,
+        "concept_score": 0.27898658104965485
+    },
+    {
+        "step": 313,
+        "vision_center": 0.2793961431627798,
+        "sound_center": 0.280554057530991,
+        "concept_score": 0.2793961431627798
+    },
+    {
+        "step": 314,
+        "vision_center": 0.27968294663779414,
+        "sound_center": 0.2808626301937742,
+        "concept_score": 0.27968294663779414
+    },
+    {
+        "step": 315,
+        "vision_center": 0.2798467997981406,
+        "sound_center": 0.2810332843847764,
+        "concept_score": 0.2798467997981406
+    },
+    {
+        "step": 316,
+        "vision_center": 0.2798892216647013,
+        "sound_center": 0.28107408132118933,
+        "concept_score": 0.2798892216647013
+    },
+    {
+        "step": 317,
+        "vision_center": 0.27981268936586245,
+        "sound_center": 0.28099016656650977,
+        "concept_score": 0.27981268936586245
+    },
+    {
+        "step": 318,
+        "vision_center": 0.2796216213546491,
+        "sound_center": 0.28078758268847437,
+        "concept_score": 0.2796216213546491
+    },
+    {
+        "step": 319,
+        "vision_center": 0.27932169856285516,
+        "sound_center": 0.28047316474115663,
+        "concept_score": 0.27932169856285516
+    },
+    {
+        "step": 320,
+        "vision_center": 0.27892045064330256,
+        "sound_center": 0.28005498942668666,
+        "concept_score": 0.27892045064330256
+    },
+    {
+        "step": 321,
+        "vision_center": 0.278426586332414,
+        "sound_center": 0.27954234867647715,
+        "concept_score": 0.278426586332414
+    },
+    {
+        "step": 322,
+        "vision_center": 0.2778506462284693,
+        "sound_center": 0.2789459860486405,
+        "concept_score": 0.2778506462284693
+    },
+    {
+        "step": 323,
+        "vision_center": 0.27720405673166326,
+        "sound_center": 0.2782777271881809,
+        "concept_score": 0.27720405673166326
+    },
+    {
+        "step": 324,
+        "vision_center": 0.2764995757040472,
+        "sound_center": 0.27755033765617054,
+        "concept_score": 0.2764995757040472
+    },
+    {
+        "step": 325,
+        "vision_center": 0.2757505556867843,
+        "sound_center": 0.276777649403694,
+        "concept_score": 0.2757505556867843
+    },
+    {
+        "step": 326,
+        "vision_center": 0.2749713620506816,
+        "sound_center": 0.2759743565172792,
+        "concept_score": 0.2749713620506816
+    },
+    {
+        "step": 327,
+        "vision_center": 0.27417686649638784,
+        "sound_center": 0.27515583876102484,
+        "concept_score": 0.27417686649638784
+    },
+    {
+        "step": 328,
+        "vision_center": 0.2733825049236127,
+        "sound_center": 0.2743379661602127,
+        "concept_score": 0.2733825049236127
+    },
+    {
+        "step": 329,
+        "vision_center": 0.2726039703524156,
+        "sound_center": 0.2735368777835766,
+        "concept_score": 0.2726039703524156
+    },
+    {
+        "step": 330,
+        "vision_center": 0.2718571603389957,
+        "sound_center": 0.2728605553078403,
+        "concept_score": 0.2718571603389957
+    },
+    {
+        "step": 331,
+        "vision_center": 0.27116921126562366,
+        "sound_center": 0.27227059942912635,
+        "concept_score": 0.27116921126562366
+    },
+    {
+        "step": 332,
+        "vision_center": 0.27062731524124084,
+        "sound_center": 0.2717376423360926,
+        "concept_score": 0.27062731524124084
+    },
+    {
+        "step": 333,
+        "vision_center": 0.27016160534760125,
+        "sound_center": 0.27126642022609154,
+        "concept_score": 0.27016160534760125
+    },
+    {
+        "step": 334,
+        "vision_center": 0.2697805892153806,
+        "sound_center": 0.2708708222087681,
+        "concept_score": 0.2697805892153806
+    },
+    {
+        "step": 335,
+        "vision_center": 0.2694924244418391,
+        "sound_center": 0.2705644028166673,
+        "concept_score": 0.2694924244418391
+    },
+    {
+        "step": 336,
+        "vision_center": 0.26930803038748263,
+        "sound_center": 0.2703599745696216,
+        "concept_score": 0.26930803038748263
+    },
+    {
+        "step": 337,
+        "vision_center": 0.26923725295256445,
+        "sound_center": 0.2702662554653877,
+        "concept_score": 0.26923725295256445
+    },
+    {
+        "step": 338,
+        "vision_center": 0.2692863369077357,
+        "sound_center": 0.27029187193482085,
+        "concept_score": 0.2692863369077357
+    },
+    {
+        "step": 339,
+        "vision_center": 0.26945733029314006,
+        "sound_center": 0.2704392716873148,
+        "concept_score": 0.26945733029314006
+    },
+    {
+        "step": 340,
+        "vision_center": 0.26974448552727065,
+        "sound_center": 0.2707083206821588,
+        "concept_score": 0.26974448552727065
+    },
+    {
+        "step": 341,
+        "vision_center": 0.2701445012028132,
+        "sound_center": 0.271095483854963,
+        "concept_score": 0.2701445012028132
+    },
+    {
+        "step": 342,
+        "vision_center": 0.2706536643870227,
+        "sound_center": 0.27159612248824816,
+        "concept_score": 0.2706536643870227
+    },
+    {
+        "step": 343,
+        "vision_center": 0.2712667191849526,
+        "sound_center": 0.27220370499116814,
+        "concept_score": 0.2712667191849526
+    },
+    {
+        "step": 344,
+        "vision_center": 0.27197784627662974,
+        "sound_center": 0.27291130622180826,
+        "concept_score": 0.27197784627662974
+    },
+    {
+        "step": 345,
+        "vision_center": 0.27278989517017344,
+        "sound_center": 0.2737114339437075,
+        "concept_score": 0.27278989517017344
+    },
+    {
+        "step": 346,
+        "vision_center": 0.27373132335621014,
+        "sound_center": 0.274597008786635,
+        "concept_score": 0.27373132335621014
+    },
+    {
+        "step": 347,
+        "vision_center": 0.2747678384761607,
+        "sound_center": 0.27560408282587917,
+        "concept_score": 0.2747678384761607
+    },
+    {
+        "step": 348,
+        "vision_center": 0.2758851851309282,
+        "sound_center": 0.2767073103479792,
+        "concept_score": 0.2758851851309282
+    },
+    {
+        "step": 349,
+        "vision_center": 0.27707198981945325,
+        "sound_center": 0.27788765178391267,
+        "concept_score": 0.27707198981945325
+    },
+    {
+        "step": 350,
+        "vision_center": 0.27832055706400766,
+        "sound_center": 0.2791334375031414,
+        "concept_score": 0.27832055706400766
+    },
+    {
+        "step": 351,
+        "vision_center": 0.27962272344296035,
+        "sound_center": 0.2804350169466363,
+        "concept_score": 0.27962272344296035
+    },
+    {
+        "step": 352,
+        "vision_center": 0.28097151492586714,
+        "sound_center": 0.281784415916893,
+        "concept_score": 0.28097151492586714
+    },
+    {
+        "step": 353,
+        "vision_center": 0.2823599081069584,
+        "sound_center": 0.28317417124317357,
+        "concept_score": 0.2823599081069584
+    },
+    {
+        "step": 354,
+        "vision_center": 0.28378152964754466,
+        "sound_center": 0.284597586617322,
+        "concept_score": 0.28378152964754466
+    },
+    {
+        "step": 355,
+        "vision_center": 0.2852298675280997,
+        "sound_center": 0.2860480029945184,
+        "concept_score": 0.2852298675280997
+    },
+    {
+        "step": 356,
+        "vision_center": 0.2866984561220757,
+        "sound_center": 0.28751877882237514,
+        "concept_score": 0.2866984561220757
+    },
+    {
+        "step": 357,
+        "vision_center": 0.28818053567989754,
+        "sound_center": 0.2890031616826405,
+        "concept_score": 0.28818053567989754
+    },
+    {
+        "step": 358,
+        "vision_center": 0.28966879202347606,
+        "sound_center": 0.290493963299478,
+        "concept_score": 0.28966879202347606
+    },
+    {
+        "step": 359,
+        "vision_center": 0.2911557686654944,
+        "sound_center": 0.2919836332787377,
+        "concept_score": 0.2911557686654944
+    },
+    {
+        "step": 360,
+        "vision_center": 0.2926336198447145,
+        "sound_center": 0.2934643086586981,
+        "concept_score": 0.2926336198447145
+    },
+    {
+        "step": 361,
+        "vision_center": 0.29409419959186506,
+        "sound_center": 0.2949277131451285,
+        "concept_score": 0.29409419959186506
+    },
+    {
+        "step": 362,
+        "vision_center": 0.295529081223101,
+        "sound_center": 0.29636537140927627,
+        "concept_score": 0.295529081223101
+    },
+    {
+        "step": 363,
+        "vision_center": 0.296929167521881,
+        "sound_center": 0.29776814095562526,
+        "concept_score": 0.296929167521881
+    },
+    {
+        "step": 364,
+        "vision_center": 0.2982854683420889,
+        "sound_center": 0.2991267549226358,
+        "concept_score": 0.2982854683420889
+    },
+    {
+        "step": 365,
+        "vision_center": 0.29958860422506406,
+        "sound_center": 0.30043163878790197,
+        "concept_score": 0.29958860422506406
+    },
+    {
+        "step": 366,
+        "vision_center": 0.3008293559969315,
+        "sound_center": 0.3016734174208402,
+        "concept_score": 0.3008293559969315
+    },
+    {
+        "step": 367,
+        "vision_center": 0.30199845443795403,
+        "sound_center": 0.3028427250337376,
+        "concept_score": 0.30199845443795403
+    },
+    {
+        "step": 368,
+        "vision_center": 0.3030871237782966,
+        "sound_center": 0.3039307149244311,
+        "concept_score": 0.3030871237782966
+    },
+    {
+        "step": 369,
+        "vision_center": 0.30408694078569093,
+        "sound_center": 0.3049289096317116,
+        "concept_score": 0.30408694078569093
+    },
+    {
+        "step": 370,
+        "vision_center": 0.30498978255401926,
+        "sound_center": 0.3058291479119784,
+        "concept_score": 0.30498978255401926
+    },
+    {
+        "step": 371,
+        "vision_center": 0.3057885336076241,
+        "sound_center": 0.30662431936799106,
+        "concept_score": 0.3057885336076241
+    },
+    {
+        "step": 372,
+        "vision_center": 0.30647672370790846,
+        "sound_center": 0.30730796930002846,
+        "concept_score": 0.30647672370790846
+    },
+    {
+        "step": 373,
+        "vision_center": 0.30704907630087225,
+        "sound_center": 0.307874993910643,
+        "concept_score": 0.30704907630087225
+    },
+    {
+        "step": 374,
+        "vision_center": 0.3075010506026402,
+        "sound_center": 0.30832101000257134,
+        "concept_score": 0.3075010506026402
+    },
+    {
+        "step": 375,
+        "vision_center": 0.30782978045857384,
+        "sound_center": 0.3086431614774966,
+        "concept_score": 0.30782978045857384
+    },
+    {
+        "step": 376,
+        "vision_center": 0.30803314768477175,
+        "sound_center": 0.30883915362827896,
+        "concept_score": 0.30803314768477175
+    },
+    {
+        "step": 377,
+        "vision_center": 0.3081109444342375,
+        "sound_center": 0.308908496288012,
+        "concept_score": 0.3081109444342375
+    },
+    {
+        "step": 378,
+        "vision_center": 0.308064027415262,
+        "sound_center": 0.3088517415165324,
+        "concept_score": 0.308064027415262
+    },
+    {
+        "step": 379,
+        "vision_center": 0.3078947897457226,
+        "sound_center": 0.3086711804008462,
+        "concept_score": 0.3078947897457226
+    },
+    {
+        "step": 380,
+        "vision_center": 0.3076064262754187,
+        "sound_center": 0.3083701013436095,
+        "concept_score": 0.3076064262754187
+    },
+    {
+        "step": 381,
+        "vision_center": 0.30720393849883687,
+        "sound_center": 0.30795367447567545,
+        "concept_score": 0.30720393849883687
+    },
+    {
+        "step": 382,
+        "vision_center": 0.3066937686196783,
+        "sound_center": 0.30742811962621774,
+        "concept_score": 0.3066937686196783
+    },
+    {
+        "step": 383,
+        "vision_center": 0.3060842858497451,
+        "sound_center": 0.3068016106822105,
+        "concept_score": 0.3060842858497451
+    },
+    {
+        "step": 384,
+        "vision_center": 0.3053876253902663,
+        "sound_center": 0.30615189743634197,
+        "concept_score": 0.3053876253902663
+    },
+    {
+        "step": 385,
+        "vision_center": 0.30463339194766487,
+        "sound_center": 0.3054904004186921,
+        "concept_score": 0.30463339194766487
+    },
+    {
+        "step": 386,
+        "vision_center": 0.30403661165678936,
+        "sound_center": 0.3047741748938013,
+        "concept_score": 0.30403661165678936
+    },
+    {
+        "step": 387,
+        "vision_center": 0.30342196201561633,
+        "sound_center": 0.3040061209348563,
+        "concept_score": 0.30342196201561633
+    },
+    {
+        "step": 388,
+        "vision_center": 0.30277510773314503,
+        "sound_center": 0.3031952278811235,
+        "concept_score": 0.30277510773314503
+    },
+    {
+        "step": 389,
+        "vision_center": 0.30209631043917456,
+        "sound_center": 0.3023535363981126,
+        "concept_score": 0.30209631043917456
+    },
+    {
+        "step": 390,
+        "vision_center": 0.301400412940327,
+        "sound_center": 0.3014978664510877,
+        "concept_score": 0.301400412940327
+    },
+    {
+        "step": 391,
+        "vision_center": 0.3006955675649124,
+        "sound_center": 0.30064377544808046,
+        "concept_score": 0.30064377544808046
+    },
+    {
+        "step": 392,
+        "vision_center": 0.2999954370374859,
+        "sound_center": 0.29987919093557286,
+        "concept_score": 0.29987919093557286
+    },
+    {
+        "step": 393,
+        "vision_center": 0.2993121113305117,
+        "sound_center": 0.29914052892886717,
+        "concept_score": 0.29914052892886717
+    },
+    {
+        "step": 394,
+        "vision_center": 0.298659368426778,
+        "sound_center": 0.2984383584936259,
+        "concept_score": 0.2984383584936259
+    },
+    {
+        "step": 395,
+        "vision_center": 0.2980501549893499,
+        "sound_center": 0.29778178121519167,
+        "concept_score": 0.29778178121519167
+    },
+    {
+        "step": 396,
+        "vision_center": 0.2974977312750096,
+        "sound_center": 0.2971848619643549,
+        "concept_score": 0.2971848619643549
+    },
+    {
+        "step": 397,
+        "vision_center": 0.29701467018085603,
+        "sound_center": 0.29665974487408603,
+        "concept_score": 0.29665974487408603
+    },
+    {
+        "step": 398,
+        "vision_center": 0.2966130214911237,
+        "sound_center": 0.29621888226823573,
+        "concept_score": 0.29621888226823573
+    },
+    {
+        "step": 399,
+        "vision_center": 0.29630344054923524,
+        "sound_center": 0.295872890789846,
+        "concept_score": 0.295872890789846
+    },
+    {
+        "step": 400,
+        "vision_center": 0.29609461739034765,
+        "sound_center": 0.29563065465354876,
+        "concept_score": 0.29563065465354876
+    },
+    {
+        "step": 401,
+        "vision_center": 0.2959916888767814,
+        "sound_center": 0.29549726134808235,
+        "concept_score": 0.29549726134808235
+    },
+    {
+        "step": 402,
+        "vision_center": 0.2959966592206341,
+        "sound_center": 0.2954747299194825,
+        "concept_score": 0.2954747299194825
+    },
+    {
+        "step": 403,
+        "vision_center": 0.29610940661225915,
+        "sound_center": 0.2955627926657039,
+        "concept_score": 0.2955627926657039
+    },
+    {
+        "step": 404,
+        "vision_center": 0.296327332487891,
+        "sound_center": 0.29575867953910173,
+        "concept_score": 0.29575867953910173
+    },
+    {
+        "step": 405,
+        "vision_center": 0.2966465097185889,
+        "sound_center": 0.2960586130308488,
+        "concept_score": 0.2960586130308488
+    },
+    {
+        "step": 406,
+        "vision_center": 0.29706156642375997,
+        "sound_center": 0.2964574813842169,
+        "concept_score": 0.2964574813842169
+    },
+    {
+        "step": 407,
+        "vision_center": 0.2975671874727135,
+        "sound_center": 0.2969496109748941,
+        "concept_score": 0.2969496109748941
+    },
+    {
+        "step": 408,
+        "vision_center": 0.29815761640259947,
+        "sound_center": 0.2975752822505999,
+        "concept_score": 0.2975752822505999
+    },
+    {
+        "step": 409,
+        "vision_center": 0.29882708430761656,
+        "sound_center": 0.29829515187533523,
+        "concept_score": 0.29829515187533523
+    },
+    {
+        "step": 410,
+        "vision_center": 0.29956972098439366,
+        "sound_center": 0.29909834519299333,
+        "concept_score": 0.29909834519299333
+    },
+    {
+        "step": 411,
+        "vision_center": 0.3003800055716345,
+        "sound_center": 0.299974848323398,
+        "concept_score": 0.299974848323398
+    },
+    {
+        "step": 412,
+        "vision_center": 0.30125263502796823,
+        "sound_center": 0.300917642820314,
+        "concept_score": 0.300917642820314
+    },
+    {
+        "step": 413,
+        "vision_center": 0.30218248901114303,
+        "sound_center": 0.3019203174846769,
+        "concept_score": 0.3019203174846769
+    },
+    {
+        "step": 414,
+        "vision_center": 0.30316463347251354,
+        "sound_center": 0.30297718405139196,
+        "concept_score": 0.30297718405139196
+    },
+    {
+        "step": 415,
+        "vision_center": 0.30420539003473634,
+        "sound_center": 0.3040930885336215,
+        "concept_score": 0.3040930885336215
+    },
+    {
+        "step": 416,
+        "vision_center": 0.30531762614958446,
+        "sound_center": 0.3052954679651687,
+        "concept_score": 0.3052954679651687
+    },
+    {
+        "step": 417,
+        "vision_center": 0.3064947973622662,
+        "sound_center": 0.30655119801307285,
+        "concept_score": 0.3064947973622662
+    },
+    {
+        "step": 418,
+        "vision_center": 0.3077520161447279,
+        "sound_center": 0.30784526560826586,
+        "concept_score": 0.3077520161447279
+    },
+    {
+        "step": 419,
+        "vision_center": 0.3090530708045393,
+        "sound_center": 0.3091665634652899,
+        "concept_score": 0.3090530708045393
+    },
+    {
+        "step": 420,
+        "vision_center": 0.310381705726694,
+        "sound_center": 0.310505864326628,
+        "concept_score": 0.310381705726694
+    },
+    {
+        "step": 421,
+        "vision_center": 0.3117247055557368,
+        "sound_center": 0.31185511588905057,
+        "concept_score": 0.3117247055557368
+    },
+    {
+        "step": 422,
+        "vision_center": 0.3130718343605163,
+        "sound_center": 0.31320585113528415,
+        "concept_score": 0.3130718343605163
+    },
+    {
+        "step": 423,
+        "vision_center": 0.31441367091483124,
+        "sound_center": 0.31455063696602076,
+        "concept_score": 0.31441367091483124
+    },
+    {
+        "step": 424,
+        "vision_center": 0.3157414189997526,
+        "sound_center": 0.3158810144306843,
+        "concept_score": 0.3157414189997526
+    },
+    {
+        "step": 425,
+        "vision_center": 0.3170459997724593,
+        "sound_center": 0.3171881142323269,
+        "concept_score": 0.3170459997724593
+    },
+    {
+        "step": 426,
+        "vision_center": 0.31831774536430185,
+        "sound_center": 0.3184622759375326,
+        "concept_score": 0.31831774536430185
+    },
+    {
+        "step": 427,
+        "vision_center": 0.31954700062347374,
+        "sound_center": 0.31969395679110546,
+        "concept_score": 0.31954700062347374
+    },
+    {
+        "step": 428,
+        "vision_center": 0.3207239829080534,
+        "sound_center": 0.3208733932732999,
+        "concept_score": 0.3207239829080534
+    },
+    {
+        "step": 429,
+        "vision_center": 0.321839013764412,
+        "sound_center": 0.3219909414596948,
+        "concept_score": 0.321839013764412
+    },
+    {
+        "step": 430,
+        "vision_center": 0.3228826177135575,
+        "sound_center": 0.3230370661060546,
+        "concept_score": 0.3228826177135575
+    },
+    {
+        "step": 431,
+        "vision_center": 0.323846115593192,
+        "sound_center": 0.32400155404910314,
+        "concept_score": 0.323846115593192
+    },
+    {
+        "step": 432,
+        "vision_center": 0.32472091113948187,
+        "sound_center": 0.32487600782047116,
+        "concept_score": 0.32472091113948187
+    },
+    {
+        "step": 433,
+        "vision_center": 0.3254987288363367,
+        "sound_center": 0.32565214004518167,
+        "concept_score": 0.3254987288363367
+    },
+    {
+        "step": 434,
+        "vision_center": 0.32617241218466275,
+        "sound_center": 0.3263230354248158,
+        "concept_score": 0.32617241218466275
+    },
+    {
+        "step": 435,
+        "vision_center": 0.3267354174088773,
+        "sound_center": 0.32688225671427407,
+        "concept_score": 0.3267354174088773
+    },
+    {
+        "step": 436,
+        "vision_center": 0.32718272945379584,
+        "sound_center": 0.32732486491868196,
+        "concept_score": 0.32718272945379584
+    },
+    {
+        "step": 437,
+        "vision_center": 0.32751001981697714,
+        "sound_center": 0.3276465415726566,
+        "concept_score": 0.32751001981697714
+    },
+    {
+        "step": 438,
+        "vision_center": 0.32771462764085485,
+        "sound_center": 0.32784459976951247,
+        "concept_score": 0.32771462764085485
+    },
+    {
+        "step": 439,
+        "vision_center": 0.3277945680128512,
+        "sound_center": 0.32791703806839345,
+        "concept_score": 0.3277945680128512
+    },
+    {
+        "step": 440,
+        "vision_center": 0.3277513564379515,
+        "sound_center": 0.32786381375672435,
+        "concept_score": 0.3277513564379515
+    },
+    {
+        "step": 441,
+        "vision_center": 0.3275868211753295,
+        "sound_center": 0.32768569726909486,
+        "concept_score": 0.3275868211753295
+    },
+    {
+        "step": 442,
+        "vision_center": 0.32739807143355715,
+        "sound_center": 0.3273857897304817,
+        "concept_score": 0.3273857897304817
+    },
+    {
+        "step": 443,
+        "vision_center": 0.3271225663296571,
+        "sound_center": 0.3269689717005037,
+        "concept_score": 0.3269689717005037
+    },
+    {
+        "step": 444,
+        "vision_center": 0.32674802488192556,
+        "sound_center": 0.32654908584244985,
+        "concept_score": 0.32654908584244985
+    },
+    {
+        "step": 445,
+        "vision_center": 0.3263004473365144,
+        "sound_center": 0.3260465200442607,
+        "concept_score": 0.3260465200442607
+    },
+    {
+        "step": 446,
+        "vision_center": 0.3258436623877342,
+        "sound_center": 0.3254598664655519,
+        "concept_score": 0.3254598664655519
+    },
+    {
+        "step": 447,
+        "vision_center": 0.3253025240792602,
+        "sound_center": 0.32478964809456073,
+        "concept_score": 0.32478964809456073
+    },
+    {
+        "step": 448,
+        "vision_center": 0.32469396267379086,
+        "sound_center": 0.32404482762678116,
+        "concept_score": 0.32404482762678116
+    },
+    {
+        "step": 449,
+        "vision_center": 0.3240223405354371,
+        "sound_center": 0.32323453977467254,
+        "concept_score": 0.32323453977467254
+    },
+    {
+        "step": 450,
+        "vision_center": 0.32329704340057763,
+        "sound_center": 0.3223783419977252,
+        "concept_score": 0.3223783419977252
+    },
+    {
+        "step": 451,
+        "vision_center": 0.3225283299811087,
+        "sound_center": 0.3215794042732841,
+        "concept_score": 0.3215794042732841
+    },
+    {
+        "step": 452,
+        "vision_center": 0.321727819131123,
+        "sound_center": 0.32074418548104205,
+        "concept_score": 0.32074418548104205
+    },
+    {
+        "step": 453,
+        "vision_center": 0.3209077929378823,
+        "sound_center": 0.31989434812230505,
+        "concept_score": 0.31989434812230505
+    },
+    {
+        "step": 454,
+        "vision_center": 0.32008062526698566,
+        "sound_center": 0.31903670690288355,
+        "concept_score": 0.31903670690288355
+    },
+    {
+        "step": 455,
+        "vision_center": 0.3192593067960032,
+        "sound_center": 0.31818655618733016,
+        "concept_score": 0.31818655618733016
+    },
+    {
+        "step": 456,
+        "vision_center": 0.31845752247828263,
+        "sound_center": 0.3173566184557457,
+        "concept_score": 0.3173566184557457
+    },
+    {
+        "step": 457,
+        "vision_center": 0.31768892081798045,
+        "sound_center": 0.3165611718359724,
+        "concept_score": 0.3165611718359724
+    },
+    {
+        "step": 458,
+        "vision_center": 0.31696707328118695,
+        "sound_center": 0.3158136463345749,
+        "concept_score": 0.3158136463345749
+    },
+    {
+        "step": 459,
+        "vision_center": 0.3163052094475572,
+        "sound_center": 0.3151276018891289,
+        "concept_score": 0.3151276018891289
+    },
+    {
+        "step": 460,
+        "vision_center": 0.31571603942231863,
+        "sound_center": 0.3145159593281075,
+        "concept_score": 0.3145159593281075
+    },
+    {
+        "step": 461,
+        "vision_center": 0.3152112497063822,
+        "sound_center": 0.3139907795407894,
+        "concept_score": 0.3139907795407894
+    },
+    {
+        "step": 462,
+        "vision_center": 0.3148011857237159,
+        "sound_center": 0.31356272957526,
+        "concept_score": 0.31356272957526
+    },
+    {
+        "step": 463,
+        "vision_center": 0.314493667338861,
+        "sound_center": 0.31323995309171887,
+        "concept_score": 0.31323995309171887
+    },
+    {
+        "step": 464,
+        "vision_center": 0.3142933277742881,
+        "sound_center": 0.3130272742787964,
+        "concept_score": 0.3130272742787964
+    },
+    {
+        "step": 465,
+        "vision_center": 0.31420128366275324,
+        "sound_center": 0.31292597752898904,
+        "concept_score": 0.31292597752898904
+    },
+    {
+        "step": 466,
+        "vision_center": 0.31421719588344676,
+        "sound_center": 0.31293577029559194,
+        "concept_score": 0.31293577029559194
+    },
+    {
+        "step": 467,
+        "vision_center": 0.3143377644402641,
+        "sound_center": 0.31305336926579236,
+        "concept_score": 0.31305336926579236
+    },
+    {
+        "step": 468,
+        "vision_center": 0.3145594096971526,
+        "sound_center": 0.3132750847998594,
+        "concept_score": 0.3132750847998594
+    },
+    {
+        "step": 469,
+        "vision_center": 0.3148769513471984,
+        "sound_center": 0.31359559110987617,
+        "concept_score": 0.31359559110987617
+    },
+    {
+        "step": 470,
+        "vision_center": 0.3152852661731566,
+        "sound_center": 0.31400953193439446,
+        "concept_score": 0.31400953193439446
+    },
+    {
+        "step": 471,
+        "vision_center": 0.31577866238563373,
+        "sound_center": 0.31451095772923005,
+        "concept_score": 0.31451095772923005
+    },
+    {
+        "step": 472,
+        "vision_center": 0.31635173095541286,
+        "sound_center": 0.31509415971657984,
+        "concept_score": 0.31509415971657984
+    },
+    {
+        "step": 473,
+        "vision_center": 0.31699895308048365,
+        "sound_center": 0.31575330860831546,
+        "concept_score": 0.31575330860831546
+    },
+    {
+        "step": 474,
+        "vision_center": 0.3177149967319069,
+        "sound_center": 0.31648268928434375,
+        "concept_score": 0.31648268928434375
+    },
+    {
+        "step": 475,
+        "vision_center": 0.3184946551708701,
+        "sound_center": 0.3173163030076056,
+        "concept_score": 0.3173163030076056
+    },
+    {
+        "step": 476,
+        "vision_center": 0.3193327627869867,
+        "sound_center": 0.31822815500476054,
+        "concept_score": 0.31822815500476054
+    },
+    {
+        "step": 477,
+        "vision_center": 0.3202242916834813,
+        "sound_center": 0.3192014501517042,
+        "concept_score": 0.3192014501517042
+    },
+    {
+        "step": 478,
+        "vision_center": 0.321164153644627,
+        "sound_center": 0.3202266206792559,
+        "concept_score": 0.3202266206792559
+    },
+    {
+        "step": 479,
+        "vision_center": 0.32214738318191666,
+        "sound_center": 0.32129711029811125,
+        "concept_score": 0.32129711029811125
+    },
+    {
+        "step": 480,
+        "vision_center": 0.32316888574085223,
+        "sound_center": 0.3224058541504186,
+        "concept_score": 0.3224058541504186
+    },
+    {
+        "step": 481,
+        "vision_center": 0.32422343597937103,
+        "sound_center": 0.32354653960486085,
+        "concept_score": 0.32354653960486085
+    },
+    {
+        "step": 482,
+        "vision_center": 0.3253300399764251,
+        "sound_center": 0.32472375682088844,
+        "concept_score": 0.32472375682088844
+    },
+    {
+        "step": 483,
+        "vision_center": 0.32648811714035286,
+        "sound_center": 0.3259519916768576,
+        "concept_score": 0.3259519916768576
+    },
+    {
+        "step": 484,
+        "vision_center": 0.32766938741505536,
+        "sound_center": 0.32720261425385166,
+        "concept_score": 0.32720261425385166
+    },
+    {
+        "step": 485,
+        "vision_center": 0.32886231278653,
+        "sound_center": 0.3284610942110586,
+        "concept_score": 0.3284610942110586
+    },
+    {
+        "step": 486,
+        "vision_center": 0.3300569773882279,
+        "sound_center": 0.329715418969377,
+        "concept_score": 0.329715418969377
+    },
+    {
+        "step": 487,
+        "vision_center": 0.3312445903800376,
+        "sound_center": 0.3309564320457656,
+        "concept_score": 0.3309564320457656
+    },
+    {
+        "step": 488,
+        "vision_center": 0.3324160731474374,
+        "sound_center": 0.33217432194009233,
+        "concept_score": 0.33217432194009233
+    },
+    {
+        "step": 489,
+        "vision_center": 0.33357990654457875,
+        "sound_center": 0.3333594475313273,
+        "concept_score": 0.3333594475313273
+    },
+    {
+        "step": 490,
+        "vision_center": 0.3347126770589949,
+        "sound_center": 0.3345020257552963,
+        "concept_score": 0.3345020257552963
+    },
+    {
+        "step": 491,
+        "vision_center": 0.3357996087069542,
+        "sound_center": 0.33559233293637725,
+        "concept_score": 0.33559233293637725
+    },
+    {
+        "step": 492,
+        "vision_center": 0.3368281333422714,
+        "sound_center": 0.33662061086040945,
+        "concept_score": 0.33662061086040945
+    },
+    {
+        "step": 493,
+        "vision_center": 0.3377875050259394,
+        "sound_center": 0.3375774835247086,
+        "concept_score": 0.3375774835247086
+    },
+    {
+        "step": 494,
+        "vision_center": 0.3386679275953486,
+        "sound_center": 0.33845398369116914,
+        "concept_score": 0.33845398369116914
+    },
+    {
+        "step": 495,
+        "vision_center": 0.339460444635801,
+        "sound_center": 0.3392416126702328,
+        "concept_score": 0.3392416126702328
+    },
+    {
+        "step": 496,
+        "vision_center": 0.34015661116990636,
+        "sound_center": 0.33993225532639115,
+        "concept_score": 0.33993225532639115
+    },
+    {
+        "step": 497,
+        "vision_center": 0.34076144391724406,
+        "sound_center": 0.34051892962967717,
+        "concept_score": 0.34051892962967717
+    },
+    {
+        "step": 498,
+        "vision_center": 0.3412873157433524,
+        "sound_center": 0.34099535166638983,
+        "concept_score": 0.34099535166638983
+    },
+    {
+        "step": 499,
+        "vision_center": 0.34171135994809276,
+        "sound_center": 0.34135659789592143,
+        "concept_score": 0.34135659789592143
+    },
+    {
+        "step": 500,
+        "vision_center": 0.3420281983869963,
+        "sound_center": 0.3415985341441688,
+        "concept_score": 0.3415985341441688
+    },
+    {
+        "step": 501,
+        "vision_center": 0.3422338100296717,
+        "sound_center": 0.3417185587077691,
+        "concept_score": 0.3417185587077691
+    },
+    {
+        "step": 502,
+        "vision_center": 0.34232600061459495,
+        "sound_center": 0.3417155192953611,
+        "concept_score": 0.3417155192953611
+    },
+    {
+        "step": 503,
+        "vision_center": 0.3423042626472768,
+        "sound_center": 0.34164463721854416,
+        "concept_score": 0.34164463721854416
+    },
+    {
+        "step": 504,
+        "vision_center": 0.3421723247579723,
+        "sound_center": 0.3414983300203702,
+        "concept_score": 0.3414983300203702
+    },
+    {
+        "step": 505,
+        "vision_center": 0.3420145732666666,
+        "sound_center": 0.3412473973824773,
+        "concept_score": 0.3412473973824773
+    },
+    {
+        "step": 506,
+        "vision_center": 0.34175188783443344,
+        "sound_center": 0.34088993886009666,
+        "concept_score": 0.34088993886009666
+    },
+    {
+        "step": 507,
+        "vision_center": 0.3413936687418993,
+        "sound_center": 0.34042839744382264,
+        "concept_score": 0.34042839744382264
+    },
+    {
+        "step": 508,
+        "vision_center": 0.3409391819568388,
+        "sound_center": 0.33986750068989846,
+        "concept_score": 0.33986750068989846
+    },
+    {
+        "step": 509,
+        "vision_center": 0.34039558171356615,
+        "sound_center": 0.33921410533106605,
+        "concept_score": 0.33921410533106605
+    },
+    {
+        "step": 510,
+        "vision_center": 0.3397690417134813,
+        "sound_center": 0.3385153613517462,
+        "concept_score": 0.3385153613517462
+    },
+    {
+        "step": 511,
+        "vision_center": 0.3390683980656438,
+        "sound_center": 0.33781294930539846,
+        "concept_score": 0.33781294930539846
+    },
+    {
+        "step": 512,
+        "vision_center": 0.3383028422580304,
+        "sound_center": 0.33704445395730853,
+        "concept_score": 0.33704445395730853
+    },
+    {
+        "step": 513,
+        "vision_center": 0.33748309741852583,
+        "sound_center": 0.33622749574746874,
+        "concept_score": 0.33622749574746874
+    },
+    {
+        "step": 514,
+        "vision_center": 0.3366204315332275,
+        "sound_center": 0.3353663828705788,
+        "concept_score": 0.3353663828705788
+    },
+    {
+        "step": 515,
+        "vision_center": 0.3357271006630522,
+        "sound_center": 0.3344750619454002,
+        "concept_score": 0.3344750619454002
+    },
+    {
+        "step": 516,
+        "vision_center": 0.33481581179683256,
+        "sound_center": 0.3335648154416775,
+        "concept_score": 0.3335648154416775
+    },
+    {
+        "step": 517,
+        "vision_center": 0.3338998525280925,
+        "sound_center": 0.3326495948459885,
+        "concept_score": 0.3326495948459885
+    },
+    {
+        "step": 518,
+        "vision_center": 0.33299274397706075,
+        "sound_center": 0.3317426299013,
+        "concept_score": 0.3317426299013
+    },
+    {
+        "step": 519,
+        "vision_center": 0.3321124565830804,
+        "sound_center": 0.3308579954824846,
+        "concept_score": 0.3308579954824846
+    },
+    {
+        "step": 520,
+        "vision_center": 0.33128033109887906,
+        "sound_center": 0.33000938072492286,
+        "concept_score": 0.33000938072492286
+    },
+    {
+        "step": 521,
+        "vision_center": 0.33050049186495833,
+        "sound_center": 0.3292105968663424,
+        "concept_score": 0.3292105968663424
+    },
+    {
+        "step": 522,
+        "vision_center": 0.32978498795303524,
+        "sound_center": 0.3284749714630441,
+        "concept_score": 0.3284749714630441
+    },
+    {
+        "step": 523,
+        "vision_center": 0.32914462135030603,
+        "sound_center": 0.32781548719441683,
+        "concept_score": 0.32781548719441683
+    },
+    {
+        "step": 524,
+        "vision_center": 0.32859055283297245,
+        "sound_center": 0.3272439326673302,
+        "concept_score": 0.3272439326673302
+    },
+    {
+        "step": 525,
+        "vision_center": 0.32813251879420113,
+        "sound_center": 0.3267708531867791,
+        "concept_score": 0.3267708531867791
+    },
+    {
+        "step": 526,
+        "vision_center": 0.32777768049762496,
+        "sound_center": 0.326403766489194,
+        "concept_score": 0.326403766489194
+    },
+    {
+        "step": 527,
+        "vision_center": 0.32753018269338297,
+        "sound_center": 0.32614719301597844,
+        "concept_score": 0.32614719301597844
+    },
+    {
+        "step": 528,
+        "vision_center": 0.3273907650921743,
+        "sound_center": 0.3260019954206929,
+        "concept_score": 0.3260019954206929
+    },
+    {
+        "step": 529,
+        "vision_center": 0.32735880025799374,
+        "sound_center": 0.3259677212497983,
+        "concept_score": 0.3259677212497983
+    },
+    {
+        "step": 530,
+        "vision_center": 0.3274308469486971,
+        "sound_center": 0.3260409100525463,
+        "concept_score": 0.3260409100525463
+    },
+    {
+        "step": 531,
+        "vision_center": 0.32760317810083156,
+        "sound_center": 0.32621786675240894,
+        "concept_score": 0.32621786675240894
+    },
+    {
+        "step": 532,
+        "vision_center": 0.32787067174049606,
+        "sound_center": 0.3264933634556443,
+        "concept_score": 0.3264933634556443
+    },
+    {
+        "step": 533,
+        "vision_center": 0.3282280693231329,
+        "sound_center": 0.3268620674407503,
+        "concept_score": 0.3268620674407503
+    },
+    {
+        "step": 534,
+        "vision_center": 0.32866985036070956,
+        "sound_center": 0.32731828948722536,
+        "concept_score": 0.32731828948722536
+    },
+    {
+        "step": 535,
+        "vision_center": 0.3291904636653586,
+        "sound_center": 0.3278563894718149,
+        "concept_score": 0.3278563894718149
+    },
+    {
+        "step": 536,
+        "vision_center": 0.3297845112612068,
+        "sound_center": 0.3284708031547054,
+        "concept_score": 0.3284708031547054
+    },
+    {
+        "step": 537,
+        "vision_center": 0.33044788945250736,
+        "sound_center": 0.32915589093057307,
+        "concept_score": 0.32915589093057307
+    },
+    {
+        "step": 538,
+        "vision_center": 0.33118213772466876,
+        "sound_center": 0.3299064106074306,
+        "concept_score": 0.3299064106074306
+    },
+    {
+        "step": 539,
+        "vision_center": 0.3319783627739537,
+        "sound_center": 0.33071690615269594,
+        "concept_score": 0.33071690615269594
+    },
+    {
+        "step": 540,
+        "vision_center": 0.3328309591474281,
+        "sound_center": 0.33158230505653397,
+        "concept_score": 0.33158230505653397
+    },
+    {
+        "step": 541,
+        "vision_center": 0.3337336233929012,
+        "sound_center": 0.33249722760190187,
+        "concept_score": 0.33249722760190187
+    },
+    {
+        "step": 542,
+        "vision_center": 0.33468106705754336,
+        "sound_center": 0.33348857546783356,
+        "concept_score": 0.33348857546783356
+    },
+    {
+        "step": 543,
+        "vision_center": 0.335668867994352,
+        "sound_center": 0.3345386304407179,
+        "concept_score": 0.3345386304407179
+    },
+    {
+        "step": 544,
+        "vision_center": 0.33669066786784746,
+        "sound_center": 0.335628311146853,
+        "concept_score": 0.335628311146853
+    },
+    {
+        "step": 545,
+        "vision_center": 0.33774080340061735,
+        "sound_center": 0.3367474699326108,
+        "concept_score": 0.3367474699326108
+    },
+    {
+        "step": 546,
+        "vision_center": 0.33881287751719513,
+        "sound_center": 0.3378877899693693,
+        "concept_score": 0.3378877899693693
+    },
+    {
+        "step": 547,
+        "vision_center": 0.33990044058269514,
+        "sound_center": 0.3390415208028554,
+        "concept_score": 0.3390415208028554
+    },
+    {
+        "step": 548,
+        "vision_center": 0.3409966402669711,
+        "sound_center": 0.34020110494498385,
+        "concept_score": 0.34020110494498385
+    },
+    {
+        "step": 549,
+        "vision_center": 0.3420942885132509,
+        "sound_center": 0.34136169950550893,
+        "concept_score": 0.34136169950550893
+    },
+    {
+        "step": 550,
+        "vision_center": 0.3431859741683343,
+        "sound_center": 0.3425358113973009,
+        "concept_score": 0.3425358113973009
+    },
+    {
+        "step": 551,
+        "vision_center": 0.3442637142130774,
+        "sound_center": 0.34369658949739756,
+        "concept_score": 0.34369658949739756
+    },
+    {
+        "step": 552,
+        "vision_center": 0.34531997382957597,
+        "sound_center": 0.34482932949550205,
+        "concept_score": 0.34482932949550205
+    },
+    {
+        "step": 553,
+        "vision_center": 0.34634618731569505,
+        "sound_center": 0.3459211432950544,
+        "concept_score": 0.3459211432950544
+    },
+    {
+        "step": 554,
+        "vision_center": 0.34733422998162383,
+        "sound_center": 0.34696126423245255,
+        "concept_score": 0.34696126423245255
+    },
+    {
+        "step": 555,
+        "vision_center": 0.3482750711626801,
+        "sound_center": 0.3479393448077575,
+        "concept_score": 0.3479393448077575
+    },
+    {
+        "step": 556,
+        "vision_center": 0.34916039393023496,
+        "sound_center": 0.34884565280491203,
+        "concept_score": 0.34884565280491203
+    },
+    {
+        "step": 557,
+        "vision_center": 0.3499819477213396,
+        "sound_center": 0.34967123874864325,
+        "concept_score": 0.34967123874864325
+    },
+    {
+        "step": 558,
+        "vision_center": 0.3507318472959887,
+        "sound_center": 0.3504073543554549,
+        "concept_score": 0.3504073543554549
+    },
+    {
+        "step": 559,
+        "vision_center": 0.3514026086006905,
+        "sound_center": 0.3510459706472896,
+        "concept_score": 0.3510459706472896
+    },
+    {
+        "step": 560,
+        "vision_center": 0.3519878845507713,
+        "sound_center": 0.3515800211917547,
+        "concept_score": 0.3515800211917547
+    },
+    {
+        "step": 561,
+        "vision_center": 0.35248175571793816,
+        "sound_center": 0.3520034451166815,
+        "concept_score": 0.3520034451166815
+    },
+    {
+        "step": 562,
+        "vision_center": 0.3528793750712622,
+        "sound_center": 0.35236291308941453,
+        "concept_score": 0.35236291308941453
+    },
+    {
+        "step": 563,
+        "vision_center": 0.3531770234956914,
+        "sound_center": 0.35262154128257334,
+        "concept_score": 0.35262154128257334
+    },
+    {
+        "step": 564,
+        "vision_center": 0.35337287161265996,
+        "sound_center": 0.35277151536661344,
+        "concept_score": 0.35277151536661344
+    },
+    {
+        "step": 565,
+        "vision_center": 0.35346400553872787,
+        "sound_center": 0.3528083995480037,
+        "concept_score": 0.3528083995480037
+    },
+    {
+        "step": 566,
+        "vision_center": 0.3534498742709268,
+        "sound_center": 0.35273159697389456,
+        "concept_score": 0.35273159697389456
+    },
+    {
+        "step": 567,
+        "vision_center": 0.3533302918529109,
+        "sound_center": 0.3525412059763285,
+        "concept_score": 0.3525412059763285
+    },
+    {
+        "step": 568,
+        "vision_center": 0.3531061381553808,
+        "sound_center": 0.35223901151201575,
+        "concept_score": 0.35223901151201575
+    },
+    {
+        "step": 569,
+        "vision_center": 0.35277869802099104,
+        "sound_center": 0.35182766306744123,
+        "concept_score": 0.35182766306744123
+    },
+    {
+        "step": 570,
+        "vision_center": 0.35235144778224103,
+        "sound_center": 0.35136027439828765,
+        "concept_score": 0.35136027439828765
+    },
+    {
+        "step": 571,
+        "vision_center": 0.35182877099417403,
+        "sound_center": 0.3508402400832708,
+        "concept_score": 0.3508402400832708
+    },
+    {
+        "step": 572,
+        "vision_center": 0.3512169203213198,
+        "sound_center": 0.35023160969086736,
+        "concept_score": 0.35023160969086736
+    },
+    {
+        "step": 573,
+        "vision_center": 0.3505231281380929,
+        "sound_center": 0.3495452044962792,
+        "concept_score": 0.3495452044962792
+    },
+    {
+        "step": 574,
+        "vision_center": 0.34975615818945405,
+        "sound_center": 0.3487852820749384,
+        "concept_score": 0.3487852820749384
+    },
+    {
+        "step": 575,
+        "vision_center": 0.3489256667978341,
+        "sound_center": 0.34796249123758183,
+        "concept_score": 0.34796249123758183
+    },
+    {
+        "step": 576,
+        "vision_center": 0.34804257618836903,
+        "sound_center": 0.347086804021728,
+        "concept_score": 0.347086804021728
+    },
+    {
+        "step": 577,
+        "vision_center": 0.3471184267469389,
+        "sound_center": 0.34617020601532017,
+        "concept_score": 0.34617020601532017
+    },
+    {
+        "step": 578,
+        "vision_center": 0.34616567525535935,
+        "sound_center": 0.34522492166456203,
+        "concept_score": 0.34522492166456203
+    },
+    {
+        "step": 579,
+        "vision_center": 0.3451972459899729,
+        "sound_center": 0.3442640646543371,
+        "concept_score": 0.3442640646543371
+    },
+    {
+        "step": 580,
+        "vision_center": 0.34422655552355336,
+        "sound_center": 0.34330065277686966,
+        "concept_score": 0.34330065277686966
+    },
+    {
+        "step": 581,
+        "vision_center": 0.34326700771149005,
+        "sound_center": 0.3423479448210307,
+        "concept_score": 0.3423479448210307
+    },
+    {
+        "step": 582,
+        "vision_center": 0.342332448368266,
+        "sound_center": 0.3414195435898062,
+        "concept_score": 0.3414195435898062
+    },
+    {
+        "step": 583,
+        "vision_center": 0.3414366245843277,
+        "sound_center": 0.3405291062200262,
+        "concept_score": 0.3405291062200262
+    },
+    {
+        "step": 584,
+        "vision_center": 0.3405932495655941,
+        "sound_center": 0.3396902228029023,
+        "concept_score": 0.3396902228029023
+    },
+    {
+        "step": 585,
+        "vision_center": 0.33981566560041643,
+        "sound_center": 0.33891621094668567,
+        "concept_score": 0.33891621094668567
+    },
+    {
+        "step": 586,
+        "vision_center": 0.3391167838522274,
+        "sound_center": 0.33821995244616854,
+        "concept_score": 0.33821995244616854
+    },
+    {
+        "step": 587,
+        "vision_center": 0.3385083122451436,
+        "sound_center": 0.3376131302349253,
+        "concept_score": 0.3376131302349253
+    },
+    {
+        "step": 588,
+        "vision_center": 0.33800056728088257,
+        "sound_center": 0.3371060837612744,
+        "concept_score": 0.3371060837612744
+    },
+    {
+        "step": 589,
+        "vision_center": 0.33760057458454584,
+        "sound_center": 0.33670580954276985,
+        "concept_score": 0.33670580954276985
+    },
+    {
+        "step": 590,
+        "vision_center": 0.3373123852281449,
+        "sound_center": 0.3364163487165643,
+        "concept_score": 0.3364163487165643
+    },
+    {
+        "step": 591,
+        "vision_center": 0.3371369250134871,
+        "sound_center": 0.33623858415298347,
+        "concept_score": 0.33623858415298347
+    },
+    {
+        "step": 592,
+        "vision_center": 0.33707328652363466,
+        "sound_center": 0.3361716231063374,
+        "concept_score": 0.3361716231063374
+    },
+    {
+        "step": 593,
+        "vision_center": 0.33711830634737233,
+        "sound_center": 0.33621230333609115,
+        "concept_score": 0.33621230333609115
+    },
+    {
+        "step": 594,
+        "vision_center": 0.33726797847659395,
+        "sound_center": 0.33635671544867146,
+        "concept_score": 0.33635671544867146
+    },
+    {
+        "step": 595,
+        "vision_center": 0.33751722126338785,
+        "sound_center": 0.3365999466003157,
+        "concept_score": 0.3365999466003157
+    },
+    {
+        "step": 596,
+        "vision_center": 0.3378605751274728,
+        "sound_center": 0.33693663512215166,
+        "concept_score": 0.33693663512215166
+    },
+    {
+        "step": 597,
+        "vision_center": 0.33829245401074326,
+        "sound_center": 0.3373613656800766,
+        "concept_score": 0.3373613656800766
+    },
+    {
+        "step": 598,
+        "vision_center": 0.3388071206346096,
+        "sound_center": 0.33786852348291757,
+        "concept_score": 0.33786852348291757
+    },
+    {
+        "step": 599,
+        "vision_center": 0.3393990101231892,
+        "sound_center": 0.3384524151563138,
+        "concept_score": 0.3384524151563138
+    },
+    {
+        "step": 600,
+        "vision_center": 0.3400624562606094,
+        "sound_center": 0.33910733089017475,
+        "concept_score": 0.33910733089017475
+    },
+    {
+        "step": 601,
+        "vision_center": 0.3407922120584224,
+        "sound_center": 0.3398280038126459,
+        "concept_score": 0.3398280038126459
+    },
+    {
+        "step": 602,
+        "vision_center": 0.34158273520782745,
+        "sound_center": 0.3406089137412226,
+        "concept_score": 0.3406089137412226
+    },
+    {
+        "step": 603,
+        "vision_center": 0.3424289266270843,
+        "sound_center": 0.3414449970122235,
+        "concept_score": 0.3414449970122235
+    },
+    {
+        "step": 604,
+        "vision_center": 0.3433253000095857,
+        "sound_center": 0.34233080661734644,
+        "concept_score": 0.34233080661734644
+    },
+    {
+        "step": 605,
+        "vision_center": 0.3442666863579424,
+        "sound_center": 0.3432613175358568,
+        "concept_score": 0.3432613175358568
+    },
+    {
+        "step": 606,
+        "vision_center": 0.3452475833718992,
+        "sound_center": 0.34424253277706257,
+        "concept_score": 0.34424253277706257
+    },
+    {
+        "step": 607,
+        "vision_center": 0.34626246742822714,
+        "sound_center": 0.34528878595946777,
+        "concept_score": 0.34528878595946777
+    },
+    {
+        "step": 608,
+        "vision_center": 0.34730548652037296,
+        "sound_center": 0.3463695980499386,
+        "concept_score": 0.3463695980499386
+    },
+    {
+        "step": 609,
+        "vision_center": 0.3483705516712741,
+        "sound_center": 0.34747454689038354,
+        "concept_score": 0.34747454689038354
+    },
+    {
+        "step": 610,
+        "vision_center": 0.34945118164454053,
+        "sound_center": 0.34859465374641696,
+        "concept_score": 0.34859465374641696
+    },
+    {
+        "step": 611,
+        "vision_center": 0.3505406503921831,
+        "sound_center": 0.34972140263590773,
+        "concept_score": 0.34972140263590773
+    },
+    {
+        "step": 612,
+        "vision_center": 0.35163173318170404,
+        "sound_center": 0.3508464418685774,
+        "concept_score": 0.3508464418685774
+    },
+    {
+        "step": 613,
+        "vision_center": 0.3527171033452532,
+        "sound_center": 0.3519614729792151,
+        "concept_score": 0.3519614729792151
+    },
+    {
+        "step": 614,
+        "vision_center": 0.3537886320397138,
+        "sound_center": 0.35305763629910764,
+        "concept_score": 0.35305763629910764
+    },
+    {
+        "step": 615,
+        "vision_center": 0.3548384780375008,
+        "sound_center": 0.3541263517649741,
+        "concept_score": 0.3541263517649741
+    },
+    {
+        "step": 616,
+        "vision_center": 0.3558580903552107,
+        "sound_center": 0.3551584944684156,
+        "concept_score": 0.3551584944684156
+    },
+    {
+        "step": 617,
+        "vision_center": 0.35683932034596244,
+        "sound_center": 0.35614530827005597,
+        "concept_score": 0.35614530827005597
+    },
+    {
+        "step": 618,
+        "vision_center": 0.3577735309327315,
+        "sound_center": 0.35707767707942356,
+        "concept_score": 0.35707767707942356
+    },
+    {
+        "step": 619,
+        "vision_center": 0.3586526664073654,
+        "sound_center": 0.35794689969595744,
+        "concept_score": 0.35794689969595744
+    },
+    {
+        "step": 620,
+        "vision_center": 0.3594688460138484,
+        "sound_center": 0.35874412278172496,
+        "concept_score": 0.35874412278172496
+    },
+    {
+        "step": 621,
+        "vision_center": 0.3602143267202646,
+        "sound_center": 0.3594611018023697,
+        "concept_score": 0.3594611018023697
+    },
+    {
+        "step": 622,
+        "vision_center": 0.3608819509091842,
+        "sound_center": 0.36009013450777444,
+        "concept_score": 0.36009013450777444
+    },
+    {
+        "step": 623,
+        "vision_center": 0.36146509245141867,
+        "sound_center": 0.3606243271358258,
+        "concept_score": 0.3606243271358258
+    },
+    {
+        "step": 624,
+        "vision_center": 0.36195811577343034,
+        "sound_center": 0.36105778989773246,
+        "concept_score": 0.36105778989773246
+    },
+    {
+        "step": 625,
+        "vision_center": 0.3623560007702456,
+        "sound_center": 0.36138545226026403,
+        "concept_score": 0.36138545226026403
+    },
+    {
+        "step": 626,
+        "vision_center": 0.36265489134546913,
+        "sound_center": 0.3616034113497585,
+        "concept_score": 0.3616034113497585
+    },
+    {
+        "step": 627,
+        "vision_center": 0.36285161031937735,
+        "sound_center": 0.36170860108637226,
+        "concept_score": 0.36170860108637226
+    },
+    {
+        "step": 628,
+        "vision_center": 0.36294455277127313,
+        "sound_center": 0.3616994582363593,
+        "concept_score": 0.3616994582363593
+    },
+    {
+        "step": 629,
+        "vision_center": 0.3629324614249145,
+        "sound_center": 0.3615754307763614,
+        "concept_score": 0.3615754307763614
+    },
+    {
+        "step": 630,
+        "vision_center": 0.3628123167063786,
+        "sound_center": 0.36133729478689236,
+        "concept_score": 0.36133729478689236
+    },
+    {
+        "step": 631,
+        "vision_center": 0.36258338298635057,
+        "sound_center": 0.3610432008803107,
+        "concept_score": 0.3610432008803107
+    },
+    {
+        "step": 632,
+        "vision_center": 0.3622480329201983,
+        "sound_center": 0.3606758918746764,
+        "concept_score": 0.3606758918746764
+    },
+    {
+        "step": 633,
+        "vision_center": 0.36180986537758963,
+        "sound_center": 0.360208872022159,
+        "concept_score": 0.360208872022159
+    },
+    {
+        "step": 634,
+        "vision_center": 0.3612738922801448,
+        "sound_center": 0.35964732313891823,
+        "concept_score": 0.35964732313891823
+    },
+    {
+        "step": 635,
+        "vision_center": 0.36064659305976476,
+        "sound_center": 0.3589960708497263,
+        "concept_score": 0.3589960708497263
+    },
+    {
+        "step": 636,
+        "vision_center": 0.35993505843425505,
+        "sound_center": 0.35826285803215857,
+        "concept_score": 0.35826285803215857
+    },
+    {
+        "step": 637,
+        "vision_center": 0.3591482565740406,
+        "sound_center": 0.35745641686058804,
+        "concept_score": 0.35745641686058804
+    },
+    {
+        "step": 638,
+        "vision_center": 0.35829595161527916,
+        "sound_center": 0.3565867426765324,
+        "concept_score": 0.3565867426765324
+    },
+    {
+        "step": 639,
+        "vision_center": 0.35738921109012867,
+        "sound_center": 0.3556648354452416,
+        "concept_score": 0.3556648354452416
+    },
+    {
+        "step": 640,
+        "vision_center": 0.3564398183899938,
+        "sound_center": 0.35470251595675034,
+        "concept_score": 0.35470251595675034
+    },
+    {
+        "step": 641,
+        "vision_center": 0.3554604285455763,
+        "sound_center": 0.35371238187543425,
+        "concept_score": 0.35371238187543425
+    },
+    {
+        "step": 642,
+        "vision_center": 0.35446421124539573,
+        "sound_center": 0.3527075625254175,
+        "concept_score": 0.3527075625254175
+    },
+    {
+        "step": 643,
+        "vision_center": 0.3534648344964262,
+        "sound_center": 0.35170167184372986,
+        "concept_score": 0.35170167184372986
+    },
+    {
+        "step": 644,
+        "vision_center": 0.3524762224636488,
+        "sound_center": 0.3507085692955727,
+        "concept_score": 0.3507085692955727
+    },
+    {
+        "step": 645,
+        "vision_center": 0.3515124644699154,
+        "sound_center": 0.3497422838256294,
+        "concept_score": 0.3497422838256294
+    },
+    {
+        "step": 646,
+        "vision_center": 0.35058761504319313,
+        "sound_center": 0.3488168033848722,
+        "concept_score": 0.3488168033848722
+    },
+    {
+        "step": 647,
+        "vision_center": 0.3497155701924293,
+        "sound_center": 0.34794596785641435,
+        "concept_score": 0.34794596785641435
+    },
+    {
+        "step": 648,
+        "vision_center": 0.34890989284681045,
+        "sound_center": 0.3471432821391446,
+        "concept_score": 0.3471432821391446
+    },
+    {
+        "step": 649,
+        "vision_center": 0.34818363414142656,
+        "sound_center": 0.3464217354335967,
+        "concept_score": 0.3464217354335967
+    },
+    {
+        "step": 650,
+        "vision_center": 0.34754858121077203,
+        "sound_center": 0.3457930214170198,
+        "concept_score": 0.3457930214170198
+    },
+    {
+        "step": 651,
+        "vision_center": 0.34701491585182437,
+        "sound_center": 0.3452672914170186,
+        "concept_score": 0.3452672914170186
+    },
+    {
+        "step": 652,
+        "vision_center": 0.346589416987907,
+        "sound_center": 0.34485116678745953,
+        "concept_score": 0.34485116678745953
+    },
+    {
+        "step": 653,
+        "vision_center": 0.34627571756431663,
+        "sound_center": 0.34454778603605996,
+        "concept_score": 0.34454778603605996
+    },
+    {
+        "step": 654,
+        "vision_center": 0.3460748942076938,
+        "sound_center": 0.3443576907022273,
+        "concept_score": 0.3443576907022273
+    },
+    {
+        "step": 655,
+        "vision_center": 0.345985629986704,
+        "sound_center": 0.3442791379025476,
+        "concept_score": 0.3442791379025476
+    },
+    {
+        "step": 656,
+        "vision_center": 0.34600509363592985,
+        "sound_center": 0.34430891666704116,
+        "concept_score": 0.34430891666704116
+    },
+    {
+        "step": 657,
+        "vision_center": 0.346129138116695,
+        "sound_center": 0.3444426066897595,
+        "concept_score": 0.3444426066897595
+    },
+    {
+        "step": 658,
+        "vision_center": 0.34635308996020403,
+        "sound_center": 0.3446752985935254,
+        "concept_score": 0.3446752985935254
+    },
+    {
+        "step": 659,
+        "vision_center": 0.34667151773576477,
+        "sound_center": 0.3450013977235157,
+        "concept_score": 0.3450013977235157
+    },
+    {
+        "step": 660,
+        "vision_center": 0.3470789389608624,
+        "sound_center": 0.34541549669789123,
+        "concept_score": 0.34541549669789123
+    },
+    {
+        "step": 661,
+        "vision_center": 0.34756967439405406,
+        "sound_center": 0.34591190720977544,
+        "concept_score": 0.34591190720977544
+    },
+    {
+        "step": 662,
+        "vision_center": 0.3481382629195397,
+        "sound_center": 0.3464851823507605,
+        "concept_score": 0.3464851823507605
+    },
+    {
+        "step": 663,
+        "vision_center": 0.3487791857394555,
+        "sound_center": 0.34712979801369703,
+        "concept_score": 0.34712979801369703
+    },
+    {
+        "step": 664,
+        "vision_center": 0.3494872409684035,
+        "sound_center": 0.3478405936600142,
+        "concept_score": 0.3478405936600142
+    },
+    {
+        "step": 665,
+        "vision_center": 0.3502569780362112,
+        "sound_center": 0.34861215433352005,
+        "concept_score": 0.34861215433352005
+    },
+    {
+        "step": 666,
+        "vision_center": 0.351083276635,
+        "sound_center": 0.3494394348527778,
+        "concept_score": 0.3494394348527778
+    },
+    {
+        "step": 667,
+        "vision_center": 0.3519606993158571,
+        "sound_center": 0.35031705463072843,
+        "concept_score": 0.35031705463072843
+    },
+    {
+        "step": 668,
+        "vision_center": 0.3528841675035136,
+        "sound_center": 0.3512399666452756,
+        "concept_score": 0.3512399666452756
+    },
+    {
+        "step": 669,
+        "vision_center": 0.35384824296703393,
+        "sound_center": 0.3522027279555876,
+        "concept_score": 0.3522027279555876
+    },
+    {
+        "step": 670,
+        "vision_center": 0.35484727472104155,
+        "sound_center": 0.3531997862046661,
+        "concept_score": 0.3531997862046661
+    },
+    {
+        "step": 671,
+        "vision_center": 0.355875360421188,
+        "sound_center": 0.3542253127063178,
+        "concept_score": 0.3542253127063178
+    },
+    {
+        "step": 672,
+        "vision_center": 0.3569262410272412,
+        "sound_center": 0.3552730946826663,
+        "concept_score": 0.3552730946826663
+    },
+    {
+        "step": 673,
+        "vision_center": 0.35799332388691174,
+        "sound_center": 0.35633654614495747,
+        "concept_score": 0.35633654614495747
+    },
+    {
+        "step": 674,
+        "vision_center": 0.359069737515885,
+        "sound_center": 0.3574087723340121,
+        "concept_score": 0.3574087723340121
+    },
+    {
+        "step": 675,
+        "vision_center": 0.36014809680330656,
+        "sound_center": 0.3584823663806086,
+        "concept_score": 0.3584823663806086
+    },
+    {
+        "step": 676,
+        "vision_center": 0.3612209360482284,
+        "sound_center": 0.359549817140077,
+        "concept_score": 0.359549817140077
+    },
+    {
+        "step": 677,
+        "vision_center": 0.3622799454185395,
+        "sound_center": 0.3606027829896686,
+        "concept_score": 0.3606027829896686
+    },
+    {
+        "step": 678,
+        "vision_center": 0.3633171809754933,
+        "sound_center": 0.36163327776833715,
+        "concept_score": 0.36163327776833715
+    },
+    {
+        "step": 679,
+        "vision_center": 0.3643239298067414,
+        "sound_center": 0.3626325533566402,
+        "concept_score": 0.3626325533566402
+    },
+    {
+        "step": 680,
+        "vision_center": 0.3652919085797121,
+        "sound_center": 0.36359229318995756,
+        "concept_score": 0.36359229318995756
+    },
+    {
+        "step": 681,
+        "vision_center": 0.36621236406109875,
+        "sound_center": 0.36450370149250144,
+        "concept_score": 0.36450370149250144
+    },
+    {
+        "step": 682,
+        "vision_center": 0.367077160216757,
+        "sound_center": 0.36535863637286237,
+        "concept_score": 0.36535863637286237
+    },
+    {
+        "step": 683,
+        "vision_center": 0.36787810662653514,
+        "sound_center": 0.36614879322650046,
+        "concept_score": 0.36614879322650046
+    },
+    {
+        "step": 684,
+        "vision_center": 0.36860734638541515,
+        "sound_center": 0.36686630333994796,
+        "concept_score": 0.36686630333994796
+    },
+    {
+        "step": 685,
+        "vision_center": 0.3692576529784509,
+        "sound_center": 0.3675039307989571,
+        "concept_score": 0.3675039307989571
+    },
+    {
+        "step": 686,
+        "vision_center": 0.3698222933874492,
+        "sound_center": 0.36805487291480254,
+        "concept_score": 0.36805487291480254
+    },
+    {
+        "step": 687,
+        "vision_center": 0.3702956697666382,
+        "sound_center": 0.36851346268761226,
+        "concept_score": 0.36851346268761226
+    },
+    {
+        "step": 688,
+        "vision_center": 0.3706665599682622,
+        "sound_center": 0.3688744831283697,
+        "concept_score": 0.3688744831283697
+    },
+    {
+        "step": 689,
+        "vision_center": 0.3709331459917295,
+        "sound_center": 0.36913377221454724,
+        "concept_score": 0.36913377221454724
+    },
+    {
+        "step": 690,
+        "vision_center": 0.3710913321984497,
+        "sound_center": 0.3692878594807408,
+        "concept_score": 0.3692878594807408
+    },
+    {
+        "step": 691,
+        "vision_center": 0.3711403873875037,
+        "sound_center": 0.3693350332664164,
+        "concept_score": 0.3693350332664164
+    },
+    {
+        "step": 692,
+        "vision_center": 0.3710790629539503,
+        "sound_center": 0.3692741021638288,
+        "concept_score": 0.3692741021638288
+    },
+    {
+        "step": 693,
+        "vision_center": 0.3709083243200958,
+        "sound_center": 0.3691055523898071,
+        "concept_score": 0.3691055523898071
+    },
+    {
+        "step": 694,
+        "vision_center": 0.3706289323462292,
+        "sound_center": 0.36883025067374875,
+        "concept_score": 0.36883025067374875
+    },
+    {
+        "step": 695,
+        "vision_center": 0.37024358484671577,
+        "sound_center": 0.36845081939825697,
+        "concept_score": 0.36845081939825697
+    },
+    {
+        "step": 696,
+        "vision_center": 0.369756028409804,
+        "sound_center": 0.3679711462036605,
+        "concept_score": 0.3679711462036605
+    },
+    {
+        "step": 697,
+        "vision_center": 0.36917150937448395,
+        "sound_center": 0.3673965133360529,
+        "concept_score": 0.3673965133360529
+    },
+    {
+        "step": 698,
+        "vision_center": 0.3684960474094476,
+        "sound_center": 0.3667284058520745,
+        "concept_score": 0.3667284058520745
+    },
+    {
+        "step": 699,
+        "vision_center": 0.36773730977455665,
+        "sound_center": 0.3659744846266476,
+        "concept_score": 0.3659744846266476
+    },
+    {
+        "step": 700,
+        "vision_center": 0.36690412273350825,
+        "sound_center": 0.36514367398818826,
+        "concept_score": 0.36514367398818826
+    },
+    {
+        "step": 701,
+        "vision_center": 0.3660065649422991,
+        "sound_center": 0.36424661734274677,
+        "concept_score": 0.36424661734274677
+    },
+    {
+        "step": 702,
+        "vision_center": 0.36505572826971566,
+        "sound_center": 0.3632948243415869,
+        "concept_score": 0.3632948243415869
+    },
+    {
+        "step": 703,
+        "vision_center": 0.36406360361861534,
+        "sound_center": 0.36230066967454194,
+        "concept_score": 0.36230066967454194
+    },
+    {
+        "step": 704,
+        "vision_center": 0.36304293523502396,
+        "sound_center": 0.36127720052885653,
+        "concept_score": 0.36127720052885653
+    },
+    {
+        "step": 705,
+        "vision_center": 0.36200705385580545,
+        "sound_center": 0.3602379785151537,
+        "concept_score": 0.3602379785151537
+    },
+    {
+        "step": 706,
+        "vision_center": 0.3609697427996306,
+        "sound_center": 0.3591969829431376,
+        "concept_score": 0.3591969829431376
+    },
+    {
+        "step": 707,
+        "vision_center": 0.35994506269691895,
+        "sound_center": 0.3581684189579905,
+        "concept_score": 0.3581684189579905
+    },
+    {
+        "step": 708,
+        "vision_center": 0.3589472350650318,
+        "sound_center": 0.35716661409222594,
+        "concept_score": 0.35716661409222594
+    },
+    {
+        "step": 709,
+        "vision_center": 0.3579904460159696,
+        "sound_center": 0.3562058292866266,
+        "concept_score": 0.3562058292866266
+    },
+    {
+        "step": 710,
+        "vision_center": 0.3570886932182531,
+        "sound_center": 0.3553001384467945,
+        "concept_score": 0.3553001384467945
+    },
+    {
+        "step": 711,
+        "vision_center": 0.35625562620994655,
+        "sound_center": 0.354463252241505,
+        "concept_score": 0.354463252241505
+    },
+    {
+        "step": 712,
+        "vision_center": 0.3555042710475882,
+        "sound_center": 0.3537082405485549,
+        "concept_score": 0.3537082405485549
+    },
+    {
+        "step": 713,
+        "vision_center": 0.35484637161690996,
+        "sound_center": 0.3530469072984354,
+        "concept_score": 0.3530469072984354
+    },
+    {
+        "step": 714,
+        "vision_center": 0.3542916872247933,
+        "sound_center": 0.35248910285495816,
+        "concept_score": 0.35248910285495816
+    },
+    {
+        "step": 715,
+        "vision_center": 0.35384665417565714,
+        "sound_center": 0.3520412685726754,
+        "concept_score": 0.3520412685726754
+    },
+    {
+        "step": 716,
+        "vision_center": 0.3535142957490968,
+        "sound_center": 0.35170645909485493,
+        "concept_score": 0.35170645909485493
+    },
+    {
+        "step": 717,
+        "vision_center": 0.35329559529021365,
+        "sound_center": 0.35148563266404037,
+        "concept_score": 0.35148563266404037
+    },
+    {
+        "step": 718,
+        "vision_center": 0.35318872776080323,
+        "sound_center": 0.35137695745833414,
+        "concept_score": 0.35137695745833414
+    },
+    {
+        "step": 719,
+        "vision_center": 0.35319092499503585,
+        "sound_center": 0.3513776222946533,
+        "concept_score": 0.3513776222946533
+    },
+    {
+        "step": 720,
+        "vision_center": 0.3532977794415413,
+        "sound_center": 0.35148318053642197,
+        "concept_score": 0.35148318053642197
+    },
+    {
+        "step": 721,
+        "vision_center": 0.3535046700342064,
+        "sound_center": 0.3516889512530243,
+        "concept_score": 0.3516889512530243
+    },
+    {
+        "step": 722,
+        "vision_center": 0.35380610413889046,
+        "sound_center": 0.35198936741606507,
+        "concept_score": 0.35198936741606507
+    },
+    {
+        "step": 723,
+        "vision_center": 0.35419684661654777,
+        "sound_center": 0.35237911078450307,
+        "concept_score": 0.35237911078450307
+    },
+    {
+        "step": 724,
+        "vision_center": 0.35467133608892154,
+        "sound_center": 0.35285252151996144,
+        "concept_score": 0.35285252151996144
+    },
+    {
+        "step": 725,
+        "vision_center": 0.355224178985243,
+        "sound_center": 0.35340410429162106,
+        "concept_score": 0.35340410429162106
+    },
+    {
+        "step": 726,
+        "vision_center": 0.35585000568996444,
+        "sound_center": 0.35402837022160666,
+        "concept_score": 0.35402837022160666
+    },
+    {
+        "step": 727,
+        "vision_center": 0.3565435800284233,
+        "sound_center": 0.35471997877544964,
+        "concept_score": 0.35471997877544964
+    },
+    {
+        "step": 728,
+        "vision_center": 0.35729962578430013,
+        "sound_center": 0.35547352156879947,
+        "concept_score": 0.35547352156879947
+    },
+    {
+        "step": 729,
+        "vision_center": 0.3581129580182765,
+        "sound_center": 0.35628370687784205,
+        "concept_score": 0.35628370687784205
+    },
+    {
+        "step": 730,
+        "vision_center": 0.3589783139171828,
+        "sound_center": 0.35714512736597404,
+        "concept_score": 0.35714512736597404
+    },
+    {
+        "step": 731,
+        "vision_center": 0.3598905000949676,
+        "sound_center": 0.35805247210257174,
+        "concept_score": 0.35805247210257174
+    },
+    {
+        "step": 732,
+        "vision_center": 0.36084407657745193,
+        "sound_center": 0.3590001727981431,
+        "concept_score": 0.3590001727981431
+    },
+    {
+        "step": 733,
+        "vision_center": 0.3618326284840039,
+        "sound_center": 0.35998241130048886,
+        "concept_score": 0.35998241130048886
+    },
+    {
+        "step": 734,
+        "vision_center": 0.36284980538020206,
+        "sound_center": 0.3609931786739212,
+        "concept_score": 0.3609931786739212
+    },
+    {
+        "step": 735,
+        "vision_center": 0.3638888232721771,
+        "sound_center": 0.36202601332521706,
+        "concept_score": 0.36202601332521706
+    },
+    {
+        "step": 736,
+        "vision_center": 0.36494277589087565,
+        "sound_center": 0.3630742024722859,
+        "concept_score": 0.3630742024722859
+    },
+    {
+        "step": 737,
+        "vision_center": 0.3660044338682416,
+        "sound_center": 0.3641306537744396,
+        "concept_score": 0.3641306537744396
+    },
+    {
+        "step": 738,
+        "vision_center": 0.3670661985644283,
+        "sound_center": 0.3651878461247191,
+        "concept_score": 0.3651878461247191
+    },
+    {
+        "step": 739,
+        "vision_center": 0.3681202857500586,
+        "sound_center": 0.3662380132123354,
+        "concept_score": 0.3662380132123354
+    },
+    {
+        "step": 740,
+        "vision_center": 0.3691582770399816,
+        "sound_center": 0.3672727398015228,
+        "concept_score": 0.3672727398015228
+    },
+    {
+        "step": 741,
+        "vision_center": 0.3701719562016172,
+        "sound_center": 0.36828377669275003,
+        "concept_score": 0.36828377669275003
+    },
+    {
+        "step": 742,
+        "vision_center": 0.37115256125713103,
+        "sound_center": 0.3692623225227022,
+        "concept_score": 0.3692623225227022
+    },
+    {
+        "step": 743,
+        "vision_center": 0.37209153589946203,
+        "sound_center": 0.3701997529542344,
+        "concept_score": 0.3701997529542344
+    },
+    {
+        "step": 744,
+        "vision_center": 0.3729801353251228,
+        "sound_center": 0.37108725733814146,
+        "concept_score": 0.37108725733814146
+    },
+    {
+        "step": 745,
+        "vision_center": 0.37381001450190227,
+        "sound_center": 0.3719164074442642,
+        "concept_score": 0.3719164074442642
+    },
+    {
+        "step": 746,
+        "vision_center": 0.3745729526655252,
+        "sound_center": 0.3726789062588398,
+        "concept_score": 0.3726789062588398
+    },
+    {
+        "step": 747,
+        "vision_center": 0.3752609119099507,
+        "sound_center": 0.37336662654629854,
+        "concept_score": 0.37336662654629854
+    },
+    {
+        "step": 748,
+        "vision_center": 0.37586671248553566,
+        "sound_center": 0.373972317934968,
+        "concept_score": 0.373972317934968
+    },
+    {
+        "step": 749,
+        "vision_center": 0.3763834926328837,
+        "sound_center": 0.37448903884778545,
+        "concept_score": 0.37448903884778545
+    },
+    {
+        "step": 750,
+        "vision_center": 0.3768056715309761,
+        "sound_center": 0.3749111201473465,
+        "concept_score": 0.3749111201473465
+    },
+    {
+        "step": 751,
+        "vision_center": 0.377127990335636,
+        "sound_center": 0.3752332200778144,
+        "concept_score": 0.3752332200778144
+    },
+    {
+        "step": 752,
+        "vision_center": 0.37734676007968115,
+        "sound_center": 0.3754515336695986,
+        "concept_score": 0.3754515336695986
+    },
+    {
+        "step": 753,
+        "vision_center": 0.37745848956843303,
+        "sound_center": 0.37556247643186613,
+        "concept_score": 0.37556247643186613
+    },
+    {
+        "step": 754,
+        "vision_center": 0.3774619570298718,
+        "sound_center": 0.37556459240647455,
+        "concept_score": 0.37556459240647455
+    },
+    {
+        "step": 755,
+        "vision_center": 0.3773558631442419,
+        "sound_center": 0.3754564979501297,
+        "concept_score": 0.3754564979501297
+    },
+    {
+        "step": 756,
+        "vision_center": 0.37714108243828726,
+        "sound_center": 0.3752388473963419,
+        "concept_score": 0.3752388473963419
+    },
+    {
+        "step": 757,
+        "vision_center": 0.37681817627939307,
+        "sound_center": 0.3749122440040066,
+        "concept_score": 0.3749122440040066
+    },
+    {
+        "step": 758,
+        "vision_center": 0.376389955012255,
+        "sound_center": 0.37447943060561706,
+        "concept_score": 0.37447943060561706
+    },
+    {
+        "step": 759,
+        "vision_center": 0.37586007952023487,
+        "sound_center": 0.37394411422206125,
+        "concept_score": 0.37394411422206125
+    },
+    {
+        "step": 760,
+        "vision_center": 0.3752338443017169,
+        "sound_center": 0.37331164573660575,
+        "concept_score": 0.37331164573660575
+    },
+    {
+        "step": 761,
+        "vision_center": 0.37451787157028954,
+        "sound_center": 0.3725886788479551,
+        "concept_score": 0.3725886788479551
+    },
+    {
+        "step": 762,
+        "vision_center": 0.37372002630057033,
+        "sound_center": 0.37178318193512383,
+        "concept_score": 0.37178318193512383
+    },
+    {
+        "step": 763,
+        "vision_center": 0.3728494812456009,
+        "sound_center": 0.3709043811995548,
+        "concept_score": 0.3709043811995548
+    },
+    {
+        "step": 764,
+        "vision_center": 0.3719164010997703,
+        "sound_center": 0.3699625758369119,
+        "concept_score": 0.3699625758369119
+    },
+    {
+        "step": 765,
+        "vision_center": 0.3709320440064051,
+        "sound_center": 0.36896912609649696,
+        "concept_score": 0.36896912609649696
+    },
+    {
+        "step": 766,
+        "vision_center": 0.36990841999709867,
+        "sound_center": 0.367936208427568,
+        "concept_score": 0.367936208427568
+    },
+    {
+        "step": 767,
+        "vision_center": 0.36885834142035057,
+        "sound_center": 0.3668767902892808,
+        "concept_score": 0.3668767902892808
+    },
+    {
+        "step": 768,
+        "vision_center": 0.3677951261580078,
+        "sound_center": 0.36580438524289854,
+        "concept_score": 0.36580438524289854
+    },
+    {
+        "step": 769,
+        "vision_center": 0.3667325699872497,
+        "sound_center": 0.3647329852589088,
+        "concept_score": 0.3647329852589088
+    },
+    {
+        "step": 770,
+        "vision_center": 0.36568469449628405,
+        "sound_center": 0.36367683718872806,
+        "concept_score": 0.36367683718872806
+    },
+    {
+        "step": 771,
+        "vision_center": 0.36466566640934966,
+        "sound_center": 0.3626503376604258,
+        "concept_score": 0.3626503376604258
+    },
+    {
+        "step": 772,
+        "vision_center": 0.36368958323765166,
+        "sound_center": 0.3616678326610388,
+        "concept_score": 0.3616678326610388
+    },
+    {
+        "step": 773,
+        "vision_center": 0.362770358928776,
+        "sound_center": 0.3607434894987514,
+        "concept_score": 0.3607434894987514
+    },
+    {
+        "step": 774,
+        "vision_center": 0.36192153040257374,
+        "sound_center": 0.35989111863757306,
+        "concept_score": 0.35989111863757306
+    },
+    {
+        "step": 775,
+        "vision_center": 0.3611558982737323,
+        "sound_center": 0.3591237348029899,
+        "concept_score": 0.3591237348029899
+    },
+    {
+        "step": 776,
+        "vision_center": 0.36048502626088735,
+        "sound_center": 0.35845318781944896,
+        "concept_score": 0.35845318781944896
+    },
+    {
+        "step": 777,
+        "vision_center": 0.35991806528790166,
+        "sound_center": 0.35788894209030947,
+        "concept_score": 0.35788894209030947
+    },
+    {
+        "step": 778,
+        "vision_center": 0.3594609824258131,
+        "sound_center": 0.357437159747851,
+        "concept_score": 0.357437159747851
+    },
+    {
+        "step": 779,
+        "vision_center": 0.35911641109767783,
+        "sound_center": 0.3571005943826679,
+        "concept_score": 0.3571005943826679
+    },
+    {
+        "step": 780,
+        "vision_center": 0.35888502890700363,
+        "sound_center": 0.35688007407431704,
+        "concept_score": 0.35688007407431704
+    },
+    {
+        "step": 781,
+        "vision_center": 0.35876472977999185,
+        "sound_center": 0.3567736309052765,
+        "concept_score": 0.3567736309052765
+    },
+    {
+        "step": 782,
+        "vision_center": 0.35875258927117704,
+        "sound_center": 0.3567784276473622,
+        "concept_score": 0.3567784276473622
+    },
+    {
+        "step": 783,
+        "vision_center": 0.3588441371164681,
+        "sound_center": 0.35689006413787877,
+        "concept_score": 0.35689006413787877
+    },
+    {
+        "step": 784,
+        "vision_center": 0.3590346338795522,
+        "sound_center": 0.3571038075739349,
+        "concept_score": 0.3571038075739349
+    },
+    {
+        "step": 785,
+        "vision_center": 0.3593186680460196,
+        "sound_center": 0.3574142243296753,
+        "concept_score": 0.3574142243296753
+    },
+    {
+        "step": 786,
+        "vision_center": 0.3596909639108313,
+        "sound_center": 0.35781596563264145,
+        "concept_score": 0.35781596563264145
+    },
+    {
+        "step": 787,
+        "vision_center": 0.36014601997853857,
+        "sound_center": 0.3583034405579527,
+        "concept_score": 0.3583034405579527
+    },
+    {
+        "step": 788,
+        "vision_center": 0.3606784421490134,
+        "sound_center": 0.35887112343343547,
+        "concept_score": 0.35887112343343547
+    },
+    {
+        "step": 789,
+        "vision_center": 0.3612829225987129,
+        "sound_center": 0.35951357110503496,
+        "concept_score": 0.35951357110503496
+    },
+    {
+        "step": 790,
+        "vision_center": 0.3619541675627572,
+        "sound_center": 0.360225342438402,
+        "concept_score": 0.360225342438402
+    },
+    {
+        "step": 791,
+        "vision_center": 0.36268695562683906,
+        "sound_center": 0.3610010592813186,
+        "concept_score": 0.3610010592813186
+    },
+    {
+        "step": 792,
+        "vision_center": 0.36347598768230055,
+        "sound_center": 0.36183528156308203,
+        "concept_score": 0.36183528156308203
+    },
+    {
+        "step": 793,
+        "vision_center": 0.36431603861447687,
+        "sound_center": 0.36272262660339455,
+        "concept_score": 0.36272262660339455
+    },
+    {
+        "step": 794,
+        "vision_center": 0.3652017652660429,
+        "sound_center": 0.363657625836711,
+        "concept_score": 0.363657625836711
+    },
+    {
+        "step": 795,
+        "vision_center": 0.36612766867347263,
+        "sound_center": 0.3646346342839151,
+        "concept_score": 0.3646346342839151
+    },
+    {
+        "step": 796,
+        "vision_center": 0.3670879320193846,
+        "sound_center": 0.3656477160527181,
+        "concept_score": 0.3656477160527181
+    },
+    {
+        "step": 797,
+        "vision_center": 0.3680765453214906,
+        "sound_center": 0.3666893493991481,
+        "concept_score": 0.3666893493991481
+    },
+    {
+        "step": 798,
+        "vision_center": 0.3690870620255585,
+        "sound_center": 0.36775289324656923,
+        "concept_score": 0.36775289324656923
+    },
+    {
+        "step": 799,
+        "vision_center": 0.3701127532469985,
+        "sound_center": 0.3688313140766488,
+        "concept_score": 0.3688313140766488
+    },
+    {
+        "step": 800,
+        "vision_center": 0.37114650977240093,
+        "sound_center": 0.3699174065078959,
+        "concept_score": 0.3699174065078959
+    },
+    {
+        "step": 801,
+        "vision_center": 0.3721808292294978,
+        "sound_center": 0.3710035278341812,
+        "concept_score": 0.3710035278341812
+    },
+    {
+        "step": 802,
+        "vision_center": 0.3732078758241546,
+        "sound_center": 0.37208171426642267,
+        "concept_score": 0.37208171426642267
+    },
+    {
+        "step": 803,
+        "vision_center": 0.3742193503645289,
+        "sound_center": 0.3731435188192631,
+        "concept_score": 0.3731435188192631
+    },
+    {
+        "step": 804,
+        "vision_center": 0.3752069403604102,
+        "sound_center": 0.3741804608874774,
+        "concept_score": 0.3741804608874774
+    },
+    {
+        "step": 805,
+        "vision_center": 0.3761620061628638,
+        "sound_center": 0.3751837192082676,
+        "concept_score": 0.3751837192082676
+    },
+    {
+        "step": 806,
+        "vision_center": 0.3770759123751806,
+        "sound_center": 0.3761444724603743,
+        "concept_score": 0.3761444724603743
+    },
+    {
+        "step": 807,
+        "vision_center": 0.37794005872955116,
+        "sound_center": 0.37705389329292716,
+        "concept_score": 0.37705389329292716
+    },
+    {
+        "step": 808,
+        "vision_center": 0.37874610776870754,
+        "sound_center": 0.3779034185780539,
+        "concept_score": 0.3779034185780539
+    },
+    {
+        "step": 809,
+        "vision_center": 0.3794859431415187,
+        "sound_center": 0.37868467476254114,
+        "concept_score": 0.37868467476254114
+    },
+    {
+        "step": 810,
+        "vision_center": 0.3801510961656663,
+        "sound_center": 0.37938945711136907,
+        "concept_score": 0.37938945711136907
+    },
+    {
+        "step": 811,
+        "vision_center": 0.38073390881125324,
+        "sound_center": 0.38001048959902106,
+        "concept_score": 0.38001048959902106
+    },
+    {
+        "step": 812,
+        "vision_center": 0.3812272274494368,
+        "sound_center": 0.38054083336789946,
+        "concept_score": 0.38054083336789946
+    },
+    {
+        "step": 813,
+        "vision_center": 0.3816252228950177,
+        "sound_center": 0.38097478475725155,
+        "concept_score": 0.38097478475725155
+    },
+    {
+        "step": 814,
+        "vision_center": 0.3819225742560926,
+        "sound_center": 0.38130705177809665,
+        "concept_score": 0.38130705177809665
+    },
+    {
+        "step": 815,
+        "vision_center": 0.38211548942589285,
+        "sound_center": 0.38153381342666537,
+        "concept_score": 0.38153381342666537
+    },
+    {
+        "step": 816,
+        "vision_center": 0.38220067696843435,
+        "sound_center": 0.38165167029269625,
+        "concept_score": 0.38165167029269625
+    },
+    {
+        "step": 817,
+        "vision_center": 0.3821768208458695,
+        "sound_center": 0.3816592379503059,
+        "concept_score": 0.3816592379503059
+    },
+    {
+        "step": 818,
+        "vision_center": 0.38204288570359957,
+        "sound_center": 0.3815553983768283,
+        "concept_score": 0.3815553983768283
+    },
+    {
+        "step": 819,
+        "vision_center": 0.38179967294438627,
+        "sound_center": 0.3813409666116971,
+        "concept_score": 0.3813409666116971
+    },
+    {
+        "step": 820,
+        "vision_center": 0.3814479282822185,
+        "sound_center": 0.3810169166864838,
+        "concept_score": 0.3810169166864838
+    },
+    {
+        "step": 821,
+        "vision_center": 0.38099064699063184,
+        "sound_center": 0.3805816238569508,
+        "concept_score": 0.3805816238569508
+    },
+    {
+        "step": 822,
+        "vision_center": 0.38043167989849,
+        "sound_center": 0.3800378282247054,
+        "concept_score": 0.3800378282247054
+    },
+    {
+        "step": 823,
+        "vision_center": 0.3797765940515441,
+        "sound_center": 0.3793910062688438,
+        "concept_score": 0.3793910062688438
+    },
+    {
+        "step": 824,
+        "vision_center": 0.3790322067189012,
+        "sound_center": 0.3786483425086428,
+        "concept_score": 0.3786483425086428
+    },
+    {
+        "step": 825,
+        "vision_center": 0.37820663693022466,
+        "sound_center": 0.37781856890504356,
+        "concept_score": 0.37781856890504356
+    },
+    {
+        "step": 826,
+        "vision_center": 0.3773092402684413,
+        "sound_center": 0.3769115769075188,
+        "concept_score": 0.3769115769075188
+    },
+    {
+        "step": 827,
+        "vision_center": 0.37635039045639446,
+        "sound_center": 0.3759384406958,
+        "concept_score": 0.3759384406958
+    },
+    {
+        "step": 828,
+        "vision_center": 0.3753415020339436,
+        "sound_center": 0.3749111186214546,
+        "concept_score": 0.3749111186214546
+    },
+    {
+        "step": 829,
+        "vision_center": 0.374294748373963,
+        "sound_center": 0.37384238231251526,
+        "concept_score": 0.37384238231251526
+    },
+    {
+        "step": 830,
+        "vision_center": 0.37322307553580897,
+        "sound_center": 0.3727457615666392,
+        "concept_score": 0.3727457615666392
+    },
+    {
+        "step": 831,
+        "vision_center": 0.3721398967153333,
+        "sound_center": 0.37163532798593574,
+        "concept_score": 0.37163532798593574
+    },
+    {
+        "step": 832,
+        "vision_center": 0.37105908040731095,
+        "sound_center": 0.3705256055433609,
+        "concept_score": 0.3705256055433609
+    },
+    {
+        "step": 833,
+        "vision_center": 0.3699947062720301,
+        "sound_center": 0.36943137792081265,
+        "concept_score": 0.36943137792081265
+    },
+    {
+        "step": 834,
+        "vision_center": 0.3689609820246365,
+        "sound_center": 0.36836754981759573,
+        "concept_score": 0.36836754981759573
+    },
+    {
+        "step": 835,
+        "vision_center": 0.367972029091638,
+        "sound_center": 0.36734897391600413,
+        "concept_score": 0.36734897391600413
+    },
+    {
+        "step": 836,
+        "vision_center": 0.3670417677158954,
+        "sound_center": 0.3663902943043459,
+        "concept_score": 0.3663902943043459
+    },
+    {
+        "step": 837,
+        "vision_center": 0.3661837188519536,
+        "sound_center": 0.36550577272528545,
+        "concept_score": 0.36550577272528545
+    },
+    {
+        "step": 838,
+        "vision_center": 0.36541052851552774,
+        "sound_center": 0.3647087247910091,
+        "concept_score": 0.3647087247910091
+    },
+    {
+        "step": 839,
+        "vision_center": 0.36473360036648983,
+        "sound_center": 0.36401127514271375,
+        "concept_score": 0.36401127514271375
+    },
+    {
+        "step": 840,
+        "vision_center": 0.364161595037884,
+        "sound_center": 0.36342270331093846,
+        "concept_score": 0.36342270331093846
+    },
+    {
+        "step": 841,
+        "vision_center": 0.36370020002930414,
+        "sound_center": 0.3629493038779486,
+        "concept_score": 0.3629493038779486
+    },
+    {
+        "step": 842,
+        "vision_center": 0.3633514593445664,
+        "sound_center": 0.36259363685779417,
+        "concept_score": 0.36259363685779417
+    },
+    {
+        "step": 843,
+        "vision_center": 0.3631160013792256,
+        "sound_center": 0.3623568484474661,
+        "concept_score": 0.3623568484474661
+    },
+    {
+        "step": 844,
+        "vision_center": 0.3629913719723117,
+        "sound_center": 0.36223690004972914,
+        "concept_score": 0.36223690004972914
+    },
+    {
+        "step": 845,
+        "vision_center": 0.3629747110024012,
+        "sound_center": 0.3622313201939431,
+        "concept_score": 0.3622313201939431
+    },
+    {
+        "step": 846,
+        "vision_center": 0.3630614584435935,
+        "sound_center": 0.36233113038607434,
+        "concept_score": 0.36233113038607434
+    },
+    {
+        "step": 847,
+        "vision_center": 0.36324689621095885,
+        "sound_center": 0.3625331142616752,
+        "concept_score": 0.3625331142616752
+    },
+    {
+        "step": 848,
+        "vision_center": 0.36352568472514807,
+        "sound_center": 0.36283159830876827,
+        "concept_score": 0.36283159830876827
+    },
+    {
+        "step": 849,
+        "vision_center": 0.36389254721573794,
+        "sound_center": 0.36322183656812795,
+        "concept_score": 0.36322183656812795
+    },
+    {
+        "step": 850,
+        "vision_center": 0.3643420494739657,
+        "sound_center": 0.3636982769591835,
+        "concept_score": 0.3636982769591835
+    },
+    {
+        "step": 851,
+        "vision_center": 0.3648687863017059,
+        "sound_center": 0.3642555748184977,
+        "concept_score": 0.3642555748184977
+    },
+    {
+        "step": 852,
+        "vision_center": 0.36546752101204766,
+        "sound_center": 0.36488830624793017,
+        "concept_score": 0.36488830624793017
+    },
+    {
+        "step": 853,
+        "vision_center": 0.36613279376597685,
+        "sound_center": 0.3655909626753464,
+        "concept_score": 0.3655909626753464
+    },
+    {
+        "step": 854,
+        "vision_center": 0.36685936993935414,
+        "sound_center": 0.36635813253419275,
+        "concept_score": 0.36635813253419275
+    },
+    {
+        "step": 855,
+        "vision_center": 0.3676417861787905,
+        "sound_center": 0.36718417133586495,
+        "concept_score": 0.36718417133586495
+    },
+    {
+        "step": 856,
+        "vision_center": 0.36847481827964823,
+        "sound_center": 0.3680636302599645,
+        "concept_score": 0.3680636302599645
+    },
+    {
+        "step": 857,
+        "vision_center": 0.36935293095425176,
+        "sound_center": 0.3689907466641328,
+        "concept_score": 0.3689907466641328
+    },
+    {
+        "step": 858,
+        "vision_center": 0.3702705596789161,
+        "sound_center": 0.3699596981099442,
+        "concept_score": 0.3699596981099442
+    },
+    {
+        "step": 859,
+        "vision_center": 0.3712217175572697,
+        "sound_center": 0.3709642485225253,
+        "concept_score": 0.3709642485225253
+    },
+    {
+        "step": 860,
+        "vision_center": 0.37220028155891843,
+        "sound_center": 0.371998005535522,
+        "concept_score": 0.371998005535522
+    },
+    {
+        "step": 861,
+        "vision_center": 0.37319963258989186,
+        "sound_center": 0.37305409902896663,
+        "concept_score": 0.37305409902896663
+    },
+    {
+        "step": 862,
+        "vision_center": 0.37421290763224496,
+        "sound_center": 0.3741254017775613,
+        "concept_score": 0.3741254017775613
+    },
+    {
+        "step": 863,
+        "vision_center": 0.37523279138762683,
+        "sound_center": 0.37520434882661063,
+        "concept_score": 0.37520434882661063
+    },
+    {
+        "step": 864,
+        "vision_center": 0.37625167161558837,
+        "sound_center": 0.37628306388511534,
+        "concept_score": 0.37625167161558837
+    },
+    {
+        "step": 865,
+        "vision_center": 0.3772614326200829,
+        "sound_center": 0.37735317538366714,
+        "concept_score": 0.3772614326200829
+    },
+    {
+        "step": 866,
+        "vision_center": 0.378253732942844,
+        "sound_center": 0.3784060746164307,
+        "concept_score": 0.378253732942844
+    },
+    {
+        "step": 867,
+        "vision_center": 0.37921997415972514,
+        "sound_center": 0.3794329016857735,
+        "concept_score": 0.37921997415972514
+    },
+    {
+        "step": 868,
+        "vision_center": 0.38015146242427783,
+        "sound_center": 0.380424686677145,
+        "concept_score": 0.38015146242427783
+    },
+    {
+        "step": 869,
+        "vision_center": 0.3810393409682713,
+        "sound_center": 0.38137229578429915,
+        "concept_score": 0.3810393409682713
+    },
+    {
+        "step": 870,
+        "vision_center": 0.381874934117125,
+        "sound_center": 0.3822667675649113,
+        "concept_score": 0.381874934117125
+    },
+    {
+        "step": 871,
+        "vision_center": 0.3826497550231383,
+        "sound_center": 0.38309933189614,
+        "concept_score": 0.3826497550231383
+    },
+    {
+        "step": 872,
+        "vision_center": 0.38335554153910417,
+        "sound_center": 0.38386143098306397,
+        "concept_score": 0.38335554153910417
+    },
+    {
+        "step": 873,
+        "vision_center": 0.38398428331850576,
+        "sound_center": 0.3845447577898274,
+        "concept_score": 0.38398428331850576
+    },
+    {
+        "step": 874,
+        "vision_center": 0.38452884449188074,
+        "sound_center": 0.38514189326617365,
+        "concept_score": 0.38452884449188074
+    },
+    {
+        "step": 875,
+        "vision_center": 0.38498258117384715,
+        "sound_center": 0.38564589467475546,
+        "concept_score": 0.38498258117384715
+    },
+    {
+        "step": 876,
+        "vision_center": 0.38533993751050233,
+        "sound_center": 0.386050913294335,
+        "concept_score": 0.38533993751050233
+    },
+    {
+        "step": 877,
+        "vision_center": 0.38559598345837615,
+        "sound_center": 0.3863517170170758,
+        "concept_score": 0.38559598345837615
+    },
+    {
+        "step": 878,
+        "vision_center": 0.38574701756338875,
+        "sound_center": 0.386544324066159,
+        "concept_score": 0.38574701756338875
+    },
+    {
+        "step": 879,
+        "vision_center": 0.3857902574270986,
+        "sound_center": 0.3866255438655744,
+        "concept_score": 0.3857902574270986
+    },
+    {
+        "step": 880,
+        "vision_center": 0.3857243569960162,
+        "sound_center": 0.38659381897326617,
+        "concept_score": 0.3857243569960162
+    },
+    {
+        "step": 881,
+        "vision_center": 0.38554868085865523,
+        "sound_center": 0.3864482481894972,
+        "concept_score": 0.38554868085865523
+    },
+    {
+        "step": 882,
+        "vision_center": 0.3852639357183788,
+        "sound_center": 0.3861894836263738,
+        "concept_score": 0.3852639357183788
+    },
+    {
+        "step": 883,
+        "vision_center": 0.3848711780469376,
+        "sound_center": 0.38581535333236544,
+        "concept_score": 0.3848711780469376
+    },
+    {
+        "step": 884,
+        "vision_center": 0.3843736122123199,
+        "sound_center": 0.38532733044209216,
+        "concept_score": 0.3843736122123199
+    },
+    {
+        "step": 885,
+        "vision_center": 0.383775213063045,
+        "sound_center": 0.384730243989183,
+        "concept_score": 0.383775213063045
+    },
+    {
+        "step": 886,
+        "vision_center": 0.3830818918452584,
+        "sound_center": 0.3840302878420486,
+        "concept_score": 0.3830818918452584
+    },
+    {
+        "step": 887,
+        "vision_center": 0.38230051318775815,
+        "sound_center": 0.38323488812234646,
+        "concept_score": 0.38230051318775815
+    },
+    {
+        "step": 888,
+        "vision_center": 0.3814395560511209,
+        "sound_center": 0.38235295216062004,
+        "concept_score": 0.3814395560511209
+    },
+    {
+        "step": 889,
+        "vision_center": 0.38050842793026696,
+        "sound_center": 0.3813943634940651,
+        "concept_score": 0.38050842793026696
+    },
+    {
+        "step": 890,
+        "vision_center": 0.3795178234957084,
+        "sound_center": 0.3803703134054944,
+        "concept_score": 0.3795178234957084
+    },
+    {
+        "step": 891,
+        "vision_center": 0.3784792353003486,
+        "sound_center": 0.37929281163228207,
+        "concept_score": 0.3784792353003486
+    },
+    {
+        "step": 892,
+        "vision_center": 0.3774050956286673,
+        "sound_center": 0.37817486451218035,
+        "concept_score": 0.3774050956286673
+    },
+    {
+        "step": 893,
+        "vision_center": 0.3763084349121023,
+        "sound_center": 0.37703010809844173,
+        "concept_score": 0.3763084349121023
+    },
+    {
+        "step": 894,
+        "vision_center": 0.3752028826291693,
+        "sound_center": 0.37587282855415904,
+        "concept_score": 0.3752028826291693
+    },
+    {
+        "step": 895,
+        "vision_center": 0.37410240898248825,
+        "sound_center": 0.3747176702441758,
+        "concept_score": 0.37410240898248825
+    },
+    {
+        "step": 896,
+        "vision_center": 0.3730212508153068,
+        "sound_center": 0.3735795787275731,
+        "concept_score": 0.3730212508153068
+    },
+    {
+        "step": 897,
+        "vision_center": 0.37197369390167734,
+        "sound_center": 0.3724735605494777,
+        "concept_score": 0.37197369390167734
+    },
+    {
+        "step": 898,
+        "vision_center": 0.3709739542041825,
+        "sound_center": 0.3714145742707497,
+        "concept_score": 0.3709739542041825
+    },
+    {
+        "step": 899,
+        "vision_center": 0.3700359927797624,
+        "sound_center": 0.37041732552227447,
+        "concept_score": 0.3700359927797624
+    },
+    {
+        "step": 900,
+        "vision_center": 0.3691733473579623,
+        "sound_center": 0.36949608706955234,
+        "concept_score": 0.3691733473579623
+    },
+    {
+        "step": 901,
+        "vision_center": 0.3683985573366555,
+        "sound_center": 0.36866408654990107,
+        "concept_score": 0.3683985573366555
+    },
+    {
+        "step": 902,
+        "vision_center": 0.3677228206591465,
+        "sound_center": 0.36793321897640685,
+        "concept_score": 0.3677228206591465
+    },
+    {
+        "step": 903,
+        "vision_center": 0.3671542729508722,
+        "sound_center": 0.3673122158089504,
+        "concept_score": 0.3671542729508722
+    },
+    {
+        "step": 904,
+        "vision_center": 0.3666980724546144,
+        "sound_center": 0.36680679711869896,
+        "concept_score": 0.3666980724546144
+    },
+    {
+        "step": 905,
+        "vision_center": 0.3663560797493644,
+        "sound_center": 0.36641930308794124,
+        "concept_score": 0.3663560797493644
+    },
+    {
+        "step": 906,
+        "vision_center": 0.3661283760546597,
+        "sound_center": 0.36615026186457234,
+        "concept_score": 0.3661283760546597
+    },
+    {
+        "step": 907,
+        "vision_center": 0.3660125524704083,
+        "sound_center": 0.36599760995972386,
+        "concept_score": 0.36599760995972386
+    },
+    {
+        "step": 908,
+        "vision_center": 0.36600531378722284,
+        "sound_center": 0.3659583388995843,
+        "concept_score": 0.3659583388995843
+    },
+    {
+        "step": 909,
+        "vision_center": 0.3661022843792666,
+        "sound_center": 0.36602824957270635,
+        "concept_score": 0.36602824957270635
+    },
+    {
+        "step": 910,
+        "vision_center": 0.3662983832074824,
+        "sound_center": 0.36620235763410014,
+        "concept_score": 0.36620235763410014
+    },
+    {
+        "step": 911,
+        "vision_center": 0.3665884954879578,
+        "sound_center": 0.3664755475508179,
+        "concept_score": 0.3664755475508179
+    },
+    {
+        "step": 912,
+        "vision_center": 0.3669670545775485,
+        "sound_center": 0.3668421750632547,
+        "concept_score": 0.3668421750632547
+    },
+    {
+        "step": 913,
+        "vision_center": 0.36742877142745006,
+        "sound_center": 0.3672967973933788,
+        "concept_score": 0.3672967973933788
+    },
+    {
+        "step": 914,
+        "vision_center": 0.36796801707513394,
+        "sound_center": 0.3678335696552937,
+        "concept_score": 0.3678335696552937
+    },
+    {
+        "step": 915,
+        "vision_center": 0.36857965426005806,
+        "sound_center": 0.3684470922868387,
+        "concept_score": 0.3684470922868387
+    },
+    {
+        "step": 916,
+        "vision_center": 0.3692581068589632,
+        "sound_center": 0.36913148284782304,
+        "concept_score": 0.36913148284782304
+    },
+    {
+        "step": 917,
+        "vision_center": 0.36999826289287363,
+        "sound_center": 0.36988129917916723,
+        "concept_score": 0.36988129917916723
+    },
+    {
+        "step": 918,
+        "vision_center": 0.3707945489978388,
+        "sound_center": 0.37069061003061393,
+        "concept_score": 0.37069061003061393
+    },
+    {
+        "step": 919,
+        "vision_center": 0.3716418012026474,
+        "sound_center": 0.3715538882206685,
+        "concept_score": 0.3715538882206685
+    },
+    {
+        "step": 920,
+        "vision_center": 0.3725343797335723,
+        "sound_center": 0.37246511860858544,
+        "concept_score": 0.37246511860858544
+    },
+    {
+        "step": 921,
+        "vision_center": 0.3734666849408241,
+        "sound_center": 0.3734183218339444,
+        "concept_score": 0.3734183218339444
+    },
+    {
+        "step": 922,
+        "vision_center": 0.3744326555682622,
+        "sound_center": 0.3744070595260484,
+        "concept_score": 0.3744070595260484
+    },
+    {
+        "step": 923,
+        "vision_center": 0.37542609621602274,
+        "sound_center": 0.375424756575294,
+        "concept_score": 0.375424756575294
+    },
+    {
+        "step": 924,
+        "vision_center": 0.3764402881978763,
+        "sound_center": 0.37646432083451015,
+        "concept_score": 0.3764402881978763
+    },
+    {
+        "step": 925,
+        "vision_center": 0.37746832781645373,
+        "sound_center": 0.3775184681601039,
+        "concept_score": 0.37746832781645373
+    },
+    {
+        "step": 926,
+        "vision_center": 0.3785027688789412,
+        "sound_center": 0.37857938389383095,
+        "concept_score": 0.3785027688789412
+    },
+    {
+        "step": 927,
+        "vision_center": 0.3795360058968402,
+        "sound_center": 0.37963908113017775,
+        "concept_score": 0.3795360058968402
+    },
+    {
+        "step": 928,
+        "vision_center": 0.3805597391998695,
+        "sound_center": 0.3806888826225449,
+        "concept_score": 0.3805597391998695
+    },
+    {
+        "step": 929,
+        "vision_center": 0.3815657194765027,
+        "sound_center": 0.3817201484830891,
+        "concept_score": 0.3815657194765027
+    },
+    {
+        "step": 930,
+        "vision_center": 0.3825451875964653,
+        "sound_center": 0.3827237323092047,
+        "concept_score": 0.3825451875964653
+    },
+    {
+        "step": 931,
+        "vision_center": 0.38348954382448486,
+        "sound_center": 0.38369063384215496,
+        "concept_score": 0.38348954382448486
+    },
+    {
+        "step": 932,
+        "vision_center": 0.3843898582617792,
+        "sound_center": 0.3846115173658422,
+        "concept_score": 0.3843898582617792
+    },
+    {
+        "step": 933,
+        "vision_center": 0.3852375582326674,
+        "sound_center": 0.385477391174659,
+        "concept_score": 0.3852375582326674
+    },
+    {
+        "step": 934,
+        "vision_center": 0.3860241865357525,
+        "sound_center": 0.3862793741397999,
+        "concept_score": 0.3860241865357525
+    },
+    {
+        "step": 935,
+        "vision_center": 0.3867415064819091,
+        "sound_center": 0.38700878837145186,
+        "concept_score": 0.3867415064819091
+    },
+    {
+        "step": 936,
+        "vision_center": 0.38738170587143833,
+        "sound_center": 0.3876573710885737,
+        "concept_score": 0.38738170587143833
+    },
+    {
+        "step": 937,
+        "vision_center": 0.38793529212715866,
+        "sound_center": 0.3882175837702149,
+        "concept_score": 0.38793529212715866
+    },
+    {
+        "step": 938,
+        "vision_center": 0.38839291958080835,
+        "sound_center": 0.38868262150885363,
+        "concept_score": 0.38839291958080835
+    },
+    {
+        "step": 939,
+        "vision_center": 0.38875001190653585,
+        "sound_center": 0.3890465249708267,
+        "concept_score": 0.38875001190653585
+    },
+    {
+        "step": 940,
+        "vision_center": 0.38900178457313245,
+        "sound_center": 0.3893042220645626,
+        "concept_score": 0.38900178457313245
+    },
+    {
+        "step": 941,
+        "vision_center": 0.389145008340275,
+        "sound_center": 0.3894516176668222,
+        "concept_score": 0.389145008340275
+    },
+    {
+        "step": 942,
+        "vision_center": 0.3891773709991446,
+        "sound_center": 0.3894857897434988,
+        "concept_score": 0.3891773709991446
+    },
+    {
+        "step": 943,
+        "vision_center": 0.38909768827102015,
+        "sound_center": 0.3894050432691941,
+        "concept_score": 0.38909768827102015
+    },
+    {
+        "step": 944,
+        "vision_center": 0.38890579798932845,
+        "sound_center": 0.3892087201236309,
+        "concept_score": 0.38890579798932845
+    },
+    {
+        "step": 945,
+        "vision_center": 0.38860245945199307,
+        "sound_center": 0.3888973098608152,
+        "concept_score": 0.38860245945199307
+    },
+    {
+        "step": 946,
+        "vision_center": 0.3881891991180343,
+        "sound_center": 0.3884722494913383,
+        "concept_score": 0.3881891991180343
+    },
+    {
+        "step": 947,
+        "vision_center": 0.38766945172508954,
+        "sound_center": 0.3879368476500244,
+        "concept_score": 0.38766945172508954
+    },
+    {
+        "step": 948,
+        "vision_center": 0.38704756592833156,
+        "sound_center": 0.38729550633244153,
+        "concept_score": 0.38704756592833156
+    },
+    {
+        "step": 949,
+        "vision_center": 0.38632976620251674,
+        "sound_center": 0.38655441835402155,
+        "concept_score": 0.38632976620251674
+    },
+    {
+        "step": 950,
+        "vision_center": 0.38552323059499816,
+        "sound_center": 0.3857208745437677,
+        "concept_score": 0.38552323059499816
+    },
+    {
+        "step": 951,
+        "vision_center": 0.38463677059313855,
+        "sound_center": 0.3848037533649898,
+        "concept_score": 0.38463677059313855
+    },
+    {
+        "step": 952,
+        "vision_center": 0.38368007509840346,
+        "sound_center": 0.3838129258090635,
+        "concept_score": 0.38368007509840346
+    },
+    {
+        "step": 953,
+        "vision_center": 0.3826641598117918,
+        "sound_center": 0.38275958495431767,
+        "concept_score": 0.3826641598117918
+    },
+    {
+        "step": 954,
+        "vision_center": 0.38160077828714833,
+        "sound_center": 0.3816557543231896,
+        "concept_score": 0.38160077828714833
+    },
+    {
+        "step": 955,
+        "vision_center": 0.3805026550830702,
+        "sound_center": 0.3805144479642021,
+        "concept_score": 0.3805026550830702
+    },
+    {
+        "step": 956,
+        "vision_center": 0.3793830612637009,
+        "sound_center": 0.37934930052090726,
+        "concept_score": 0.37934930052090726
+    },
+    {
+        "step": 957,
+        "vision_center": 0.37825588109748876,
+        "sound_center": 0.378174588168371,
+        "concept_score": 0.378174588168371
+    },
+    {
+        "step": 958,
+        "vision_center": 0.37713529677773394,
+        "sound_center": 0.3770049407766964,
+        "concept_score": 0.3770049407766964
+    },
+    {
+        "step": 959,
+        "vision_center": 0.3760357532480685,
+        "sound_center": 0.3758552752724543,
+        "concept_score": 0.3758552752724543
+    },
+    {
+        "step": 960,
+        "vision_center": 0.3749717106486207,
+        "sound_center": 0.37474055861101363,
+        "concept_score": 0.37474055861101363
+    },
+    {
+        "step": 961,
+        "vision_center": 0.37395754472114523,
+        "sound_center": 0.37367569274506457,
+        "concept_score": 0.37367569274506457
+    },
+    {
+        "step": 962,
+        "vision_center": 0.37300734291309284,
+        "sound_center": 0.3726753115691811,
+        "concept_score": 0.3726753115691811
+    },
+    {
+        "step": 963,
+        "vision_center": 0.3721347308798107,
+        "sound_center": 0.37175357152719546,
+        "concept_score": 0.37175357152719546
+    },
+    {
+        "step": 964,
+        "vision_center": 0.37135221651665773,
+        "sound_center": 0.37092350012508557,
+        "concept_score": 0.37092350012508557
+    },
+    {
+        "step": 965,
+        "vision_center": 0.3706707856281449,
+        "sound_center": 0.37019661246091684,
+        "concept_score": 0.37019661246091684
+    },
+    {
+        "step": 966,
+        "vision_center": 0.37009819478063694,
+        "sound_center": 0.36958109424286,
+        "concept_score": 0.36958109424286
+    },
+    {
+        "step": 967,
+        "vision_center": 0.36963907040124067,
+        "sound_center": 0.36908199180467083,
+        "concept_score": 0.36908199180467083
+    },
+    {
+        "step": 968,
+        "vision_center": 0.36929523151205107,
+        "sound_center": 0.36870147788954377,
+        "concept_score": 0.36870147788954377
+    },
+    {
+        "step": 969,
+        "vision_center": 0.3690662701959771,
+        "sound_center": 0.3684394743583887,
+        "concept_score": 0.3684394743583887
+    },
+    {
+        "step": 970,
+        "vision_center": 0.36894986224026055,
+        "sound_center": 0.3682939279134917,
+        "concept_score": 0.3682939279134917
+    },
+    {
+        "step": 971,
+        "vision_center": 0.3689424533409182,
+        "sound_center": 0.3682615031001307,
+        "concept_score": 0.3682615031001307
+    },
+    {
+        "step": 972,
+        "vision_center": 0.3690396943404225,
+        "sound_center": 0.36833800933236194,
+        "concept_score": 0.36833800933236194
+    },
+    {
+        "step": 973,
+        "vision_center": 0.3692364204259501,
+        "sound_center": 0.368518370185469,
+        "concept_score": 0.368518370185469
+    },
+    {
+        "step": 974,
+        "vision_center": 0.36952749400569884,
+        "sound_center": 0.3687974814730184,
+        "concept_score": 0.3687974814730184
+    },
+    {
+        "step": 975,
+        "vision_center": 0.369907338772844,
+        "sound_center": 0.3691697340550829,
+        "concept_score": 0.3691697340550829
+    },
+    {
+        "step": 976,
+        "vision_center": 0.3703705746820873,
+        "sound_center": 0.36962966852593165,
+        "concept_score": 0.36962966852593165
+    },
+    {
+        "step": 977,
+        "vision_center": 0.3709115709123523,
+        "sound_center": 0.3701715200060827,
+        "concept_score": 0.3701715200060827
+    },
+    {
+        "step": 978,
+        "vision_center": 0.3715251021293415,
+        "sound_center": 0.37078990709685017,
+        "concept_score": 0.37078990709685017
+    },
+    {
+        "step": 979,
+        "vision_center": 0.3722055255286493,
+        "sound_center": 0.37147898464565987,
+        "concept_score": 0.37147898464565987
+    },
+    {
+        "step": 980,
+        "vision_center": 0.3729476340920832,
+        "sound_center": 0.37223334143149284,
+        "concept_score": 0.37223334143149284
+    },
+    {
+        "step": 981,
+        "vision_center": 0.3737457635412126,
+        "sound_center": 0.3730470739008492,
+        "concept_score": 0.3730470739008492
+    },
+    {
+        "step": 982,
+        "vision_center": 0.3745946377289849,
+        "sound_center": 0.3739146796826947,
+        "concept_score": 0.3739146796826947
+    },
+    {
+        "step": 983,
+        "vision_center": 0.3754884937144477,
+        "sound_center": 0.37483014645200335,
+        "concept_score": 0.37483014645200335
+    },
+    {
+        "step": 984,
+        "vision_center": 0.37642155992706766,
+        "sound_center": 0.3757874636747818,
+        "concept_score": 0.3757874636747818
+    },
+    {
+        "step": 985,
+        "vision_center": 0.3773876549253412,
+        "sound_center": 0.3767802071664782,
+        "concept_score": 0.3767802071664782
+    },
+    {
+        "step": 986,
+        "vision_center": 0.37838039738543167,
+        "sound_center": 0.3778017609584655,
+        "concept_score": 0.3778017609584655
+    },
+    {
+        "step": 987,
+        "vision_center": 0.3793929002031904,
+        "sound_center": 0.3788450159977182,
+        "concept_score": 0.3788450159977182
+    },
+    {
+        "step": 988,
+        "vision_center": 0.38041806005058854,
+        "sound_center": 0.37990269741681615,
+        "concept_score": 0.37990269741681615
+    },
+    {
+        "step": 989,
+        "vision_center": 0.3814480718718093,
+        "sound_center": 0.3809668156989704,
+        "concept_score": 0.3809668156989704
+    },
+    {
+        "step": 990,
+        "vision_center": 0.38247517213086824,
+        "sound_center": 0.38202896929805563,
+        "concept_score": 0.38202896929805563
+    },
+    {
+        "step": 991,
+        "vision_center": 0.38349064993502613,
+        "sound_center": 0.38308012713522266,
+        "concept_score": 0.38308012713522266
+    },
+    {
+        "step": 992,
+        "vision_center": 0.38448616225210885,
+        "sound_center": 0.38411151901893875,
+        "concept_score": 0.38411151901893875
+    },
+    {
+        "step": 993,
+        "vision_center": 0.38545257208622447,
+        "sound_center": 0.3851137375142346,
+        "concept_score": 0.3851137375142346
+    },
+    {
+        "step": 994,
+        "vision_center": 0.3863811786726676,
+        "sound_center": 0.38607777915923513,
+        "concept_score": 0.38607777915923513
+    },
+    {
+        "step": 995,
+        "vision_center": 0.38726274167395736,
+        "sound_center": 0.3869941605991219,
+        "concept_score": 0.3869941605991219
+    },
+    {
+        "step": 996,
+        "vision_center": 0.3880886173566903,
+        "sound_center": 0.38785398250101205,
+        "concept_score": 0.38785398250101205
+    },
+    {
+        "step": 997,
+        "vision_center": 0.3888500974514451,
+        "sound_center": 0.3886483022090764,
+        "concept_score": 0.3886483022090764
+    },
+    {
+        "step": 998,
+        "vision_center": 0.3895388008265777,
+        "sound_center": 0.3893684937421798,
+        "concept_score": 0.3893684937421798
+    },
+    {
+        "step": 999,
+        "vision_center": 0.39014683948019485,
+        "sound_center": 0.3900064300868151,
+        "concept_score": 0.3900064300868151
+    },
+    {
+        "step": 1000,
+        "vision_center": 0.3906669365758,
+        "sound_center": 0.3905545952527461,
+        "concept_score": 0.3905545952527461
+    },
+    {
+        "step": 1001,
+        "vision_center": 0.39109277402762893,
+        "sound_center": 0.3910064073775811,
+        "concept_score": 0.3910064073775811
+    },
+    {
+        "step": 1002,
+        "vision_center": 0.3914187099126132,
+        "sound_center": 0.39135592954497145,
+        "concept_score": 0.39135592954497145
+    },
+    {
+        "step": 1003,
+        "vision_center": 0.3916402889722634,
+        "sound_center": 0.39159837004009473,
+        "concept_score": 0.39159837004009473
+    },
+    {
+        "step": 1004,
+        "vision_center": 0.3917536703087551,
+        "sound_center": 0.39172963391765836,
+        "concept_score": 0.39172963391765836
+    },
+    {
+        "step": 1005,
+        "vision_center": 0.39175668389505786,
+        "sound_center": 0.39174718471489484,
+        "concept_score": 0.39174718471489484
+    },
+    {
+        "step": 1006,
+        "vision_center": 0.3916478071124288,
+        "sound_center": 0.3916492862432737,
+        "concept_score": 0.3916478071124288
+    },
+    {
+        "step": 1007,
+        "vision_center": 0.3914270680974728,
+        "sound_center": 0.3914356423894578,
+        "concept_score": 0.3914270680974728
+    },
+    {
+        "step": 1008,
+        "vision_center": 0.39109497945996946,
+        "sound_center": 0.39110669153800387,
+        "concept_score": 0.39109497945996946
+    },
+    {
+        "step": 1009,
+        "vision_center": 0.39065335382697447,
+        "sound_center": 0.39066424231327773,
+        "concept_score": 0.39065335382697447
+    },
+    {
+        "step": 1010,
+        "vision_center": 0.39010561125852267,
+        "sound_center": 0.3901117145783164,
+        "concept_score": 0.39010561125852267
+    },
+    {
+        "step": 1011,
+        "vision_center": 0.3894563707423335,
+        "sound_center": 0.38945379170914335,
+        "concept_score": 0.38945379170914335
+    },
+    {
+        "step": 1012,
+        "vision_center": 0.388711919386673,
+        "sound_center": 0.3886968326004693,
+        "concept_score": 0.3886968326004693
+    },
+    {
+        "step": 1013,
+        "vision_center": 0.3878797111126304,
+        "sound_center": 0.38784836172589593,
+        "concept_score": 0.38784836172589593
+    },
+    {
+        "step": 1014,
+        "vision_center": 0.3869686515043272,
+        "sound_center": 0.3869174208032886,
+        "concept_score": 0.3869174208032886
+    },
+    {
+        "step": 1015,
+        "vision_center": 0.38598869440643674,
+        "sound_center": 0.38591407669654154,
+        "concept_score": 0.38591407669654154
+    },
+    {
+        "step": 1016,
+        "vision_center": 0.38495097329224065,
+        "sound_center": 0.38484966467569526,
+        "concept_score": 0.38484966467569526
+    },
+    {
+        "step": 1017,
+        "vision_center": 0.3838674765423864,
+        "sound_center": 0.383736364054932,
+        "concept_score": 0.383736364054932
+    },
+    {
+        "step": 1018,
+        "vision_center": 0.38275105878566906,
+        "sound_center": 0.38258730113236905,
+        "concept_score": 0.38258730113236905
+    },
+    {
+        "step": 1019,
+        "vision_center": 0.3816151898159667,
+        "sound_center": 0.38141622141529946,
+        "concept_score": 0.38141622141529946
+    },
+    {
+        "step": 1020,
+        "vision_center": 0.38047388064829635,
+        "sound_center": 0.38023747570213096,
+        "concept_score": 0.38023747570213096
+    },
+    {
+        "step": 1021,
+        "vision_center": 0.3793414730723891,
+        "sound_center": 0.37906575707491746,
+        "concept_score": 0.37906575707491746
+    },
+    {
+        "step": 1022,
+        "vision_center": 0.3782325191788369,
+        "sound_center": 0.3779160142242348,
+        "concept_score": 0.3779160142242348
+    },
+    {
+        "step": 1023,
+        "vision_center": 0.3771615971878816,
+        "sound_center": 0.3768032287723466,
+        "concept_score": 0.3768032287723466
+    },
+    {
+        "step": 1024,
+        "vision_center": 0.3761431642833194,
+        "sound_center": 0.3757422889544626,
+        "concept_score": 0.3757422889544626
+    },
+    {
+        "step": 1025,
+        "vision_center": 0.3751913845594099,
+        "sound_center": 0.3747477940830249,
+        "concept_score": 0.3747477940830249
+    },
+    {
+        "step": 1026,
+        "vision_center": 0.3743199128300447,
+        "sound_center": 0.3738338003109475,
+        "concept_score": 0.3738338003109475
+    },
+    {
+        "step": 1027,
+        "vision_center": 0.3735411899818147,
+        "sound_center": 0.37301317433305636,
+        "concept_score": 0.37301317433305636
+    },
+    {
+        "step": 1028,
+        "vision_center": 0.37286591489124515,
+        "sound_center": 0.3722969581374296,
+        "concept_score": 0.3722969581374296
+    },
+    {
+        "step": 1029,
+        "vision_center": 0.3723015097364021,
+        "sound_center": 0.37169292837133294,
+        "concept_score": 0.37169292837133294
+    },
+    {
+        "step": 1030,
+        "vision_center": 0.3718519996781381,
+        "sound_center": 0.37120539014716103,
+        "concept_score": 0.37120539014716103
+    },
+    {
+        "step": 1031,
+        "vision_center": 0.3715191500309203,
+        "sound_center": 0.37083644176235586,
+        "concept_score": 0.37083644176235586
+    },
+    {
+        "step": 1032,
+        "vision_center": 0.37130198757383465,
+        "sound_center": 0.37058533921816494,
+        "concept_score": 0.37058533921816494
+    },
+    {
+        "step": 1033,
+        "vision_center": 0.37119827860085297,
+        "sound_center": 0.37045011065608247,
+        "concept_score": 0.37045011065608247
+    },
+    {
+        "step": 1034,
+        "vision_center": 0.3712041436558798,
+        "sound_center": 0.37042703077048467,
+        "concept_score": 0.37042703077048467
+    },
+    {
+        "step": 1035,
+        "vision_center": 0.3713153011197303,
+        "sound_center": 0.37051197390916746,
+        "concept_score": 0.37051197390916746
+    },
+    {
+        "step": 1036,
+        "vision_center": 0.3715264665509446,
+        "sound_center": 0.37069971296795384,
+        "concept_score": 0.37069971296795384
+    },
+    {
+        "step": 1037,
+        "vision_center": 0.3718325445976038,
+        "sound_center": 0.37098519347952486,
+        "concept_score": 0.37098519347952486
+    },
+    {
+        "step": 1038,
+        "vision_center": 0.3722279506222982,
+        "sound_center": 0.371362792889966,
+        "concept_score": 0.371362792889966
+    },
+    {
+        "step": 1039,
+        "vision_center": 0.3727072895817037,
+        "sound_center": 0.37182705114337217,
+        "concept_score": 0.37182705114337217
+    },
+    {
+        "step": 1040,
+        "vision_center": 0.37326500306628596,
+        "sound_center": 0.3723722902749609,
+        "concept_score": 0.3723722902749609
+    },
+    {
+        "step": 1041,
+        "vision_center": 0.3738957726529109,
+        "sound_center": 0.37299304846747083,
+        "concept_score": 0.37299304846747083
+    },
+    {
+        "step": 1042,
+        "vision_center": 0.37459404675664154,
+        "sound_center": 0.37368359282497166,
+        "concept_score": 0.37368359282497166
+    },
+    {
+        "step": 1043,
+        "vision_center": 0.3753544922544463,
+        "sound_center": 0.37443839112581034,
+        "concept_score": 0.37443839112581034
+    },
+    {
+        "step": 1044,
+        "vision_center": 0.3761715319492382,
+        "sound_center": 0.37525164218345003,
+        "concept_score": 0.37525164218345003
+    },
+    {
+        "step": 1045,
+        "vision_center": 0.37703976617501533,
+        "sound_center": 0.3761177146602633,
+        "concept_score": 0.3761177146602633
+    },
+    {
+        "step": 1046,
+        "vision_center": 0.3779534733475716,
+        "sound_center": 0.3770306379541459,
+        "concept_score": 0.3770306379541459
+    },
+    {
+        "step": 1047,
+        "vision_center": 0.3789067327810766,
+        "sound_center": 0.3779842385803473,
+        "concept_score": 0.3779842385803473
+    },
+    {
+        "step": 1048,
+        "vision_center": 0.379893388706941,
+        "sound_center": 0.37897210115113245,
+        "concept_score": 0.37897210115113245
+    },
+    {
+        "step": 1049,
+        "vision_center": 0.3809069172106814,
+        "sound_center": 0.3799874409142091,
+        "concept_score": 0.3799874409142091
+    },
+    {
+        "step": 1050,
+        "vision_center": 0.38194041884446456,
+        "sound_center": 0.38102308427606585,
+        "concept_score": 0.38102308427606585
+    },
+    {
+        "step": 1051,
+        "vision_center": 0.38298674649857684,
+        "sound_center": 0.38207162491424995,
+        "concept_score": 0.38207162491424995
+    },
+    {
+        "step": 1052,
+        "vision_center": 0.38403817354275116,
+        "sound_center": 0.38312505116234513,
+        "concept_score": 0.38312505116234513
+    },
+    {
+        "step": 1053,
+        "vision_center": 0.38508693089660884,
+        "sound_center": 0.3841753258115797,
+        "concept_score": 0.3841753258115797
+    },
+    {
+        "step": 1054,
+        "vision_center": 0.386124347638285,
+        "sound_center": 0.38521347904082914,
+        "concept_score": 0.38521347904082914
+    },
+    {
+        "step": 1055,
+        "vision_center": 0.3871421439342628,
+        "sound_center": 0.38623095111573874,
+        "concept_score": 0.38623095111573874
+    },
+    {
+        "step": 1056,
+        "vision_center": 0.38813123451836157,
+        "sound_center": 0.38721834093327573,
+        "concept_score": 0.38721834093327573
+    },
+    {
+        "step": 1057,
+        "vision_center": 0.3890829755911427,
+        "sound_center": 0.3881667005401104,
+        "concept_score": 0.3881667005401104
+    },
+    {
+        "step": 1058,
+        "vision_center": 0.38998823738858707,
+        "sound_center": 0.3890665622071089,
+        "concept_score": 0.3890665622071089
+    },
+    {
+        "step": 1059,
+        "vision_center": 0.39083850706647333,
+        "sound_center": 0.38990907762527244,
+        "concept_score": 0.38990907762527244
+    },
+    {
+        "step": 1060,
+        "vision_center": 0.391625206022301,
+        "sound_center": 0.3906853031381186,
+        "concept_score": 0.3906853031381186
+    },
+    {
+        "step": 1061,
+        "vision_center": 0.3923401755200554,
+        "sound_center": 0.3913866434182637,
+        "concept_score": 0.3913866434182637
+    },
+    {
+        "step": 1062,
+        "vision_center": 0.3929758266133153,
+        "sound_center": 0.3920050961097083,
+        "concept_score": 0.3920050961097083
+    },
+    {
+        "step": 1063,
+        "vision_center": 0.3935186717840785,
+        "sound_center": 0.39253317683432815,
+        "concept_score": 0.39253317683432815
+    },
+    {
+        "step": 1064,
+        "vision_center": 0.3939628655465049,
+        "sound_center": 0.3929644818189602,
+        "concept_score": 0.3929644818189602
+    },
+    {
+        "step": 1065,
+        "vision_center": 0.3943020920502698,
+        "sound_center": 0.39329310220787994,
+        "concept_score": 0.39329310220787994
+    },
+    {
+        "step": 1066,
+        "vision_center": 0.39453254381844627,
+        "sound_center": 0.3935144967761179,
+        "concept_score": 0.3935144967761179
+    },
+    {
+        "step": 1067,
+        "vision_center": 0.39465049498459537,
+        "sound_center": 0.3936245640026168,
+        "concept_score": 0.3936245640026168
+    },
+    {
+        "step": 1068,
+        "vision_center": 0.39465447146647686,
+        "sound_center": 0.39362113755563954,
+        "concept_score": 0.39362113755563954
+    },
+    {
+        "step": 1069,
+        "vision_center": 0.39454309297566553,
+        "sound_center": 0.3935024439589763,
+        "concept_score": 0.3935024439589763
+    },
+    {
+        "step": 1070,
+        "vision_center": 0.3943169583379919,
+        "sound_center": 0.3932685427343983,
+        "concept_score": 0.3932685427343983
+    },
+    {
+        "step": 1071,
+        "vision_center": 0.3939766591302055,
+        "sound_center": 0.39291981170327833,
+        "concept_score": 0.39291981170327833
+    },
+    {
+        "step": 1072,
+        "vision_center": 0.3935245580605161,
+        "sound_center": 0.39245845154700654,
+        "concept_score": 0.39245845154700654
+    },
+    {
+        "step": 1073,
+        "vision_center": 0.3929642807175408,
+        "sound_center": 0.3918879876181321,
+        "concept_score": 0.3918879876181321
+    },
+    {
+        "step": 1074,
+        "vision_center": 0.3923008720764221,
+        "sound_center": 0.3912133969519653,
+        "concept_score": 0.3912133969519653
+    },
+    {
+        "step": 1075,
+        "vision_center": 0.3915408880672706,
+        "sound_center": 0.3904412427984529,
+        "concept_score": 0.3904412427984529
+    },
+    {
+        "step": 1076,
+        "vision_center": 0.3906921303232405,
+        "sound_center": 0.38957928653548096,
+        "concept_score": 0.38957928653548096
+    },
+    {
+        "step": 1077,
+        "vision_center": 0.38976378257283567,
+        "sound_center": 0.38863674320105035,
+        "concept_score": 0.38863674320105035
+    },
+    {
+        "step": 1078,
+        "vision_center": 0.3887661021643832,
+        "sound_center": 0.38762386973183993,
+        "concept_score": 0.38762386973183993
+    },
+    {
+        "step": 1079,
+        "vision_center": 0.3877104897669624,
+        "sound_center": 0.3865521470024996,
+        "concept_score": 0.3865521470024996
+    },
+    {
+        "step": 1080,
+        "vision_center": 0.3866092058642182,
+        "sound_center": 0.38543384761207217,
+        "concept_score": 0.38543384761207217
+    },
+    {
+        "step": 1081,
+        "vision_center": 0.3854753530532909,
+        "sound_center": 0.38428216805534426,
+        "concept_score": 0.38428216805534426
+    },
+    {
+        "step": 1082,
+        "vision_center": 0.3843226434381898,
+        "sound_center": 0.38311089297450407,
+        "concept_score": 0.38311089297450407
+    },
+    {
+        "step": 1083,
+        "vision_center": 0.3831653102704222,
+        "sound_center": 0.3819343969896658,
+        "concept_score": 0.3819343969896658
+    },
+    {
+        "step": 1084,
+        "vision_center": 0.3820179050607636,
+        "sound_center": 0.3807673730035743,
+        "concept_score": 0.3807673730035743
+    },
+    {
+        "step": 1085,
+        "vision_center": 0.38089516936445716,
+        "sound_center": 0.37962475431765685,
+        "concept_score": 0.37962475431765685
+    },
+    {
+        "step": 1086,
+        "vision_center": 0.3798118484567435,
+        "sound_center": 0.3785214841298355,
+        "concept_score": 0.3785214841298355
+    },
+    {
+        "step": 1087,
+        "vision_center": 0.37878254855765814,
+        "sound_center": 0.37747239467022503,
+        "concept_score": 0.37747239467022503
+    },
+    {
+        "step": 1088,
+        "vision_center": 0.37782155183881566,
+        "sound_center": 0.37649200584326054,
+        "concept_score": 0.37649200584326054
+    },
+    {
+        "step": 1089,
+        "vision_center": 0.37694252377373055,
+        "sound_center": 0.3755941782706416,
+        "concept_score": 0.3755941782706416
+    },
+    {
+        "step": 1090,
+        "vision_center": 0.37615793534309855,
+        "sound_center": 0.37479162406921707,
+        "concept_score": 0.37479162406921707
+    },
+    {
+        "step": 1091,
+        "vision_center": 0.3754781037074096,
+        "sound_center": 0.3740948517765304,
+        "concept_score": 0.3740948517765304
+    },
+    {
+        "step": 1092,
+        "vision_center": 0.3749101863704011,
+        "sound_center": 0.37351116194894823,
+        "concept_score": 0.37351116194894823
+    },
+    {
+        "step": 1093,
+        "vision_center": 0.37445777024827365,
+        "sound_center": 0.373044267588746,
+        "concept_score": 0.373044267588746
+    },
+    {
+        "step": 1094,
+        "vision_center": 0.3741225729068608,
+        "sound_center": 0.3726959861459468,
+        "concept_score": 0.3726959861459468
+    },
+    {
+        "step": 1095,
+        "vision_center": 0.37390329777896203,
+        "sound_center": 0.3724651136787338,
+        "concept_score": 0.3724651136787338
+    },
+    {
+        "step": 1096,
+        "vision_center": 0.3737977648486002,
+        "sound_center": 0.37234954841165196,
+        "concept_score": 0.37234954841165196
+    },
+    {
+        "step": 1097,
+        "vision_center": 0.37380197148650024,
+        "sound_center": 0.3723453482918937,
+        "concept_score": 0.3723453482918937
+    },
+    {
+        "step": 1098,
+        "vision_center": 0.37391165120133196,
+        "sound_center": 0.37244829312229416,
+        "concept_score": 0.37244829312229416
+    },
+    {
+        "step": 1099,
+        "vision_center": 0.3741215291108307,
+        "sound_center": 0.3726531272746494,
+        "concept_score": 0.3726531272746494
+    },
+    {
+        "step": 1100,
+        "vision_center": 0.37442650386385695,
+        "sound_center": 0.3729547532626492,
+        "concept_score": 0.3729547532626492
+    },
+    {
+        "step": 1101,
+        "vision_center": 0.37482102323848054,
+        "sound_center": 0.37334759831824965,
+        "concept_score": 0.37334759831824965
+    },
+    {
+        "step": 1102,
+        "vision_center": 0.3752996348804305,
+        "sound_center": 0.3738261695889996,
+        "concept_score": 0.3738261695889996
+    },
+    {
+        "step": 1103,
+        "vision_center": 0.3758568347507012,
+        "sound_center": 0.3743849061430328,
+        "concept_score": 0.3743849061430328
+    },
+    {
+        "step": 1104,
+        "vision_center": 0.3764871540157891,
+        "sound_center": 0.3750182689182681,
+        "concept_score": 0.3750182689182681
+    },
+    {
+        "step": 1105,
+        "vision_center": 0.3771850825278548,
+        "sound_center": 0.3757206584896171,
+        "concept_score": 0.3757206584896171
+    },
+    {
+        "step": 1106,
+        "vision_center": 0.37794508230483853,
+        "sound_center": 0.3764864445759631,
+        "concept_score": 0.3764864445759631
+    },
+    {
+        "step": 1107,
+        "vision_center": 0.37876159515276026,
+        "sound_center": 0.377309961609135,
+        "concept_score": 0.377309961609135
+    },
+    {
+        "step": 1108,
+        "vision_center": 0.3796289993495542,
+        "sound_center": 0.37818549087649683,
+        "concept_score": 0.37818549087649683
+    },
+    {
+        "step": 1109,
+        "vision_center": 0.3805414933219103,
+        "sound_center": 0.3791071197047742,
+        "concept_score": 0.3791071197047742
+    },
+    {
+        "step": 1110,
+        "vision_center": 0.38149293684330404,
+        "sound_center": 0.3800686039577512,
+        "concept_score": 0.3800686039577512
+    },
+    {
+        "step": 1111,
+        "vision_center": 0.38247703650688325,
+        "sound_center": 0.3810635409903785,
+        "concept_score": 0.3810635409903785
+    },
+    {
+        "step": 1112,
+        "vision_center": 0.3834870360221739,
+        "sound_center": 0.3820850654309657,
+        "concept_score": 0.3820850654309657
+    },
+    {
+        "step": 1113,
+        "vision_center": 0.3845158653116128,
+        "sound_center": 0.38312601473673263,
+        "concept_score": 0.38312601473673263
+    },
+    {
+        "step": 1114,
+        "vision_center": 0.3855561331178764,
+        "sound_center": 0.38417889758948875,
+        "concept_score": 0.38417889758948875
+    },
+    {
+        "step": 1115,
+        "vision_center": 0.38659992564216966,
+        "sound_center": 0.3852357127926665,
+        "concept_score": 0.3852357127926665
+    },
+    {
+        "step": 1116,
+        "vision_center": 0.3876391737079281,
+        "sound_center": 0.3862882977389937,
+        "concept_score": 0.3862882977389937
+    },
+    {
+        "step": 1117,
+        "vision_center": 0.3886650649316591,
+        "sound_center": 0.3873277504860499,
+        "concept_score": 0.3873277504860499
+    },
+    {
+        "step": 1118,
+        "vision_center": 0.38966901614509064,
+        "sound_center": 0.38834540025223413,
+        "concept_score": 0.38834540025223413
+    },
+    {
+        "step": 1119,
+        "vision_center": 0.39064182829731703,
+        "sound_center": 0.38933195993662245,
+        "concept_score": 0.38933195993662245
+    },
+    {
+        "step": 1120,
+        "vision_center": 0.3915745222875773,
+        "sound_center": 0.3902783637196801,
+        "concept_score": 0.3902783637196801
+    },
+    {
+        "step": 1121,
+        "vision_center": 0.3924579377730844,
+        "sound_center": 0.39117531881665096,
+        "concept_score": 0.39117531881665096
+    },
+    {
+        "step": 1122,
+        "vision_center": 0.39328330254328264,
+        "sound_center": 0.3920139298066122,
+        "concept_score": 0.3920139298066122
+    },
+    {
+        "step": 1123,
+        "vision_center": 0.3940419066877766,
+        "sound_center": 0.39278539626094033,
+        "concept_score": 0.39278539626094033
+    },
+    {
+        "step": 1124,
+        "vision_center": 0.3947252461316966,
+        "sound_center": 0.39348112454688394,
+        "concept_score": 0.39348112454688394
+    },
+    {
+        "step": 1125,
+        "vision_center": 0.39532564023691574,
+        "sound_center": 0.3940933531465941,
+        "concept_score": 0.3940933531465941
+    },
+    {
+        "step": 1126,
+        "vision_center": 0.3958357688650594,
+        "sound_center": 0.3946146805806335,
+        "concept_score": 0.3946146805806335
+    },
+    {
+        "step": 1127,
+        "vision_center": 0.39624956620874996,
+        "sound_center": 0.395038509778496,
+        "concept_score": 0.395038509778496
+    },
+    {
+        "step": 1128,
+        "vision_center": 0.39656134038711044,
+        "sound_center": 0.3953587083743038,
+        "concept_score": 0.3953587083743038
+    },
+    {
+        "step": 1129,
+        "vision_center": 0.39676696740742773,
+        "sound_center": 0.39557074797021224,
+        "concept_score": 0.39557074797021224
+    },
+    {
+        "step": 1130,
+        "vision_center": 0.39686260243653965,
+        "sound_center": 0.3956704528618449,
+        "concept_score": 0.3956704528618449
+    },
+    {
+        "step": 1131,
+        "vision_center": 0.3968466338069997,
+        "sound_center": 0.39565588481320624,
+        "concept_score": 0.39565588481320624
+    },
+    {
+        "step": 1132,
+        "vision_center": 0.39671749538896944,
+        "sound_center": 0.39552523888067004,
+        "concept_score": 0.39552523888067004
+    },
+    {
+        "step": 1133,
+        "vision_center": 0.3964757568569521,
+        "sound_center": 0.39527884399842406,
+        "concept_score": 0.39527884399842406
+    },
+    {
+        "step": 1134,
+        "vision_center": 0.39612183658591976,
+        "sound_center": 0.3949170765672162,
+        "concept_score": 0.3949170765672162
+    },
+    {
+        "step": 1135,
+        "vision_center": 0.39565826236075985,
+        "sound_center": 0.39444248873693005,
+        "concept_score": 0.39444248873693005
+    },
+    {
+        "step": 1136,
+        "vision_center": 0.39508870295642656,
+        "sound_center": 0.39385870314624377,
+        "concept_score": 0.39385870314624377
+    },
+    {
+        "step": 1137,
+        "vision_center": 0.3944183668186924,
+        "sound_center": 0.393171014990186,
+        "concept_score": 0.393171014990186
+    },
+    {
+        "step": 1138,
+        "vision_center": 0.3936538893535634,
+        "sound_center": 0.39238609315446027,
+        "concept_score": 0.39238609315446027
+    },
+    {
+        "step": 1139,
+        "vision_center": 0.3928030171865064,
+        "sound_center": 0.391511974386831,
+        "concept_score": 0.391511974386831
+    },
+    {
+        "step": 1140,
+        "vision_center": 0.3918743273657048,
+        "sound_center": 0.39055801069801793,
+        "concept_score": 0.39055801069801793
+    },
+    {
+        "step": 1141,
+        "vision_center": 0.39087793115103975,
+        "sound_center": 0.38953469193128676,
+        "concept_score": 0.38953469193128676
+    },
+    {
+        "step": 1142,
+        "vision_center": 0.3898249881985776,
+        "sound_center": 0.38845362734603445,
+        "concept_score": 0.38845362734603445
+    },
+    {
+        "step": 1143,
+        "vision_center": 0.38872771707997644,
+        "sound_center": 0.38732731614740395,
+        "concept_score": 0.38732731614740395
+    },
+    {
+        "step": 1144,
+        "vision_center": 0.3875991749329356,
+        "sound_center": 0.3861691008166621,
+        "concept_score": 0.3861691008166621
+    },
+    {
+        "step": 1145,
+        "vision_center": 0.3864530936631107,
+        "sound_center": 0.3849929436447103,
+        "concept_score": 0.3849929436447103
+    },
+    {
+        "step": 1146,
+        "vision_center": 0.38530373354640957,
+        "sound_center": 0.38381333395788997,
+        "concept_score": 0.38381333395788997
+    },
+    {
+        "step": 1147,
+        "vision_center": 0.3841656873148464,
+        "sound_center": 0.3826450788824004,
+        "concept_score": 0.3826450788824004
+    },
+    {
+        "step": 1148,
+        "vision_center": 0.38305373998779335,
+        "sound_center": 0.3815031770628035,
+        "concept_score": 0.3815031770628035
+    },
+    {
+        "step": 1149,
+        "vision_center": 0.3819826759868548,
+        "sound_center": 0.38040262308739886,
+        "concept_score": 0.38040262308739886
+    },
+    {
+        "step": 1150,
+        "vision_center": 0.38096713362861734,
+        "sound_center": 0.3793582464088232,
+        "concept_score": 0.3793582464088232
+    },
+    {
+        "step": 1151,
+        "vision_center": 0.38002141057626043,
+        "sound_center": 0.3783845320253057,
+        "concept_score": 0.3783845320253057
+    },
+    {
+        "step": 1152,
+        "vision_center": 0.37915907520122266,
+        "sound_center": 0.3774951693714293,
+        "concept_score": 0.3774951693714293
+    },
+    {
+        "step": 1153,
+        "vision_center": 0.37839252133765233,
+        "sound_center": 0.3767027140125556,
+        "concept_score": 0.3767027140125556
+    },
+    {
+        "step": 1154,
+        "vision_center": 0.37773162263604876,
+        "sound_center": 0.37601712227328893,
+        "concept_score": 0.37601712227328893
+    },
+    {
+        "step": 1155,
+        "vision_center": 0.37718317318595285,
+        "sound_center": 0.3754452479773773,
+        "concept_score": 0.3754452479773773
+    },
+    {
+        "step": 1156,
+        "vision_center": 0.3767503926741932,
+        "sound_center": 0.374990306865731,
+        "concept_score": 0.374990306865731
+    },
+    {
+        "step": 1157,
+        "vision_center": 0.3764347928417715,
+        "sound_center": 0.3746538265529712,
+        "concept_score": 0.3746538265529712
+    },
+    {
+        "step": 1158,
+        "vision_center": 0.3762348748565566,
+        "sound_center": 0.3744342730770382,
+        "concept_score": 0.3744342730770382
+    },
+    {
+        "step": 1159,
+        "vision_center": 0.376148392954731,
+        "sound_center": 0.374329394674465,
+        "concept_score": 0.374329394674465
+    },
+    {
+        "step": 1160,
+        "vision_center": 0.37617136017520986,
+        "sound_center": 0.3743351536440816,
+        "concept_score": 0.3743351536440816
+    },
+    {
+        "step": 1161,
+        "vision_center": 0.37629946583925306,
+        "sound_center": 0.3744472084469661,
+        "concept_score": 0.3744472084469661
+    },
+    {
+        "step": 1162,
+        "vision_center": 0.37652758812961895,
+        "sound_center": 0.37466036706942285,
+        "concept_score": 0.37466036706942285
+    },
+    {
+        "step": 1163,
+        "vision_center": 0.3768506537066335,
+        "sound_center": 0.3749694940344889,
+        "concept_score": 0.3749694940344889
+    },
+    {
+        "step": 1164,
+        "vision_center": 0.3772632340913473,
+        "sound_center": 0.37536907150155635,
+        "concept_score": 0.37536907150155635
+    },
+    {
+        "step": 1165,
+        "vision_center": 0.3777599499547178,
+        "sound_center": 0.37585362533990374,
+        "concept_score": 0.37585362533990374
+    },
+    {
+        "step": 1166,
+        "vision_center": 0.3783354240829358,
+        "sound_center": 0.37641766726169645,
+        "concept_score": 0.37641766726169645
+    },
+    {
+        "step": 1167,
+        "vision_center": 0.37898421841121877,
+        "sound_center": 0.3770556438927326,
+        "concept_score": 0.3770556438927326
+    },
+    {
+        "step": 1168,
+        "vision_center": 0.37970095470221177,
+        "sound_center": 0.37776204666570884,
+        "concept_score": 0.37776204666570884
+    },
+    {
+        "step": 1169,
+        "vision_center": 0.3804800909915495,
+        "sound_center": 0.37853120256693484,
+        "concept_score": 0.37853120256693484
+    },
+    {
+        "step": 1170,
+        "vision_center": 0.3813162217822856,
+        "sound_center": 0.37935745732983456,
+        "concept_score": 0.37935745732983456
+    },
+    {
+        "step": 1171,
+        "vision_center": 0.3822036827770594,
+        "sound_center": 0.3802349244983497,
+        "concept_score": 0.3802349244983497
+    },
+    {
+        "step": 1172,
+        "vision_center": 0.3831367642346137,
+        "sound_center": 0.3811576636443644,
+        "concept_score": 0.3811576636443644
+    },
+    {
+        "step": 1173,
+        "vision_center": 0.3841093095386912,
+        "sound_center": 0.3821192975260608,
+        "concept_score": 0.3821192975260608
+    },
+    {
+        "step": 1174,
+        "vision_center": 0.38511507974548137,
+        "sound_center": 0.3831133519333873,
+        "concept_score": 0.3831133519333873
+    },
+    {
+        "step": 1175,
+        "vision_center": 0.3861472995499201,
+        "sound_center": 0.38413283922522296,
+        "concept_score": 0.38413283922522296
+    },
+    {
+        "step": 1176,
+        "vision_center": 0.38719897456603214,
+        "sound_center": 0.38517052700574056,
+        "concept_score": 0.38517052700574056
+    },
+    {
+        "step": 1177,
+        "vision_center": 0.388262687643662,
+        "sound_center": 0.38621878055913783,
+        "concept_score": 0.38621878055913783
+    },
+    {
+        "step": 1178,
+        "vision_center": 0.38933065659175525,
+        "sound_center": 0.3872695652491753,
+        "concept_score": 0.3872695652491753
+    },
+    {
+        "step": 1179,
+        "vision_center": 0.3903947535653313,
+        "sound_center": 0.38831451513389564,
+        "concept_score": 0.38831451513389564
+    },
+    {
+        "step": 1180,
+        "vision_center": 0.3914463991091007,
+        "sound_center": 0.3893447737174252,
+        "concept_score": 0.3893447737174252
+    },
+    {
+        "step": 1181,
+        "vision_center": 0.39247255096876127,
+        "sound_center": 0.39035147668372805,
+        "concept_score": 0.39035147668372805
+    },
+    {
+        "step": 1182,
+        "vision_center": 0.3934632437092727,
+        "sound_center": 0.3913254024509195,
+        "concept_score": 0.3913254024509195
+    },
+    {
+        "step": 1183,
+        "vision_center": 0.3944093300211814,
+        "sound_center": 0.3922573319565263,
+        "concept_score": 0.3922573319565263
+    },
+    {
+        "step": 1184,
+        "vision_center": 0.3953020062207055,
+        "sound_center": 0.39313805257674966,
+        "concept_score": 0.39313805257674966
+    },
+    {
+        "step": 1185,
+        "vision_center": 0.3961326343560499,
+        "sound_center": 0.3939585995350609,
+        "concept_score": 0.3939585995350609
+    },
+    {
+        "step": 1186,
+        "vision_center": 0.39689279035917724,
+        "sound_center": 0.3947102032786351,
+        "concept_score": 0.3947102032786351
+    },
+    {
+        "step": 1187,
+        "vision_center": 0.3975741452143446,
+        "sound_center": 0.3953842763540514,
+        "concept_score": 0.3953842763540514
+    },
+    {
+        "step": 1188,
+        "vision_center": 0.39816923675623533,
+        "sound_center": 0.3959731262672844,
+        "concept_score": 0.3959731262672844
+    },
+    {
+        "step": 1189,
+        "vision_center": 0.39867094797562935,
+        "sound_center": 0.3964694417184678,
+        "concept_score": 0.3964694417184678
+    },
+    {
+        "step": 1190,
+        "vision_center": 0.399073334879598,
+        "sound_center": 0.39686708562574907,
+        "concept_score": 0.39686708562574907
+    },
+    {
+        "step": 1191,
+        "vision_center": 0.39937091906398164,
+        "sound_center": 0.39716039489924265,
+        "concept_score": 0.39716039489924265
+    },
+    {
+        "step": 1192,
+        "vision_center": 0.3995596222327652,
+        "sound_center": 0.39734510797020917,
+        "concept_score": 0.39734510797020917
+    },
+    {
+        "step": 1193,
+        "vision_center": 0.3996359260752802,
+        "sound_center": 0.397417466421183,
+        "concept_score": 0.397417466421183
+    },
+    {
+        "step": 1194,
+        "vision_center": 0.3995981841097597,
+        "sound_center": 0.3973756510004219,
+        "concept_score": 0.3973756510004219
+    },
+    {
+        "step": 1195,
+        "vision_center": 0.39944513803099174,
+        "sound_center": 0.39721817865130565,
+        "concept_score": 0.39721817865130565
+    },
+    {
+        "step": 1196,
+        "vision_center": 0.3991772953187288,
+        "sound_center": 0.3969454438349882,
+        "concept_score": 0.3969454438349882
+    },
+    {
+        "step": 1197,
+        "vision_center": 0.3987952531303723,
+        "sound_center": 0.3965580439077667,
+        "concept_score": 0.3965580439077667
+    },
+    {
+        "step": 1198,
+        "vision_center": 0.3983016739050636,
+        "sound_center": 0.39605876590754546,
+        "concept_score": 0.39605876590754546
+    },
+    {
+        "step": 1199,
+        "vision_center": 0.39770043526400917,
+        "sound_center": 0.3954513929429935,
+        "concept_score": 0.3954513929429935
+    },
+    {
+        "step": 1200,
+        "vision_center": 0.396996848771899,
+        "sound_center": 0.3947414784367689,
+        "concept_score": 0.3947414784367689
+    },
+    {
+        "step": 1201,
+        "vision_center": 0.3961978840432658,
+        "sound_center": 0.3939358222176251,
+        "concept_score": 0.3939358222176251
+    },
+    {
+        "step": 1202,
+        "vision_center": 0.395311571999779,
+        "sound_center": 0.3930426967066811,
+        "concept_score": 0.3930426967066811
+    },
+    {
+        "step": 1203,
+        "vision_center": 0.39434752680738966,
+        "sound_center": 0.39207156408924654,
+        "concept_score": 0.39207156408924654
+    },
+    {
+        "step": 1204,
+        "vision_center": 0.39331622648303904,
+        "sound_center": 0.39103310586897544,
+        "concept_score": 0.39103310586897544
+    },
+    {
+        "step": 1205,
+        "vision_center": 0.39222944977847124,
+        "sound_center": 0.38993902105814104,
+        "concept_score": 0.38993902105814104
+    },
+    {
+        "step": 1206,
+        "vision_center": 0.3910996635081391,
+        "sound_center": 0.38880194284859837,
+        "concept_score": 0.38880194284859837
+    },
+    {
+        "step": 1207,
+        "vision_center": 0.38994028071894526,
+        "sound_center": 0.387635276173992,
+        "concept_score": 0.387635276173992
+    },
+    {
+        "step": 1208,
+        "vision_center": 0.38876519663084014,
+        "sound_center": 0.3864530595343715,
+        "concept_score": 0.3864530595343715
+    },
+    {
+        "step": 1209,
+        "vision_center": 0.387588881447358,
+        "sound_center": 0.3852698064818501,
+        "concept_score": 0.3852698064818501
+    },
+    {
+        "step": 1210,
+        "vision_center": 0.3864260314974526,
+        "sound_center": 0.3841003434792268,
+        "concept_score": 0.3841003434792268
+    },
+    {
+        "step": 1211,
+        "vision_center": 0.3852915490472285,
+        "sound_center": 0.3829596477228561,
+        "concept_score": 0.3829596477228561
+    },
+    {
+        "step": 1212,
+        "vision_center": 0.38420027097764475,
+        "sound_center": 0.38186267702838117,
+        "concept_score": 0.38186267702838117
+    },
+    {
+        "step": 1213,
+        "vision_center": 0.3831668828918345,
+        "sound_center": 0.38082420673096706,
+        "concept_score": 0.38082420673096706
+    },
+    {
+        "step": 1214,
+        "vision_center": 0.38220568863989385,
+        "sound_center": 0.3798586235057648,
+        "concept_score": 0.3798586235057648
+    },
+    {
+        "step": 1215,
+        "vision_center": 0.38133012348672873,
+        "sound_center": 0.37897941713440825,
+        "concept_score": 0.37897941713440825
+    },
+    {
+        "step": 1216,
+        "vision_center": 0.38055234827146717,
+        "sound_center": 0.3781988409854398,
+        "concept_score": 0.3781988409854398
+    },
+    {
+        "step": 1217,
+        "vision_center": 0.37988168788736765,
+        "sound_center": 0.3775262479645603,
+        "concept_score": 0.3775262479645603
+    },
+    {
+        "step": 1218,
+        "vision_center": 0.37932449111617295,
+        "sound_center": 0.3769680088303175,
+        "concept_score": 0.3769680088303175
+    },
+    {
+        "step": 1219,
+        "vision_center": 0.3788835286137734,
+        "sound_center": 0.3765268366339841,
+        "concept_score": 0.3765268366339841
+    },
+    {
+        "step": 1220,
+        "vision_center": 0.3785599931510745,
+        "sound_center": 0.3762039402300201,
+        "concept_score": 0.3762039402300201
+    },
+    {
+        "step": 1221,
+        "vision_center": 0.37835224200434947,
+        "sound_center": 0.3759974531139175,
+        "concept_score": 0.3759974531139175
+    },
+    {
+        "step": 1222,
+        "vision_center": 0.3782577452615734,
+        "sound_center": 0.37590494616203074,
+        "concept_score": 0.37590494616203074
+    },
+    {
+        "step": 1223,
+        "vision_center": 0.3782724500692774,
+        "sound_center": 0.3759222784502608,
+        "concept_score": 0.3759222784502608
+    },
+    {
+        "step": 1224,
+        "vision_center": 0.3783918487395885,
+        "sound_center": 0.376044958092438,
+        "concept_score": 0.376044958092438
+    },
+    {
+        "step": 1225,
+        "vision_center": 0.3786108599995004,
+        "sound_center": 0.3762678523190489,
+        "concept_score": 0.3762678523190489
+    },
+    {
+        "step": 1226,
+        "vision_center": 0.37892423392423463,
+        "sound_center": 0.37658571131989915,
+        "concept_score": 0.37658571131989915
+    },
+    {
+        "step": 1227,
+        "vision_center": 0.3793265648544155,
+        "sound_center": 0.37699308991383534,
+        "concept_score": 0.37699308991383534
+    },
+    {
+        "step": 1228,
+        "vision_center": 0.3798123163381041,
+        "sound_center": 0.3774844370663165,
+        "concept_score": 0.3774844370663165
+    },
+    {
+        "step": 1229,
+        "vision_center": 0.380376125279115,
+        "sound_center": 0.37805435246636937,
+        "concept_score": 0.37805435246636937
+    },
+    {
+        "step": 1230,
+        "vision_center": 0.38101236557700235,
+        "sound_center": 0.3786971885132917,
+        "concept_score": 0.3786971885132917
+    },
+    {
+        "step": 1231,
+        "vision_center": 0.3817156406678655,
+        "sound_center": 0.3794075140449386,
+        "concept_score": 0.3794075140449386
+    },
+    {
+        "step": 1232,
+        "vision_center": 0.38248022123971337,
+        "sound_center": 0.38017956998130686,
+        "concept_score": 0.38017956998130686
+    },
+    {
+        "step": 1233,
+        "vision_center": 0.38330063533097564,
+        "sound_center": 0.3810078539164959,
+        "concept_score": 0.3810078539164959
+    },
+    {
+        "step": 1234,
+        "vision_center": 0.38417101622846545,
+        "sound_center": 0.38188647245225027,
+        "concept_score": 0.38188647245225027
+    },
+    {
+        "step": 1235,
+        "vision_center": 0.3850854948262444,
+        "sound_center": 0.3828095251573829,
+        "concept_score": 0.3828095251573829
+    },
+    {
+        "step": 1236,
+        "vision_center": 0.3860377211327617,
+        "sound_center": 0.38377064065761374,
+        "concept_score": 0.38377064065761374
+    },
+    {
+        "step": 1237,
+        "vision_center": 0.38702124701175294,
+        "sound_center": 0.38476334527001566,
+        "concept_score": 0.38476334527001566
+    },
+    {
+        "step": 1238,
+        "vision_center": 0.38802905503138635,
+        "sound_center": 0.38578061656050805,
+        "concept_score": 0.38578061656050805
+    },
+    {
+        "step": 1239,
+        "vision_center": 0.38905394905576257,
+        "sound_center": 0.38681523899290216,
+        "concept_score": 0.38681523899290216
+    },
+    {
+        "step": 1240,
+        "vision_center": 0.39008825157661897,
+        "sound_center": 0.38785949319478147,
+        "concept_score": 0.38785949319478147
+    },
+    {
+        "step": 1241,
+        "vision_center": 0.3911240013706892,
+        "sound_center": 0.3889053580639484,
+        "concept_score": 0.3889053580639484
+    },
+    {
+        "step": 1242,
+        "vision_center": 0.39215267623026195,
+        "sound_center": 0.3899442706083914,
+        "concept_score": 0.3899442706083914
+    },
+    {
+        "step": 1243,
+        "vision_center": 0.39316555089606836,
+        "sound_center": 0.39096744053819404,
+        "concept_score": 0.39096744053819404
+    },
+    {
+        "step": 1244,
+        "vision_center": 0.3941536032373565,
+        "sound_center": 0.39196580040372386,
+        "concept_score": 0.39196580040372386
+    },
+    {
+        "step": 1245,
+        "vision_center": 0.3951077263742606,
+        "sound_center": 0.39293018003724495,
+        "concept_score": 0.39293018003724495
+    },
+    {
+        "step": 1246,
+        "vision_center": 0.39601861945618594,
+        "sound_center": 0.39385123034609126,
+        "concept_score": 0.39385123034609126
+    },
+    {
+        "step": 1247,
+        "vision_center": 0.3968771758189178,
+        "sound_center": 0.39471978616463776,
+        "concept_score": 0.39471978616463776
+    },
+    {
+        "step": 1248,
+        "vision_center": 0.3976744421383941,
+        "sound_center": 0.39552685274856186,
+        "concept_score": 0.39552685274856186
+    },
+    {
+        "step": 1249,
+        "vision_center": 0.3984016925638111,
+        "sound_center": 0.39626365377033324,
+        "concept_score": 0.39626365377033324
+    },
+    {
+        "step": 1250,
+        "vision_center": 0.39905045069628053,
+        "sound_center": 0.39692167146659846,
+        "concept_score": 0.39692167146659846
+    },
+    {
+        "step": 1251,
+        "vision_center": 0.3996130962428035,
+        "sound_center": 0.3974932483161672,
+        "concept_score": 0.3974932483161672
+    },
+    {
+        "step": 1252,
+        "vision_center": 0.4000825359703291,
+        "sound_center": 0.3979712392847148,
+        "concept_score": 0.3979712392847148
+    },
+    {
+        "step": 1253,
+        "vision_center": 0.40045272841793345,
+        "sound_center": 0.398349544985783,
+        "concept_score": 0.398349544985783
+    },
+    {
+        "step": 1254,
+        "vision_center": 0.4007183263702664,
+        "sound_center": 0.3986227350565034,
+        "concept_score": 0.3986227350565034
+    },
+    {
+        "step": 1255,
+        "vision_center": 0.4008751698124272,
+        "sound_center": 0.3987865618829764,
+        "concept_score": 0.3987865618829764
+    },
+    {
+        "step": 1256,
+        "vision_center": 0.40092005529430974,
+        "sound_center": 0.3988376444860444,
+        "concept_score": 0.3988376444860444
+    },
+    {
+        "step": 1257,
+        "vision_center": 0.40085123161771075,
+        "sound_center": 0.3987741518025262,
+        "concept_score": 0.3987741518025262
+    },
+    {
+        "step": 1258,
+        "vision_center": 0.40066777355217675,
+        "sound_center": 0.3985949762869173,
+        "concept_score": 0.3985949762869173
+    },
+    {
+        "step": 1259,
+        "vision_center": 0.4003700950103843,
+        "sound_center": 0.39830050437183134,
+        "concept_score": 0.39830050437183134
+    },
+    {
+        "step": 1260,
+        "vision_center": 0.399959026005799,
+        "sound_center": 0.397891663606028,
+        "concept_score": 0.397891663606028
+    },
+    {
+        "step": 1261,
+        "vision_center": 0.39943750610294126,
+        "sound_center": 0.39737148449198745,
+        "concept_score": 0.39737148449198745
+    },
+    {
+        "step": 1262,
+        "vision_center": 0.3988094499228259,
+        "sound_center": 0.3967439606574857,
+        "concept_score": 0.3967439606574857
+    },
+    {
+        "step": 1263,
+        "vision_center": 0.3980805899166232,
+        "sound_center": 0.3960149622204041,
+        "concept_score": 0.3960149622204041
+    },
+    {
+        "step": 1264,
+        "vision_center": 0.3972578627455717,
+        "sound_center": 0.39519144367878967,
+        "concept_score": 0.39519144367878967
+    },
+    {
+        "step": 1265,
+        "vision_center": 0.39634970299003874,
+        "sound_center": 0.3942819779809984,
+        "concept_score": 0.3942819779809984
+    },
+    {
+        "step": 1266,
+        "vision_center": 0.39536570165430607,
+        "sound_center": 0.3932961583185362,
+        "concept_score": 0.3932961583185362
+    },
+    {
+        "step": 1267,
+        "vision_center": 0.3943166652460229,
+        "sound_center": 0.3922449160469159,
+        "concept_score": 0.3922449160469159
+    },
+    {
+        "step": 1268,
+        "vision_center": 0.39321438189618785,
+        "sound_center": 0.39114005990249817,
+        "concept_score": 0.39114005990249817
+    },
+    {
+        "step": 1269,
+        "vision_center": 0.39207155626023993,
+        "sound_center": 0.38999440624248266,
+        "concept_score": 0.38999440624248266
+    },
+    {
+        "step": 1270,
+        "vision_center": 0.3909016260518445,
+        "sound_center": 0.3888214410973181,
+        "concept_score": 0.3888214410973181
+    },
+    {
+        "step": 1271,
+        "vision_center": 0.3897186371906842,
+        "sound_center": 0.3876353167967964,
+        "concept_score": 0.3876353167967964
+    },
+    {
+        "step": 1272,
+        "vision_center": 0.38853707280664707,
+        "sound_center": 0.38645058654151015,
+        "concept_score": 0.38645058654151015
+    },
+    {
+        "step": 1273,
+        "vision_center": 0.3873717018318159,
+        "sound_center": 0.3852821220792163,
+        "concept_score": 0.3852821220792163
+    },
+    {
+        "step": 1274,
+        "vision_center": 0.386237409214127,
+        "sound_center": 0.3841448907517516,
+        "concept_score": 0.3841448907517516
+    },
+    {
+        "step": 1275,
+        "vision_center": 0.3851490324769147,
+        "sound_center": 0.383053830759605,
+        "concept_score": 0.383053830759605
+    },
+    {
+        "step": 1276,
+        "vision_center": 0.3841211966206699,
+        "sound_center": 0.38202365528566595,
+        "concept_score": 0.38202365528566595
+    },
+    {
+        "step": 1277,
+        "vision_center": 0.38316811697387304,
+        "sound_center": 0.38106864627932724,
+        "concept_score": 0.38106864627932724
+    },
+    {
+        "step": 1278,
+        "vision_center": 0.3823030277107211,
+        "sound_center": 0.38020208516973275,
+        "concept_score": 0.38020208516973275
+    },
+    {
+        "step": 1279,
+        "vision_center": 0.38153775063109246,
+        "sound_center": 0.37943589074751194,
+        "concept_score": 0.37943589074751194
+    },
+    {
+        "step": 1280,
+        "vision_center": 0.38088106697470914,
+        "sound_center": 0.378778806624096,
+        "concept_score": 0.378778806624096
+    },
+    {
+        "step": 1281,
+        "vision_center": 0.3803386069243241,
+        "sound_center": 0.37823652517165246,
+        "concept_score": 0.37823652517165246
+    },
+    {
+        "step": 1282,
+        "vision_center": 0.3799130126593391,
+        "sound_center": 0.37781156751679923,
+        "concept_score": 0.37781156751679923
+    },
+    {
+        "step": 1283,
+        "vision_center": 0.3796048265988631,
+        "sound_center": 0.37750442494837927,
+        "concept_score": 0.37750442494837927
+    },
+    {
+        "step": 1284,
+        "vision_center": 0.3794123399997123,
+        "sound_center": 0.3773133017168071,
+        "concept_score": 0.3773133017168071
+    },
+    {
+        "step": 1285,
+        "vision_center": 0.3793325385482308,
+        "sound_center": 0.37723520824725515,
+        "concept_score": 0.37723520824725515
+    },
+    {
+        "step": 1286,
+        "vision_center": 0.3793615788405358,
+        "sound_center": 0.37726621273812383,
+        "concept_score": 0.37726621273812383
+    },
+    {
+        "step": 1287,
+        "vision_center": 0.3794945556934865,
+        "sound_center": 0.3774014077976752,
+        "concept_score": 0.3774014077976752
+    },
+    {
+        "step": 1288,
+        "vision_center": 0.37972662584143124,
+        "sound_center": 0.377635914093052,
+        "concept_score": 0.377635914093052
+    },
+    {
+        "step": 1289,
+        "vision_center": 0.38005223968209084,
+        "sound_center": 0.377964195970326,
+        "concept_score": 0.377964195970326
+    },
+    {
+        "step": 1290,
+        "vision_center": 0.38046615368193515,
+        "sound_center": 0.3783809953064217,
+        "concept_score": 0.3783809953064217
+    },
+    {
+        "step": 1291,
+        "vision_center": 0.3809626321451287,
+        "sound_center": 0.3788805786769908,
+        "concept_score": 0.3788805786769908
+    },
+    {
+        "step": 1292,
+        "vision_center": 0.38153644390083136,
+        "sound_center": 0.37945769970018844,
+        "concept_score": 0.37945769970018844
+    },
+    {
+        "step": 1293,
+        "vision_center": 0.38218179828364873,
+        "sound_center": 0.3801065576576329,
+        "concept_score": 0.3801065576576329
+    },
+    {
+        "step": 1294,
+        "vision_center": 0.3828933881443127,
+        "sound_center": 0.3808218248604835,
+        "concept_score": 0.3808218248604835
+    },
+    {
+        "step": 1295,
+        "vision_center": 0.38366537141020823,
+        "sound_center": 0.38159763049437123,
+        "concept_score": 0.38159763049437123
+    },
+    {
+        "step": 1296,
+        "vision_center": 0.3844923206896036,
+        "sound_center": 0.38242852096688734,
+        "concept_score": 0.38242852096688734
+    },
+    {
+        "step": 1297,
+        "vision_center": 0.38536828026286124,
+        "sound_center": 0.38330851108045977,
+        "concept_score": 0.38330851108045977
+    },
+    {
+        "step": 1298,
+        "vision_center": 0.3862873453572105,
+        "sound_center": 0.3842316645965663,
+        "concept_score": 0.3842316645965663
+    },
+    {
+        "step": 1299,
+        "vision_center": 0.3872431133958345,
+        "sound_center": 0.38519154912699255,
+        "concept_score": 0.38519154912699255
+    },
+    {
+        "step": 1300,
+        "vision_center": 0.388229070361674,
+        "sound_center": 0.38618161668879397,
+        "concept_score": 0.38618161668879397
+    },
+    {
+        "step": 1301,
+        "vision_center": 0.38923812111981965,
+        "sound_center": 0.3871947517897649,
+        "concept_score": 0.3871947517897649
+    },
+    {
+        "step": 1302,
+        "vision_center": 0.39026304138854073,
+        "sound_center": 0.3882236844277145,
+        "concept_score": 0.3882236844277145
+    },
+    {
+        "step": 1303,
+        "vision_center": 0.39129603376451433,
+        "sound_center": 0.3892605570868338,
+        "concept_score": 0.3892605570868338
+    },
+    {
+        "step": 1304,
+        "vision_center": 0.3923291369420875,
+        "sound_center": 0.3902973777514933,
+        "concept_score": 0.3902973777514933
+    },
+    {
+        "step": 1305,
+        "vision_center": 0.39335364553845675,
+        "sound_center": 0.39132541465285353,
+        "concept_score": 0.39132541465285353
+    },
+    {
+        "step": 1306,
+        "vision_center": 0.39436092577380755,
+        "sound_center": 0.39233600603315477,
+        "concept_score": 0.39233600603315477
+    },
+    {
+        "step": 1307,
+        "vision_center": 0.3953417867558427,
+        "sound_center": 0.3933199465575193,
+        "concept_score": 0.3933199465575193
+    },
+    {
+        "step": 1308,
+        "vision_center": 0.39628721484202684,
+        "sound_center": 0.3942681968974846,
+        "concept_score": 0.3942681968974846
+    },
+    {
+        "step": 1309,
+        "vision_center": 0.3971878248121165,
+        "sound_center": 0.3951713548768635,
+        "concept_score": 0.3951713548768635
+    },
+    {
+        "step": 1310,
+        "vision_center": 0.39803460063400825,
+        "sound_center": 0.39602038034994413,
+        "concept_score": 0.39602038034994413
+    },
+    {
+        "step": 1311,
+        "vision_center": 0.39881859945019416,
+        "sound_center": 0.39680631479803297,
+        "concept_score": 0.39680631479803297
+    },
+    {
+        "step": 1312,
+        "vision_center": 0.399531099600273,
+        "sound_center": 0.3975204121979887,
+        "concept_score": 0.3975204121979887
+    },
+    {
+        "step": 1313,
+        "vision_center": 0.40016378504561406,
+        "sound_center": 0.3981543369753222,
+        "concept_score": 0.3981543369753222
+    },
+    {
+        "step": 1314,
+        "vision_center": 0.4007090470369338,
+        "sound_center": 0.3987004616878754,
+        "concept_score": 0.3987004616878754
+    },
+    {
+        "step": 1315,
+        "vision_center": 0.40116005297327256,
+        "sound_center": 0.3991519131935629,
+        "concept_score": 0.3991519131935629
+    },
+    {
+        "step": 1316,
+        "vision_center": 0.4015107840706453,
+        "sound_center": 0.3995026297814174,
+        "concept_score": 0.3995026297814174
+    },
+    {
+        "step": 1317,
+        "vision_center": 0.40175618586892786,
+        "sound_center": 0.3997474789174109,
+        "concept_score": 0.3997474789174109
+    },
+    {
+        "step": 1318,
+        "vision_center": 0.40189212061378027,
+        "sound_center": 0.399882251313094,
+        "concept_score": 0.399882251313094
+    },
+    {
+        "step": 1319,
+        "vision_center": 0.4019157998871666,
+        "sound_center": 0.39990397721476173,
+        "concept_score": 0.39990397721476173
+    },
+    {
+        "step": 1320,
+        "vision_center": 0.40182545893535204,
+        "sound_center": 0.3998108286255552,
+        "concept_score": 0.3998108286255552
+    },
+    {
+        "step": 1321,
+        "vision_center": 0.40162057216787045,
+        "sound_center": 0.3996020896563882,
+        "concept_score": 0.3996020896563882
+    },
+    {
+        "step": 1322,
+        "vision_center": 0.40130150082364174,
+        "sound_center": 0.3992781232338772,
+        "concept_score": 0.3992781232338772
+    },
+    {
+        "step": 1323,
+        "vision_center": 0.4008694415569973,
+        "sound_center": 0.3988402568896895,
+        "concept_score": 0.3988402568896895
+    },
+    {
+        "step": 1324,
+        "vision_center": 0.40032756912318945,
+        "sound_center": 0.3982916792507038,
+        "concept_score": 0.3982916792507038
+    },
+    {
+        "step": 1325,
+        "vision_center": 0.39967999463183274,
+        "sound_center": 0.3976366833677025,
+        "concept_score": 0.3976366833677025
+    },
+    {
+        "step": 1326,
+        "vision_center": 0.3989328051561854,
+        "sound_center": 0.39688135705006716,
+        "concept_score": 0.39688135705006716
+    },
+    {
+        "step": 1327,
+        "vision_center": 0.3980930489540104,
+        "sound_center": 0.3960328905358065,
+        "concept_score": 0.3960328905358065
+    },
+    {
+        "step": 1328,
+        "vision_center": 0.3971695142607727,
+        "sound_center": 0.3951000755402715,
+        "concept_score": 0.3951000755402715
+    },
+    {
+        "step": 1329,
+        "vision_center": 0.39617187884815896,
+        "sound_center": 0.3940926938003767,
+        "concept_score": 0.3940926938003767
+    },
+    {
+        "step": 1330,
+        "vision_center": 0.39511124441658163,
+        "sound_center": 0.3930218671733133,
+        "concept_score": 0.3930218671733133
+    },
+    {
+        "step": 1331,
+        "vision_center": 0.3939994768702725,
+        "sound_center": 0.3918995493269597,
+        "concept_score": 0.3918995493269597
+    },
+    {
+        "step": 1332,
+        "vision_center": 0.39284949700249655,
+        "sound_center": 0.3907387009784723,
+        "concept_score": 0.3907387009784723
+    },
+    {
+        "step": 1333,
+        "vision_center": 0.3916748056997347,
+        "sound_center": 0.3895529089868661,
+        "concept_score": 0.3895529089868661
+    },
+    {
+        "step": 1334,
+        "vision_center": 0.39048956413081204,
+        "sound_center": 0.3883564163844058,
+        "concept_score": 0.3883564163844058
+    },
+    {
+        "step": 1335,
+        "vision_center": 0.3893082626227964,
+        "sound_center": 0.3871638294088067,
+        "concept_score": 0.3871638294088067
+    },
+    {
+        "step": 1336,
+        "vision_center": 0.3881456989220482,
+        "sound_center": 0.3859900554864735,
+        "concept_score": 0.3859900554864735
+    },
+    {
+        "step": 1337,
+        "vision_center": 0.3870167165379458,
+        "sound_center": 0.38485006357761214,
+        "concept_score": 0.38485006357761214
+    },
+    {
+        "step": 1338,
+        "vision_center": 0.3859361153927316,
+        "sound_center": 0.38375877115753804,
+        "concept_score": 0.38375877115753804
+    },
+    {
+        "step": 1339,
+        "vision_center": 0.3849184355530407,
+        "sound_center": 0.3827308397017873,
+        "concept_score": 0.3827308397017873
+    },
+    {
+        "step": 1340,
+        "vision_center": 0.3839777748845267,
+        "sound_center": 0.38178044968826447,
+        "concept_score": 0.38178044968826447
+    },
+    {
+        "step": 1341,
+        "vision_center": 0.3831271408395765,
+        "sound_center": 0.38092068437162657,
+        "concept_score": 0.38092068437162657
+    },
+    {
+        "step": 1342,
+        "vision_center": 0.3823779284810539,
+        "sound_center": 0.38016303683149044,
+        "concept_score": 0.38016303683149044
+    },
+    {
+        "step": 1343,
+        "vision_center": 0.381738361957942,
+        "sound_center": 0.37951573673626665,
+        "concept_score": 0.37951573673626665
+    },
+    {
+        "step": 1344,
+        "vision_center": 0.38121344844241134,
+        "sound_center": 0.3789838057333275,
+        "concept_score": 0.3789838057333275
+    },
+    {
+        "step": 1345,
+        "vision_center": 0.3808055894032435,
+        "sound_center": 0.37856953108248914,
+        "concept_score": 0.37856953108248914
+    },
+    {
+        "step": 1346,
+        "vision_center": 0.3805147238749103,
+        "sound_center": 0.3782728548163188,
+        "concept_score": 0.3782728548163188
+    },
+    {
+        "step": 1347,
+        "vision_center": 0.3803389966308441,
+        "sound_center": 0.37809186879551443,
+        "concept_score": 0.37809186879551443
+    },
+    {
+        "step": 1348,
+        "vision_center": 0.380275170430793,
+        "sound_center": 0.3780233142464059,
+        "concept_score": 0.3780233142464059
+    },
+    {
+        "step": 1349,
+        "vision_center": 0.3803192278698575,
+        "sound_center": 0.37806314208816855,
+        "concept_score": 0.37806314208816855
+    },
+    {
+        "step": 1350,
+        "vision_center": 0.3804662266924697,
+        "sound_center": 0.37820638555983993,
+        "concept_score": 0.37820638555983993
+    },
+    {
+        "step": 1351,
+        "vision_center": 0.38071121511850897,
+        "sound_center": 0.37844806970168554,
+        "concept_score": 0.37844806970168554
+    },
+    {
+        "step": 1352,
+        "vision_center": 0.3810487273869461,
+        "sound_center": 0.378782700555232,
+        "concept_score": 0.378782700555232
+    },
+    {
+        "step": 1353,
+        "vision_center": 0.38147345097709906,
+        "sound_center": 0.3792049195484975,
+        "concept_score": 0.3792049195484975
+    },
+    {
+        "step": 1354,
+        "vision_center": 0.3819797547060637,
+        "sound_center": 0.3797090748947932,
+        "concept_score": 0.3797090748947932
+    },
+    {
+        "step": 1355,
+        "vision_center": 0.38256234753987967,
+        "sound_center": 0.3802898431735804,
+        "concept_score": 0.3802898431735804
+    },
+    {
+        "step": 1356,
+        "vision_center": 0.38321552164602857,
+        "sound_center": 0.3809414724388294,
+        "concept_score": 0.3809414724388294
+    },
+    {
+        "step": 1357,
+        "vision_center": 0.38393391711478236,
+        "sound_center": 0.3816585675410084,
+        "concept_score": 0.3816585675410084
+    },
+    {
+        "step": 1358,
+        "vision_center": 0.38471175810324965,
+        "sound_center": 0.38243529248500574,
+        "concept_score": 0.38243529248500574
+    },
+    {
+        "step": 1359,
+        "vision_center": 0.38554356797612055,
+        "sound_center": 0.38326613412468774,
+        "concept_score": 0.38326613412468774
+    },
+    {
+        "step": 1360,
+        "vision_center": 0.38642341578452616,
+        "sound_center": 0.3841451460036022,
+        "concept_score": 0.3841451460036022
+    },
+    {
+        "step": 1361,
+        "vision_center": 0.38734530560373776,
+        "sound_center": 0.3850663671844786,
+        "concept_score": 0.3850663671844786
+    },
+    {
+        "step": 1362,
+        "vision_center": 0.38830285084253435,
+        "sound_center": 0.38602339786748247,
+        "concept_score": 0.38602339786748247
+    },
+    {
+        "step": 1363,
+        "vision_center": 0.3892894436274999,
+        "sound_center": 0.38700963394806404,
+        "concept_score": 0.38700963394806404
+    },
+    {
+        "step": 1364,
+        "vision_center": 0.3902979502809156,
+        "sound_center": 0.3880179322592397,
+        "concept_score": 0.3880179322592397
+    },
+    {
+        "step": 1365,
+        "vision_center": 0.39132113698500776,
+        "sound_center": 0.38904099170430523,
+        "concept_score": 0.38904099170430523
+    },
+    {
+        "step": 1366,
+        "vision_center": 0.39235106852229407,
+        "sound_center": 0.3900708631202128,
+        "concept_score": 0.3900708631202128
+    },
+    {
+        "step": 1367,
+        "vision_center": 0.3933798061868953,
+        "sound_center": 0.39109957181272414,
+        "concept_score": 0.39109957181272414
+    },
+    {
+        "step": 1368,
+        "vision_center": 0.3943984623475838,
+        "sound_center": 0.3921182135406716,
+        "concept_score": 0.3921182135406716
+    },
+    {
+        "step": 1369,
+        "vision_center": 0.39539849781033276,
+        "sound_center": 0.39311822470156066,
+        "concept_score": 0.39311822470156066
+    },
+    {
+        "step": 1370,
+        "vision_center": 0.39637055740897265,
+        "sound_center": 0.3940902334162334,
+        "concept_score": 0.3940902334162334
+    },
+    {
+        "step": 1371,
+        "vision_center": 0.39730571676823,
+        "sound_center": 0.3950252954632181,
+        "concept_score": 0.3950252954632181
+    },
+    {
+        "step": 1372,
+        "vision_center": 0.3981944861500369,
+        "sound_center": 0.395913900042714,
+        "concept_score": 0.395913900042714
+    },
+    {
+        "step": 1373,
+        "vision_center": 0.3990279765710446,
+        "sound_center": 0.39674713781983456,
+        "concept_score": 0.39674713781983456
+    },
+    {
+        "step": 1374,
+        "vision_center": 0.3997972016447643,
+        "sound_center": 0.39751600402767806,
+        "concept_score": 0.39751600402767806
+    },
+    {
+        "step": 1375,
+        "vision_center": 0.400493514216031,
+        "sound_center": 0.3982118295031433,
+        "concept_score": 0.3982118295031433
+    },
+    {
+        "step": 1376,
+        "vision_center": 0.40110873395924335,
+        "sound_center": 0.3988264144065069,
+        "concept_score": 0.3988264144065069
+    },
+    {
+        "step": 1377,
+        "vision_center": 0.4016352995212603,
+        "sound_center": 0.39935217800182826,
+        "concept_score": 0.39935217800182826
+    },
+    {
+        "step": 1378,
+        "vision_center": 0.40206660357294877,
+        "sound_center": 0.3997824659812908,
+        "concept_score": 0.3997824659812908
+    },
+    {
+        "step": 1379,
+        "vision_center": 0.40239667418320807,
+        "sound_center": 0.40011126199523933,
+        "concept_score": 0.40011126199523933
+    },
+    {
+        "step": 1380,
+        "vision_center": 0.4026207330013736,
+        "sound_center": 0.40033370477488617,
+        "concept_score": 0.40033370477488617
+    },
+    {
+        "step": 1381,
+        "vision_center": 0.4027346694634087,
+        "sound_center": 0.40044560994632067,
+        "concept_score": 0.40044560994632067
+    },
+    {
+        "step": 1382,
+        "vision_center": 0.4027360733371314,
+        "sound_center": 0.40044439151408073,
+        "concept_score": 0.40044439151408073
+    },
+    {
+        "step": 1383,
+        "vision_center": 0.40262317052391705,
+        "sound_center": 0.4003282117519014,
+        "concept_score": 0.4003282117519014
+    },
+    {
+        "step": 1384,
+        "vision_center": 0.40239579100671186,
+        "sound_center": 0.4000967225137777,
+        "concept_score": 0.4000967225137777
+    },
+    {
+        "step": 1385,
+        "vision_center": 0.40205424712613763,
+        "sound_center": 0.3997502533569078,
+        "concept_score": 0.3997502533569078
+    },
+    {
+        "step": 1386,
+        "vision_center": 0.40160014777881625,
+        "sound_center": 0.3992905367185837,
+        "concept_score": 0.3992905367185837
+    },
+    {
+        "step": 1387,
+        "vision_center": 0.40103676997879456,
+        "sound_center": 0.3987208851811342,
+        "concept_score": 0.3987208851811342
+    },
+    {
+        "step": 1388,
+        "vision_center": 0.40036858420665916,
+        "sound_center": 0.3980459142400286,
+        "concept_score": 0.3980459142400286
+    },
+    {
+        "step": 1389,
+        "vision_center": 0.3996018011939092,
+        "sound_center": 0.3972718843236147,
+        "concept_score": 0.3972718843236147
+    },
+    {
+        "step": 1390,
+        "vision_center": 0.39874379201366644,
+        "sound_center": 0.3964062591032416,
+        "concept_score": 0.3964062591032416
+    },
+    {
+        "step": 1391,
+        "vision_center": 0.39780346067736433,
+        "sound_center": 0.3954579976027895,
+        "concept_score": 0.3954579976027895
+    },
+    {
+        "step": 1392,
+        "vision_center": 0.3967907552595533,
+        "sound_center": 0.3944371120476478,
+        "concept_score": 0.3944371120476478
+    },
+    {
+        "step": 1393,
+        "vision_center": 0.3957168822705143,
+        "sound_center": 0.3933548712134513,
+        "concept_score": 0.3933548712134513
+    },
+    {
+        "step": 1394,
+        "vision_center": 0.39459391155978807,
+        "sound_center": 0.39222340641424686,
+        "concept_score": 0.39222340641424686
+    },
+    {
+        "step": 1395,
+        "vision_center": 0.3934348459127373,
+        "sound_center": 0.39105579425514136,
+        "concept_score": 0.39105579425514136
+    },
+    {
+        "step": 1396,
+        "vision_center": 0.39225332156919784,
+        "sound_center": 0.3898657440233161,
+        "concept_score": 0.3898657440233161
+    },
+    {
+        "step": 1397,
+        "vision_center": 0.39106357035434564,
+        "sound_center": 0.38866757353014675,
+        "concept_score": 0.38866757353014675
+    },
+    {
+        "step": 1398,
+        "vision_center": 0.3898801774099966,
+        "sound_center": 0.3874759474441142,
+        "concept_score": 0.3874759474441142
+    },
+    {
+        "step": 1399,
+        "vision_center": 0.38871798012217834,
+        "sound_center": 0.38630579903729284,
+        "concept_score": 0.38630579903729284
+    },
+    {
+        "step": 1400,
+        "vision_center": 0.38759185872806895,
+        "sound_center": 0.38517210259554796,
+        "concept_score": 0.38517210259554796
+    },
+    {
+        "step": 1401,
+        "vision_center": 0.38651660305672214,
+        "sound_center": 0.38408974866527323,
+        "concept_score": 0.38408974866527323
+    },
+    {
+        "step": 1402,
+        "vision_center": 0.38550672520178947,
+        "sound_center": 0.3830733477444206,
+        "concept_score": 0.3830733477444206
+    },
+    {
+        "step": 1403,
+        "vision_center": 0.38457623640276345,
+        "sound_center": 0.38213696699400806,
+        "concept_score": 0.38213696699400806
+    },
+    {
+        "step": 1404,
+        "vision_center": 0.3837379563612991,
+        "sound_center": 0.38129349582234173,
+        "concept_score": 0.38129349582234173
+    },
+    {
+        "step": 1405,
+        "vision_center": 0.38300286630726965,
+        "sound_center": 0.3805539768806052,
+        "concept_score": 0.3805539768806052
+    },
+    {
+        "step": 1406,
+        "vision_center": 0.38237872464389827,
+        "sound_center": 0.3799261685523654,
+        "concept_score": 0.3799261685523654
+    },
+    {
+        "step": 1407,
+        "vision_center": 0.38186989536669447,
+        "sound_center": 0.3794143855971425,
+        "concept_score": 0.3794143855971425
+    },
+    {
+        "step": 1408,
+        "vision_center": 0.38147855065872227,
+        "sound_center": 0.3790207588061103,
+        "concept_score": 0.3790207588061103
+    },
+    {
+        "step": 1409,
+        "vision_center": 0.3812040138907384,
+        "sound_center": 0.37874457790035304,
+        "concept_score": 0.37874457790035304
+    },
+    {
+        "step": 1410,
+        "vision_center": 0.3810444190276582,
+        "sound_center": 0.3785839441801148,
+        "concept_score": 0.3785839441801148
+    },
+    {
+        "step": 1411,
+        "vision_center": 0.3809961341354063,
+        "sound_center": 0.3785352010640839,
+        "concept_score": 0.3785352010640839
+    },
+    {
+        "step": 1412,
+        "vision_center": 0.3810551341522809,
+        "sound_center": 0.3785943116197942,
+        "concept_score": 0.3785943116197942
+    },
+    {
+        "step": 1413,
+        "vision_center": 0.3812163000865754,
+        "sound_center": 0.3787561399657115,
+        "concept_score": 0.3787561399657115
+    },
+    {
+        "step": 1414,
+        "vision_center": 0.38147467449875555,
+        "sound_center": 0.3790157218162943,
+        "concept_score": 0.3790157218162943
+    },
+    {
+        "step": 1415,
+        "vision_center": 0.3818247471831698,
+        "sound_center": 0.3793675310870376,
+        "concept_score": 0.3793675310870376
+    },
+    {
+        "step": 1416,
+        "vision_center": 0.38226115546607553,
+        "sound_center": 0.37980618683132195,
+        "concept_score": 0.37980618683132195
+    },
+    {
+        "step": 1417,
+        "vision_center": 0.3827783498816319,
+        "sound_center": 0.3803261094053401,
+        "concept_score": 0.3803261094053401
+    },
+    {
+        "step": 1418,
+        "vision_center": 0.38337092073315177,
+        "sound_center": 0.3809218903149418,
+        "concept_score": 0.3809218903149418
+    },
+    {
+        "step": 1419,
+        "vision_center": 0.3840332611268221,
+        "sound_center": 0.381587880939117,
+        "concept_score": 0.381587880939117
+    },
+    {
+        "step": 1420,
+        "vision_center": 0.38475988050763427,
+        "sound_center": 0.38231857636781236,
+        "concept_score": 0.38231857636781236
+    },
+    {
+        "step": 1421,
+        "vision_center": 0.3855451015752743,
+        "sound_center": 0.3831082478252488,
+        "concept_score": 0.3831082478252488
+    },
+    {
+        "step": 1422,
+        "vision_center": 0.3863833290808865,
+        "sound_center": 0.38395127942292356,
+        "concept_score": 0.38395127942292356
+    },
+    {
+        "step": 1423,
+        "vision_center": 0.3872686852679115,
+        "sound_center": 0.3848417466322972,
+        "concept_score": 0.3848417466322972
+    },
+    {
+        "step": 1424,
+        "vision_center": 0.3881950318493956,
+        "sound_center": 0.38577348287823116,
+        "concept_score": 0.38577348287823116
+    },
+    {
+        "step": 1425,
+        "vision_center": 0.3891560176966886,
+        "sound_center": 0.3867400981171668,
+        "concept_score": 0.3867400981171668
+    },
+    {
+        "step": 1426,
+        "vision_center": 0.39014489431564237,
+        "sound_center": 0.3877348117544871,
+        "concept_score": 0.3877348117544871
+    },
+    {
+        "step": 1427,
+        "vision_center": 0.39115455258640536,
+        "sound_center": 0.38875045741151015,
+        "concept_score": 0.38875045741151015
+    },
+    {
+        "step": 1428,
+        "vision_center": 0.39217762615056634,
+        "sound_center": 0.3897796230370207,
+        "concept_score": 0.3897796230370207
+    },
+    {
+        "step": 1429,
+        "vision_center": 0.3932061256331331,
+        "sound_center": 0.3908142903355034,
+        "concept_score": 0.3908142903355034
+    },
+    {
+        "step": 1430,
+        "vision_center": 0.39423202852122113,
+        "sound_center": 0.39184640986388614,
+        "concept_score": 0.39184640986388614
+    },
+    {
+        "step": 1431,
+        "vision_center": 0.3952463739043161,
+        "sound_center": 0.3928669975951368,
+        "concept_score": 0.3928669975951368
+    },
+    {
+        "step": 1432,
+        "vision_center": 0.39624059787628574,
+        "sound_center": 0.3938674734380824,
+        "concept_score": 0.3938674734380824
+    },
+    {
+        "step": 1433,
+        "vision_center": 0.3972052991662832,
+        "sound_center": 0.3948384183162026,
+        "concept_score": 0.3948384183162026
+    },
+    {
+        "step": 1434,
+        "vision_center": 0.39813151486269277,
+        "sound_center": 0.39577085766761116,
+        "concept_score": 0.39577085766761116
+    },
+    {
+        "step": 1435,
+        "vision_center": 0.3990097781568932,
+        "sound_center": 0.3966553025671362,
+        "concept_score": 0.3966553025671362
+    },
+    {
+        "step": 1436,
+        "vision_center": 0.3998312151037944,
+        "sound_center": 0.39748287130262727,
+        "concept_score": 0.39748287130262727
+    },
+    {
+        "step": 1437,
+        "vision_center": 0.40058686773364627,
+        "sound_center": 0.3982445861231748,
+        "concept_score": 0.3982445861231748
+    },
+    {
+        "step": 1438,
+        "vision_center": 0.40126811761270104,
+        "sound_center": 0.3989318153771879,
+        "concept_score": 0.3989318153771879
+    },
+    {
+        "step": 1439,
+        "vision_center": 0.4018669407936862,
+        "sound_center": 0.39953651648277044,
+        "concept_score": 0.39953651648277044
+    },
+    {
+        "step": 1440,
+        "vision_center": 0.40237582970589064,
+        "sound_center": 0.4000511656393667,
+        "concept_score": 0.4000511656393667
+    },
+    {
+        "step": 1441,
+        "vision_center": 0.40278838060974986,
+        "sound_center": 0.40046931203572633,
+        "concept_score": 0.40046931203572633
+    },
+    {
+        "step": 1442,
+        "vision_center": 0.4030986791899159,
+        "sound_center": 0.40078499947965573,
+        "concept_score": 0.40078499947965573
+    },
+    {
+        "step": 1443,
+        "vision_center": 0.40330222122261467,
+        "sound_center": 0.40099363660885295,
+        "concept_score": 0.40099363660885295
+    },
+    {
+        "step": 1444,
+        "vision_center": 0.40339491861197696,
+        "sound_center": 0.40109106446789955,
+        "concept_score": 0.40109106446789955
+    },
+    {
+        "step": 1445,
+        "vision_center": 0.4033747534505901,
+        "sound_center": 0.4010750781064031,
+        "concept_score": 0.4010750781064031
+    },
+    {
+        "step": 1446,
+        "vision_center": 0.4032399315330005,
+        "sound_center": 0.4009438279216584,
+        "concept_score": 0.4009438279216584
+    },
+    {
+        "step": 1447,
+        "vision_center": 0.40299065561039055,
+        "sound_center": 0.4006973292417214,
+        "concept_score": 0.4006973292417214
+    },
+    {
+        "step": 1448,
+        "vision_center": 0.4026271788904903,
+        "sound_center": 0.40033588076125526,
+        "concept_score": 0.40033588076125526
+    },
+    {
+        "step": 1449,
+        "vision_center": 0.4021515476802399,
+        "sound_center": 0.39986161113281155,
+        "concept_score": 0.39986161113281155
+    },
+    {
+        "step": 1450,
+        "vision_center": 0.4015671385082837,
+        "sound_center": 0.3992779673791676,
+        "concept_score": 0.3992779673791676
+    },
+    {
+        "step": 1451,
+        "vision_center": 0.40087877196407246,
+        "sound_center": 0.3985898553495737,
+        "concept_score": 0.3985898553495737
+    },
+    {
+        "step": 1452,
+        "vision_center": 0.4000928293922935,
+        "sound_center": 0.3978037451698197,
+        "concept_score": 0.3978037451698197
+    },
+    {
+        "step": 1453,
+        "vision_center": 0.3992169686030466,
+        "sound_center": 0.39692732688816385,
+        "concept_score": 0.39692732688816385
+    },
+    {
+        "step": 1454,
+        "vision_center": 0.3982602683937141,
+        "sound_center": 0.3959697674282842,
+        "concept_score": 0.3959697674282842
+    },
+    {
+        "step": 1455,
+        "vision_center": 0.3972329130051307,
+        "sound_center": 0.39494126473343166,
+        "concept_score": 0.39494126473343166
+    },
+    {
+        "step": 1456,
+        "vision_center": 0.3961462642452413,
+        "sound_center": 0.3938532628138023,
+        "concept_score": 0.3938532628138023
+    },
+    {
+        "step": 1457,
+        "vision_center": 0.3950125739261793,
+        "sound_center": 0.392718037146242,
+        "concept_score": 0.392718037146242
+    },
+    {
+        "step": 1458,
+        "vision_center": 0.3938449678166881,
+        "sound_center": 0.39154879950040805,
+        "concept_score": 0.39154879950040805
+    },
+    {
+        "step": 1459,
+        "vision_center": 0.3926572088158123,
+        "sound_center": 0.3903593528208995,
+        "concept_score": 0.3903593528208995
+    },
+    {
+        "step": 1460,
+        "vision_center": 0.3914636092325062,
+        "sound_center": 0.389164096708793,
+        "concept_score": 0.389164096708793
+    },
+    {
+        "step": 1461,
+        "vision_center": 0.3902788240060889,
+        "sound_center": 0.3879777436630242,
+        "concept_score": 0.3879777436630242
+    },
+    {
+        "step": 1462,
+        "vision_center": 0.3891177217255389,
+        "sound_center": 0.38681525040338005,
+        "concept_score": 0.38681525040338005
+    },
+    {
+        "step": 1463,
+        "vision_center": 0.3879951949367982,
+        "sound_center": 0.3856915814918194,
+        "concept_score": 0.3856915814918194
+    },
+    {
+        "step": 1464,
+        "vision_center": 0.3869260136373806,
+        "sound_center": 0.38462159497868553,
+        "concept_score": 0.38462159497868553
+    },
+    {
+        "step": 1465,
+        "vision_center": 0.3859246394789087,
+        "sound_center": 0.38361983576505154,
+        "concept_score": 0.38361983576505154
+    },
+    {
+        "step": 1466,
+        "vision_center": 0.38500491285268135,
+        "sound_center": 0.38270018179697113,
+        "concept_score": 0.38270018179697113
+    },
+    {
+        "step": 1467,
+        "vision_center": 0.3841795119973515,
+        "sound_center": 0.3818753861395682,
+        "concept_score": 0.3818753861395682
+    },
+    {
+        "step": 1468,
+        "vision_center": 0.38345890733525717,
+        "sound_center": 0.38115594062730296,
+        "concept_score": 0.38115594062730296
+    },
+    {
+        "step": 1469,
+        "vision_center": 0.38285042350279125,
+        "sound_center": 0.3805491475353286,
+        "concept_score": 0.3805491475353286
+    },
+    {
+        "step": 1470,
+        "vision_center": 0.3823578312745561,
+        "sound_center": 0.38005874127220435,
+        "concept_score": 0.38005874127220435
+    },
+    {
+        "step": 1471,
+        "vision_center": 0.3819830112280715,
+        "sound_center": 0.3796865670207258,
+        "concept_score": 0.3796865670207258
+    },
+    {
+        "step": 1472,
+        "vision_center": 0.38172485769805653,
+        "sound_center": 0.3794314840745297,
+        "concept_score": 0.3794314840745297
+    },
+    {
+        "step": 1473,
+        "vision_center": 0.38158133518971227,
+        "sound_center": 0.37929144718765667,
+        "concept_score": 0.37929144718765667
+    },
+    {
+        "step": 1474,
+        "vision_center": 0.38154860760228354,
+        "sound_center": 0.37926261256219773,
+        "concept_score": 0.37926261256219773
+    },
+    {
+        "step": 1475,
+        "vision_center": 0.38162250845806867,
+        "sound_center": 0.3793408324401121,
+        "concept_score": 0.3793408324401121
+    },
+    {
+        "step": 1476,
+        "vision_center": 0.3817978836813051,
+        "sound_center": 0.37952096642886257,
+        "concept_score": 0.37952096642886257
+    },
+    {
+        "step": 1477,
+        "vision_center": 0.3820696929502091,
+        "sound_center": 0.3797980059871813,
+        "concept_score": 0.3797980059871813
+    },
+    {
+        "step": 1478,
+        "vision_center": 0.38243244024783635,
+        "sound_center": 0.3801664834781239,
+        "concept_score": 0.3801664834781239
+    },
+    {
+        "step": 1479,
+        "vision_center": 0.3828806954664464,
+        "sound_center": 0.38062099940356553,
+        "concept_score": 0.38062099940356553
+    },
+    {
+        "step": 1480,
+        "vision_center": 0.38340898407868584,
+        "sound_center": 0.3811560930489072,
+        "concept_score": 0.3811560930489072
+    },
+    {
+        "step": 1481,
+        "vision_center": 0.3840118061718404,
+        "sound_center": 0.3817663018322967,
+        "concept_score": 0.3817663018322967
+    },
+    {
+        "step": 1482,
+        "vision_center": 0.38468363025486446,
+        "sound_center": 0.38244612192592664,
+        "concept_score": 0.38244612192592664
+    },
+    {
+        "step": 1483,
+        "vision_center": 0.38541885362730827,
+        "sound_center": 0.3831899802815685,
+        "concept_score": 0.3831899802815685
+    },
+    {
+        "step": 1484,
+        "vision_center": 0.38621188245487637,
+        "sound_center": 0.383992306246966,
+        "concept_score": 0.383992306246966
+    },
+    {
+        "step": 1485,
+        "vision_center": 0.38705700369609486,
+        "sound_center": 0.3848471464129239,
+        "concept_score": 0.3848471464129239
+    },
+    {
+        "step": 1486,
+        "vision_center": 0.387948358352129,
+        "sound_center": 0.385748449698212,
+        "concept_score": 0.385748449698212
+    },
+    {
+        "step": 1487,
+        "vision_center": 0.3888797036410738,
+        "sound_center": 0.3866898298713059,
+        "concept_score": 0.3866898298713059
+    },
+    {
+        "step": 1488,
+        "vision_center": 0.38984466799417455,
+        "sound_center": 0.3876648112087631,
+        "concept_score": 0.3876648112087631
+    },
+    {
+        "step": 1489,
+        "vision_center": 0.39083640170690837,
+        "sound_center": 0.38866646553058026,
+        "concept_score": 0.38866646553058026
+    },
+    {
+        "step": 1490,
+        "vision_center": 0.39184777443703306,
+        "sound_center": 0.3896875933853092,
+        "concept_score": 0.3896875933853092
+    },
+    {
+        "step": 1491,
+        "vision_center": 0.3928712873014442,
+        "sound_center": 0.3907207114111306,
+        "concept_score": 0.3907207114111306
+    },
+    {
+        "step": 1492,
+        "vision_center": 0.39389893389558817,
+        "sound_center": 0.39175779062114574,
+        "concept_score": 0.39175779062114574
+    },
+    {
+        "step": 1493,
+        "vision_center": 0.39492252822112944,
+        "sound_center": 0.392790665355792,
+        "concept_score": 0.392790665355792
+    },
+    {
+        "step": 1494,
+        "vision_center": 0.3959331502159373,
+        "sound_center": 0.3938104037796458,
+        "concept_score": 0.3938104037796458
+    },
+    {
+        "step": 1495,
+        "vision_center": 0.3969220917496161,
+        "sound_center": 0.39480831473796774,
+        "concept_score": 0.39480831473796774
+    },
+    {
+        "step": 1496,
+        "vision_center": 0.39788003715483933,
+        "sound_center": 0.395775076078407,
+        "concept_score": 0.395775076078407
+    },
+    {
+        "step": 1497,
+        "vision_center": 0.3987978748203644,
+        "sound_center": 0.3967015834127499,
+        "concept_score": 0.3967015834127499
+    },
+    {
+        "step": 1498,
+        "vision_center": 0.39966627589918097,
+        "sound_center": 0.3975784988162368,
+        "concept_score": 0.3975784988162368
+    }
+]
+
+# Extracting columns
+steps = [row['step'] for row in data]
+vision = [row['vision_center'] for row in data]
+sound = [row['sound_center'] for row in data]
+score = [row['concept_score'] for row in data]
+
+# --- PLOT 1: The Birth of a Concept ---
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 10))
+
+# Subplot 1: Signal Convergence
+ax1.plot(steps, vision, label='Vision (Input A)', color='red', alpha=0.7)
+ax1.plot(steps, sound, label='Sound (Input B)', color='blue', alpha=0.7)
+ax1.plot(steps, score, label='Concept Score (Intersection)', color='purple', linewidth=2, linestyle='--')
+ax1.set_title("DET 9.0: Signal Convergence & Association")
+ax1.set_ylabel("Pressure / Signal Strength")
+ax1.legend()
+ax1.grid(True, which='both', linestyle='--', linewidth=0.5)
+
+# Subplot 2: Equilibrium Stability (Zoomed in on Stability Phase)
+# We look at steps 800+ where the system stabilizes
+zoom_start = 800
+ax2.plot(steps[zoom_start:], score[zoom_start:], color='purple')
+ax2.set_title(f"Dynamic Equilibrium (Steps {zoom_start}+)")
+ax2.set_xlabel("Simulation Step")
+ax2.set_ylabel("Concept Score")
+ax2.grid(True, linestyle='--', linewidth=0.5)
+
+# Highlight the oscillation range
+min_eq = min(score[zoom_start:])
+max_eq = max(score[zoom_start:])
+ax2.axhline(y=min_eq, color='green', linestyle=':', alpha=0.5, label=f'Min: {min_eq:.3f}')
+ax2.axhline(y=max_eq, color='orange', linestyle=':', alpha=0.5, label=f'Max: {max_eq:.3f}')
+ax2.legend()
+
+plt.tight_layout()
+plt.show()
